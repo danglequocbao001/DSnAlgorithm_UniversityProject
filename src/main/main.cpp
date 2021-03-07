@@ -109,15 +109,15 @@ void timTheoTen(struct SinhVien* ds, int slsv) {
 }
 
 void ghiFile(struct SinhVien* ds, int slsv) {
-	FILE* fOut = fopen("SV.txt", "a");
+	FILE* fout = fopen("SV.txt", "a");
 	int i;
 	for(i = 0; i < slsv; i++) {
 		struct SinhVien sv = ds[i];
-		fprintf(fOut, "%-10d %-10s %-20s %-10s %-10d %-10s %-10.2f %-10.2f %-10.2f %-10.2f\n",
+		fprintf(fout, "%-10d %-10s %-20s %-10s %-10d %-10s %-10.2f %-10.2f %-10.2f %-10.2f\n",
 		sv.ma, sv.hoVaTen.ho, sv.hoVaTen.dem, sv.hoVaTen.ten, sv.tuoi, sv.gioiTinh,
 		sv.diem.toan, sv.diem.van, sv.diem.anh, sv.diem.tbc);
 	}
-	fclose(fOut);
+	fclose(fout);
 }
 
 void hienThiTenCot() {
