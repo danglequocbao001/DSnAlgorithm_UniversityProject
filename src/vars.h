@@ -1,10 +1,13 @@
 #ifndef VARS
 #define VARS
 
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <unistd.h>
+#include <dirent.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
-
-#define FILENAME_MAX 125
 
 #ifdef _WIN32 || _WIN64
     // set seperater
@@ -12,6 +15,8 @@
     // get current work direction
     #include <direct.h>
     #define _pwd _getcwd
+    // compile code for dev-c of windows
+    #define compile_string(path) "g++ " #path " -o abc && .\\abc && del abc"
 
 #elif __linux__
     // set seperater
@@ -19,22 +24,12 @@
     // get current work direction
     #include <unistd.h>
     #define _pwd getcwd
+    // compile code for linux
+    #define compile_string(path) "g++ " #path " -o abc && ./abc && rm abc"
 #endif
 
-
-char* pwd(void) {
-    char* path = (char*) malloc(FILENAME_MAX);
-    _pwd(path, FILENAME_MAX);
-    return path;
-}
-
-char* join_path(char* path1, char* path2) {
-    char* result = (char*) malloc(strlen(path1) + strlen(path2) + 2);
-    strcpy(result, path1);
-    strcat(result, SEPERATER);
-    strcat(result, path2);
-    return result;
-}
+#define STDIN stdin
+#define STDOUT stdout
 
 #endif /*VARS*/
 
