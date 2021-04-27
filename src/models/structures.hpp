@@ -1,12 +1,188 @@
 #ifndef _MODEL_H
 #define _MODEL_H
 
+#include "stdio.h"
+#include "stddef.h"
+#include "stdlib.h"
+
+#ifndef _POINTER_ARRAY_
+#define _POINTER_ARRAY_
+
+
+template <class C>
+class Array {
+    
+    // private:
+    public:
+        void shiftLeft(int);
+        void shiftRight(int);
+        void increaseOne();
+        void decreaseOne();
+
+        size_t size;
+
+    public:
+        C* head;
+
+    public:
+
+        Array();
+        ~Array();
+        size_t getSize();
+
+        #define $a_for_each(runner) for ( C* runner = Array<C>::head;\
+                                        runner < Array<C>::head + Array<C>::size - 1;\
+                                        runner++)
+
+        C* addHead    (C);
+        C* addTail    (C);
+        C* addAt      (int, C);
+        C* search     (C);
+        C* get        (int);
+        C  delHead    ();
+        C  delTail    ();
+        C  delAt      (int);
+};
+
+
+template <class C>
+void Array<C>::shiftRight(int index) {
+    if (Array<C>::head == nullptr) return;
+    for (C* runner = Array<C>::head + Array<C>::size - 1; runner > Array<C>::head + index; runner-- ) {
+        *runner = *(runner - 1);
+    }
+}
+
+
+template <class C>
+void Array<C>::shiftLeft(int index) {
+    if (Array<C>::head == nullptr) return;
+    for (C* runner = Array<C>::head + index; runner < Array<C>::head + Array<C>::size - 1; runner++ ) {
+        *runner = *(runner + 1);
+    }
+}
+
+
+template <class C>
+void Array<C>::increaseOne() {
+    Array<C>::size++;
+    Array<C>::head = (C*) realloc(Array<C>::head, Array<C>::size);
+}
+
+template <class C>
+void Array<C>::decreaseOne() {
+    Array<C>::size--;
+}
+
+
+template <class C>
+Array<C>::Array() {
+    Array<C>::head = nullptr;
+    Array<C>::size = 0;
+};
+
+
+template <class C>
+Array<C>::~Array() {
+    free(Array<C>::head);
+    printf("[log] goes here too\n");
+};
+
+
+template <class C>
+size_t Array<C>::getSize() {
+    return Array<C>::size;
+};
+
+
+template <class C>
+C* Array<C>::addHead(C value) {
+    printf("[log] ------\n");
+    Array<C>::increaseOne();
+    Array<C>::shiftRight(0);
+    *(Array<C>::head) = value;
+    return Array<C>::head;
+}
+
+
+template <class C>
+C* Array<C>::addTail(C value) {
+    Array<C>::increaseOne();
+    *(Array<C>::head + size - 1) = value;
+    return Array<C>::head + size - 1;
+}
+
+
+template <class C>
+C* Array<C>::addAt(int index, C value) {
+    for (C* runner = head; runner < head + size ;runner ++) {
+        printf("[log] index: %d %d\n", runner - head, *runner);
+    }
+    Array<C>::increaseOne();
+    printf("[log] ---\n");
+    Array<C>::shiftRight(index);
+    *(Array<C>::head + index) = value;
+    for (C* runner = head; runner < head + size ;runner ++) {
+        printf("[log] index: %d %d\n", runner - head, *runner);
+    }
+    return Array<C>::head + index;
+}
+
+
+template <class C>
+C* Array<C>::search(C value) {
+    C* result = nullptr;
+    $a_for_each(runner) {
+        if(*(runner) == value) {
+            result = runner;
+            break;
+        }
+    }
+    return result;
+}
+
+
+template <class C>
+C* Array<C>::get(int index) {
+    if (0 < index && index < Array<C>::size ) {
+        return Array<C>::head + index;
+    }
+    return nullptr;
+}
+
+
+template <class C>
+C Array<C>::delHead() {
+    C result = *(Array<C>::head);
+    Array<C>::shiftLeft(0);
+    Array<C>::decreaseOne();
+    return result;
+}
+
+
+template <class C>
+C Array<C>::delTail() {
+    C result = *(Array<C>::head + Array<C>::size);
+    Array<C>::shiftRight(0);
+    Array<C>::decreaseOne();
+    return result;
+}
+
+
+template <class C>
+C Array<C>::delAt(int index) {
+    C result = *(Array<C>::head + index);
+    Array<C>::shiftLeft(index);
+    Array<C>::decreaseOne();
+    return result;
+}
+
+
+#endif /*_POINTER_ARRAY_*/
+
 #ifndef _LINKED_LIST_
 #define _LINKED_LIST_
 
-
-#include "stdio.h"
-#include "stdlib.h"
 
 template <class C>
 struct node { 
@@ -19,21 +195,22 @@ template <class C>
 class LinkedList {
 
     private:
+        size_t size;
         node<C>* insertNode(node<C>*, C);
 
     public:
         node<C> *head;
         node<C> *tail;
-        int size;
 
 
     public:
 
         LinkedList(C*, C*);
         ~LinkedList();
+        size_t getSize();
 
-        #define $for_each(runner) for ( node<C>* runner = LinkedList<C>::head;\
-                                        runner != NULL;\
+        #define $ll_for_each(runner) for ( node<C>* runner = LinkedList<C>::head;\
+                                        runner != nullptr;\
                                         runner = runner->next)
 
         void traverser( node<C>*,
@@ -84,7 +261,7 @@ template <class C>
 node<C>* LinkedList<C>::InitNode(C value) {
     LinkedList<C>::size++;
     node<C> *_node = (node<C>*) malloc(sizeof(node<C>));
-    _node->next = NULL;
+    _node->next = nullptr;
     _node->value = value;
 
     return _node;
@@ -93,16 +270,16 @@ node<C>* LinkedList<C>::InitNode(C value) {
 
 template <class C>
 C LinkedList<C>::FreeNode(node<C>* previousNode) {
-    node<C>* unused = NULL;
+    node<C>* unused = nullptr;
     // delete head of this list
-    if (previousNode == NULL) {
+    if (previousNode == nullptr) {
         unused = LinkedList<C>::head;
         LinkedList<C>::head = LinkedList<C>::head->next;
     // delete tail of this list
     } else if (previousNode->next == LinkedList<C>::tail) {
         unused = LinkedList<C>::tail;
         LinkedList<C>::tail = previousNode;
-        LinkedList<C>::tail->next = NULL;
+        LinkedList<C>::tail->next = nullptr;
     // normal deleting
     } else {
         unused = previousNode->next;
@@ -119,7 +296,13 @@ C LinkedList<C>::FreeNode(node<C>* previousNode) {
 template <class C>
 LinkedList<C>::~LinkedList() {
     auto bw = [](int _, node<C>* _node) { free(_node); };
-    LinkedList<C>::traverser(LinkedList<C>::head, NULL, bw);
+    LinkedList<C>::traverser(LinkedList<C>::head, nullptr, bw);
+};
+
+
+template <class C>
+size_t LinkedList<C>::getSize() {
+    return LinkedList<C>::size;
 };
 
 
@@ -174,7 +357,7 @@ template <class C>
 node<C>* LinkedList<C>::addAt(int index, C value) {
     int _current_index = 0;
     // for (node<C>* runner = LinkedList<C>::head; runner != NULL; runner = runner->next)
-    $for_each(runner) {
+    $ll_for_each(runner) {
         if (index == _current_index + 1) {
             return LinkedList<C>::insertNode(runner, value);
         }
@@ -185,28 +368,37 @@ node<C>* LinkedList<C>::addAt(int index, C value) {
 
 
 template <class C>
+node<C>* LinkedList<C>::search(C value) {
+    $ll_for_each(runner) {
+        if (runner->value = value) return runner;
+    }
+    return nullptr;
+}
+
+
+template <class C>
 node<C>* LinkedList<C>::get(int index) {
     int _current_index = 0;
-    $for_each(runner) {
+    $ll_for_each(runner) {
         if (index == _current_index) {
             return runner;
         }
         _current_index++;
     }
-    return NULL;
+    return nullptr;
 }
 
 
 template <class C>
 C LinkedList<C>::delHead() {
-    return LinkedList<C>::FreeNode(NULL);
+    return LinkedList<C>::FreeNode(nullptr);
 }
 
 
 template <class C>
 C LinkedList<C>::delTail() {
     C result;
-    $for_each(runner) {
+    $ll_for_each(runner) {
         if (runner->next == LinkedList<C>::tail) {
             result = LinkedList<C>::FreeNode(runner);
             break;
