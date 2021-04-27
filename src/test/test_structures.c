@@ -1,14 +1,6 @@
 #include "../models/structures.hpp"
 #include <stdio.h>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 151bec7 (feat: add pointer array)
-=======
-
->>>>>>> 2b4f569 (:coffin: Remove delete)
 int main() {
     int a[3] = {0, 1, 2};
     LinkedList<int> x = LinkedList<int>(a, a+3);
