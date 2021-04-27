@@ -1,6 +1,7 @@
 #include "../models/structures.hpp"
 #include <stdio.h>
 
+
 int main() {
     int a[3] = {0, 1, 2};
     LinkedList<int> x = LinkedList<int>(a, a+3);
@@ -30,7 +31,6 @@ int main() {
     printf("-> this is the length of list: %d\n", x.getSize());
 
     x.traverser(x.head, fw, NULL);
-    delete x;
 
 
     Array<int> b = Array<int>();
