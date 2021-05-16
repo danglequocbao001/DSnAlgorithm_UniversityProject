@@ -31,5 +31,10 @@
 #define STDIN stdin
 #define STDOUT stdout
 
+struct string_2d {
+    char** array;
+    int size;
+};
+
 #endif /*VARS*/
 
