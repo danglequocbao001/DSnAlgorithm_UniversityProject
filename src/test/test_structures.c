@@ -1,4 +1,5 @@
-#include "../models/structures.hpp"
+#include "../models/structures/normalarray.h"
+#include "../models/structures/linkedlist.h"
 #include <stdio.h>
 
 int main() {
@@ -40,12 +41,12 @@ int main() {
     b.addHead(1);
     b.addHead(2);
     b.addHead(1);
-    // b.addTail(5);
-    // b.addTail(6);
-    // b.addTail(7);
-    // printf("====================== mark here\n");
-    // b.addAt(2, 3);
-    // printf("====================== mark here\n");
+    b.addTail(5);
+    b.addTail(6);
+    b.addTail(7);
+    printf("====================== mark here\n");
+    b.addAt(2, 3);
+    printf("====================== mark here\n");
 
     printf("-> search some things with value is 2: %d\n", *(b.search(2)));
     printf("-> get value using index id=1 value=%d\n", *(b.get(1)));
@@ -55,6 +56,6 @@ int main() {
     for(int* runner = b.head; runner < b.head + b.getSize(); runner++) {
         printf("index: %d; element: %d\n", runner - b.head, *runner);
     }
-    printf("[log] this is the end\n");
+    // printf("[log] this is the end\n");
 }
 
