@@ -1,23 +1,23 @@
 #include "__init__.h"
 
+/*
+ * Model<DanhMucSachSchema, LinkedList>* DanhMucSach = new Model<>();
+ */
+
 template <typename T, class C>
 class Model {
     private:
         struct string_2d split_string(char*, char);
 
     public:
-        /*
-         * load from db
-         * write to db
-         * str2attr
-         * attr2str
-         */
-        C str2attr(char* string)
+        C<T>* data;
+        T str2attr(char* string)
         Model();
         ~Model();
 };
 
 
+/*____PRIVATE BLOCK____*/
 template <typename T, class C>
 struct string_2d Model<T, C>::split_string(char* string, char* chr) {
 
@@ -49,4 +49,17 @@ struct string_2d Model<T, C>::split_string(char* string, char* chr) {
         .array = str_array,
         .size = counted_chrs
     };
+}
+
+
+/*____PUBLIC BLOCK____*/
+template <typename T, class C>
+Model::Model() {
+    Model::data = new C<T>();
+}
+
+
+template <typename T, class C>
+Model::~Model() {
+    Model::data = new C<T>();
 }

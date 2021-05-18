@@ -1,3 +1,6 @@
+#ifndef _DAUSACH_H
+#define _DAUSACH_H
+
 #include "./danhmucsach.h"
 
 
@@ -22,3 +25,5 @@ enum DauSachAttirbutes {
     publishingYear,
     DanhMucSach,
 };
+
+#endif /*_DAUSACH_H*/

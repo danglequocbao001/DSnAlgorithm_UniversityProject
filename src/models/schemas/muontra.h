@@ -1,3 +1,6 @@
+#ifndef _MUONTRA_H
+#define _MUONTRA_H
+
 
 struct MuonTraSchema {
     // struct MuonTraSchema *id;
@@ -17,3 +20,5 @@ enum MuonTraAttirbutes {
     status
 };
 
+
+#endif /*_MUONTRA_H*/

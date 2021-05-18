@@ -1,3 +1,6 @@
+#ifndef _DOCGIA_H
+#define _DOCGIA_H
+
 #include "./docgia.h"
 
 struct TheDocGiaSchema {
@@ -19,3 +22,5 @@ enum TheDocGiaAttirbutes {
     status,
 };
 
+
+#endif /*_DOCGIA_H*/
