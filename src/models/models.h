@@ -1,40 +1,56 @@
 #include "__init__.h"
 
 /*
- * Model<DanhMucSachSchema, LinkedList>* DanhMucSach = new Model<>();
+ * TODO:
+ *      Model<DanhMucSachSchema, LinkedList>* DanhMucSach = new Model<>();
+ *       - actions:
+ *           + load from db
+ *           + write to db
  */
 
-template <typename T, class C>
+template <class T, template <class T> class C>
 class Model {
-    private:
-        struct string_2d split_string(char*, char);
+    // private:
+    public:
+        int count_substring(char*, char*);
+        struct string_2d split_string(char*, char*);
 
     public:
         C<T>* data;
-        T str2attr(char* string)
+        T str2attr(char* string);
         Model();
         ~Model();
 };
 
 
 /*____PRIVATE BLOCK____*/
-template <typename T, class C>
+template <class T, template <class T> class C>
+int Model<T, C>::count_substring(char* string, char* chr) {
+    int len_string = strlen(string),
+        len_chr = strlen(chr),
+        counted_chrs = 0;
+
+    for (int index = 0; index < len_string; index++)
+        for(int _index = index; _index < index + len_chr; _index++)
+            if (string[_index] == chr[_index - index])
+                counted_chrs++;
+
+    return counted_chrs;
+}
+
+
+template <class T, template <class T> class C>
 struct string_2d Model<T, C>::split_string(char* string, char* chr) {
 
-    int len_string = strlen(string);
-    int len_chr = strlen(chr);
-    int counted_chrs = 0;
+    int len_string = strlen(string),
+        len_chr = strlen(chr),
+        counted_chrs = 0;
 
     char _string[len_string];
     strcpy(_string, string);
 
-    /*__COUNT AMOUNT OF CHR IN STRING__*/
-    for (int index = 0; index < len_string; index ++)
-        for(int _index = index; _index < index + len_chr; _index ++ )
-            if (string[_index] == chr[_index - index])
-                counted_chrs++;
-
-    char **str_array = (char**) malloc(++counted_chrs);
+    counted_chrs = Model<T, C>::count_substring(string, char);
+    char **str_array = (char**)malloc(++counted_chrs);
 
     /*__SPLIT STRING WITH CHR__*/
     char * token = strtok(_string, chr);
@@ -53,13 +69,13 @@ struct string_2d Model<T, C>::split_string(char* string, char* chr) {
 
 
 /*____PUBLIC BLOCK____*/
-template <typename T, class C>
-Model::Model() {
+template <class T, template <class T> class C>
+Model<T, C>::Model() {
     Model::data = new C<T>();
 }
 
 
-template <typename T, class C>
-Model::~Model() {
+template <class T, template <class T> class C>
+Model<T, C>::~Model() {
     Model::data = new C<T>();
 }
