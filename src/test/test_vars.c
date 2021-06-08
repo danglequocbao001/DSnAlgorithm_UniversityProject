@@ -1,7 +1,7 @@
 #include "test_frame.h"
 
 void test_seperater() {
-    #ifdef _WIN32 || _WIN64
+    #ifdef _WIN32
         assert(SEPERATER == "\\");
     #elif __linux__
         assert(SEPERATER == "/");
