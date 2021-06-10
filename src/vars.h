@@ -1,15 +1,17 @@
 #ifndef VARS
 #define VARS
 
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <unistd.h>
+#include <cstdint>
 #include <dirent.h>
+#include <math.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <unistd.h>
 
-#ifdef _WIN32 || _WIN64
+#ifdef _WIN32
     // set seperater
     #define SEPERATER "\\"
     // get current work direction

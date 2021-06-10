@@ -10,9 +10,9 @@ void test_danhmucsach() {
         .status = BORROWED,
         .position = 0,
     };
-    printf("%s\n", codeToString(a.code));
-    printf("%s\n", statusToString(a.status));
-    printf("%s\n", positionToString(a.position));
+    dm_stringToCode(dm_codeToString(a.code));
+    dm_stringToStatus(dm_statusToString(a.status));
+    dm_stringToPosition(dm_positionToString(a.position));
 }
 
 void test_dausach() {
@@ -25,12 +25,12 @@ void test_dausach() {
         .type = (char*)"sjgkw4g",
         .DanhMucSach = NULL,
     };
-    ISBNToString(a.ISBN);
-    nameToString(a.name);
-    numberOfPagesToString(a.numberOfPages);
-    authorToString(a.author);
-    publishingYearToString(a.publishingYear);
-    typeToString(a.type);
+    ds_stringToISBN(ds_ISBNToString(a.ISBN));
+    ds_stringToName(ds_nameToString(a.name));
+    ds_stringToNumberOfPages(ds_numberOfPagesToString(a.numberOfPages));
+    ds_stringToAuthor(ds_authorToString(a.author));
+    ds_stringToPublishingYear(ds_publishingYearToString(a.publishingYear));
+    ds_stringToType(ds_typeToString(a.type));
 }
 
 
@@ -42,11 +42,11 @@ void test_docgia() {
         .sex = MALE,
         .status = ACTIVE,
     };
-    codeToString(a.code);
-    firstNameToString(a.firstName);
-    lastNameToString(a.lastName);
-    sexToString(a.sex);
-    dg_statusToString(a.status);
+    dg_stringToCode(dg_codeToString(a.code));
+    dg_stringToFirstName(dg_firstNameToString(a.firstName));
+    dg_stringToLastName(dg_lastNameToString(a.lastName));
+    dg_stringToSex(dg_sexToString(a.sex));
+    dg_stringToStatus(dg_statusToString(a.status));
 }
 
 void test_muontra() {
@@ -56,10 +56,10 @@ void test_muontra() {
         .returnedDate = 4213412,
         .status = LOST,
     };
-    mt_codeToString(a.code);
-    borrowedDateToString(a.borrowedDate);
-    returnedDateToString(a.returnedDate);
-    mt_statusToString(a.status);
+    mt_stringToCode(mt_codeToString(a.code));
+    mt_stringToBorrowedDate(mt_borrowedDateToString(a.borrowedDate));
+    mt_stringToReturnedDate(mt_returnedDateToString(a.returnedDate));
+    mt_stringToStatus(mt_statusToString(a.status));
 }
 
 int main() {

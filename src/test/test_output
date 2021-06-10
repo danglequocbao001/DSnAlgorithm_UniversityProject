@@ -1,6 +1,3 @@
-123
-1
-0
 g++ string -o abc && ./abc && rm abc
 g++ string -o abc && ./abc && rm abc
 g++ string -o abc && ./abc && rm abc

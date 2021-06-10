@@ -2,13 +2,13 @@
 
 /*
  * TODO:
- *      Model<DanhMucSachSchema, LinkedList>* DanhMucSach = new Model<>();
+ *      Model<LinkedList, DanhMucSachSchema>* DanhMucSach = new Model<>();
  *       - actions:
  *           + load from db
  *           + write to db
  */
 
-template <class T, template <class T> class C>
+template <template <typename T> class C, typename T>
 class Model {
     // private:
     public:
@@ -16,7 +16,7 @@ class Model {
         struct string_2d split_string(char*, char*);
 
     public:
-        C<T>* data;
+        C<T> *data;
         T str2attr(char* string);
         Model();
         ~Model();
@@ -24,8 +24,8 @@ class Model {
 
 
 /*____PRIVATE BLOCK____*/
-template <class T, template <class T> class C>
-int Model<T, C>::count_substring(char* string, char* chr) {
+template <template <typename T> class C, typename T>
+int Model<C, T>::count_substring(char* string, char* chr) {
     int len_string = strlen(string),
         len_chr = strlen(chr),
         counted_chrs = 0;
@@ -39,8 +39,8 @@ int Model<T, C>::count_substring(char* string, char* chr) {
 }
 
 
-template <class T, template <class T> class C>
-struct string_2d Model<T, C>::split_string(char* string, char* chr) {
+template <template <typename T> class C, typename T>
+struct string_2d Model<C, T>::split_string(char* string, char* chr) {
 
     int len_string = strlen(string),
         len_chr = strlen(chr),
@@ -49,7 +49,7 @@ struct string_2d Model<T, C>::split_string(char* string, char* chr) {
     char _string[len_string];
     strcpy(_string, string);
 
-    counted_chrs = Model<T, C>::count_substring(string, char);
+    counted_chrs = Model<C, T>::count_substring(string, chr);
     char **str_array = (char**)malloc(++counted_chrs);
 
     /*__SPLIT STRING WITH CHR__*/
@@ -69,13 +69,13 @@ struct string_2d Model<T, C>::split_string(char* string, char* chr) {
 
 
 /*____PUBLIC BLOCK____*/
-template <class T, template <class T> class C>
-Model<T, C>::Model() {
-    Model::data = new C<T>();
+template <template <typename T> class C, typename T>
+Model<C, T>::Model() {
+    int a[3] = {0, 1, 2};
+    Model::data = new C<T>(a, a+3);
 }
 
 
-template <class T, template <class T> class C>
-Model<T, C>::~Model() {
-    Model::data = new C<T>();
+template <template <typename T> class C, typename T>
+Model<C, T>::~Model() {
 }
