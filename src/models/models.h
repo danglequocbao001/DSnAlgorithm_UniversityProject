@@ -6,14 +6,20 @@ class Model {
     public: // private:
         int count_substring(char*, char*);
         struct string_2d split_string(char*, char*);
+        char* merge_string(struct string_2d);
+
+        T arrayToType(struct string_2d);
+        struct string_2d typeToArray(T);
 
     public:
         Model();
         ~Model();
 
+        char* separator = "|";
         char* database_connection;
+
         C<T> *data;
-        T str2attr(char* string);
+        void append(T);
 
         void refresh();
         void commit();
@@ -65,14 +71,17 @@ struct string_2d Model<C, T>::split_string(char* string, char* chr) {
 }
 
 
-/*____PUBLIC BLOCK____*/
 template <template <typename T> class C, typename T>
-Model<C, T>::Model() {
-    int a[3] = {0, 1, 2};
-    Model::data = new C<T>(a, a+3);
-}
-
-
-template <template <typename T> class C, typename T>
-Model<C, T>::~Model() {
+void Model<C, T>::refresh() {
+    FILE *file = fopen(Model<C, T>::database_connection, "r");
+    char line[1000]; int index = 0;
+    while((line[index++] = (char)getc(file)) != EOF) {
+        if (line[index - 1] == '\n') {
+            line[index - 1] = 0;
+            Model<C, T>::append(Model<C, T>::stringToType(line));
+            memset(line, 0, index - 1);
+            index = 0;
+        }
+    }
+    fclose(file);
 }

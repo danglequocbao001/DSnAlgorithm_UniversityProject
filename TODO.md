@@ -24,7 +24,16 @@
     - [x] base casting
 
 - **Model for each one**
-    - [x] 2 casting functions
+    - [ ] merge_string
+    
+    refresh:
+    - [x] doc file
+    - [x] for each line covert to type
+    
+    commit:
+    - [x] for each item
+    - [ ] write line to file
+
 
 ---
 - **Notes**:
