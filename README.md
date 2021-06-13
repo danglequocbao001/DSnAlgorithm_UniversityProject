@@ -1,8 +1,8 @@
 # Project _CAUTRUCDULIEU_INT1306_4_
 
 <p align="center">
-{ <a href="mailto:n19dccn027@student.ptithcm.edu.vn">Nguyễn Ngọc Thanh Danh</a>,
-  <a href="mailto:n19dccn014@student.ptithcm.edu.vn">Đặng Lê Quốc Bảo</a> }<br> <b>N19DCCN027</b> <b>N19DCCN014</b>
+{ <a href="https://github.com/shanenoi">Nguyễn Ngọc Thanh Danh</a>,
+  <a href="https://github.com/danglequocbao001">Đặng Lê Quốc Bảo</a> }<br> <b>N19DCCN027</b> <b>N19DCCN014</b>
 </p>
 ___
 
