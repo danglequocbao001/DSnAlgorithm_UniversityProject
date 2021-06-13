@@ -3,5 +3,5 @@
 
 
 int main() {
-    Model<LinkedList, int> *c = new Model<LinkedList, int>();
+    // Model<LinkedList, int> *c = new Model<LinkedList, int>();
 }
