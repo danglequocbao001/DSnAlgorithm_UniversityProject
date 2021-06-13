@@ -6,46 +6,26 @@
 #include "../models/schemas/muontra.h"
 
 void test_danhmucsach() {
-    DanhMucSachSchema a = {
-        .code = (char*)"123",
-        .status = BORROWED,
-        .position = 0,
-    };
-    dm_stringToCode(dm_codeToString(a.code));
-    dm_stringToStatus(dm_statusToString(a.status));
-    dm_stringToPosition(dm_positionToString(a.position));
-
     struct string_2d _a = {
         .array = (char**) malloc(POINTER_SIZE*3),
         .size = 3
     };
-    _a.array[DM_code] = (char*)"123";
-    _a.array[DM_status] = (char*)"24123";
-    _a.array[DM_position] = 0;
+    _a.array[DM_code] = (char*)"125345234523423";
+    _a.array[DM_status] = (char*)"125345234523423";
+    _a.array[DM_position] = (char*)"125345234523423";
 
     struct DanhMucSachSchema dms = DanhMucSachInit(_a);
+    free(_a.array);
     _a = DanhMucSachToArray(dms);
+
+    for(int index = 0 ; index < _a.size; index ++) {
+        printf("%d-%s\n", index, _a.array[index]);
+    }
 }
 
 void test_dausach() {
-    DauSachSchema a = {
-        .ISBN = (char*)"kasghwer",
-        .name = (char*)"kergwlerg",
-        .numberOfPages = 123,
-        .author = (char*)"wkjgwrt",
-        .publishingYear = 1213423,
-        .type = (char*)"sjgkw4g",
-        .DanhMucSach = NULL,
-    };
-    ds_stringToISBN(ds_ISBNToString(a.ISBN));
-    ds_stringToName(ds_nameToString(a.name));
-    ds_stringToNumberOfPages(ds_numberOfPagesToString(a.numberOfPages));
-    ds_stringToAuthor(ds_authorToString(a.author));
-    ds_stringToPublishingYear(ds_publishingYearToString(a.publishingYear));
-    ds_stringToType(ds_typeToString(a.type));
-
     struct string_2d _a = {
-        .array = (char**) malloc(POINTER_SIZE*6),
+        .array = (char**) malloc(sizeof(char**)*6),
         .size = 6
     };
     _a.array[DS_ISBN] = (char*)"24123";
@@ -56,26 +36,18 @@ void test_dausach() {
     _a.array[DS_type] = (char*)"24123";
 
     struct DauSachSchema dms = DauSachInit(_a);
+    free(_a.array);
     _a = DauSachToArray(dms);
+
+    for(int index = 0 ; index < _a.size; index ++) {
+        printf("%d-%s\n", index, _a.array[index]);
+    }
 }
 
 
 void test_docgia() {
-    TheDocGiaSchema a = {
-        .code = 1,
-        .firstName = (char*)"",
-        .lastName = (char*)"",
-        .sex = MALE,
-        .status = ACTIVE,
-    };
-    dg_stringToCode(dg_codeToString(a.code));
-    dg_stringToFirstName(dg_firstNameToString(a.firstName));
-    dg_stringToLastName(dg_lastNameToString(a.lastName));
-    dg_stringToSex(dg_sexToString(a.sex));
-    dg_stringToStatus(dg_statusToString(a.status));
-
     struct string_2d _a = {
-        .array = (char**) malloc(POINTER_SIZE*5),
+        .array = (char**) malloc(sizeof(char**)*5),
         .size = 5
     };
     _a.array[DG_code] = (char*)"123";
@@ -85,37 +57,36 @@ void test_docgia() {
     _a.array[DG_status] = (char*)"24123";
 
     struct TheDocGiaSchema dms = TheDocGiaInit(_a);
+    free(_a.array);
     _a = TheDocGiaToArray(dms);
+
+    for(int index = 0 ; index < _a.size; index ++) {
+        printf("%d-%s\n", index, _a.array[index]);
+    }
 }
 
 void test_muontra() {
-    MuonTraSchema a = {
-        .code = (char*)"shjgwrt",
-        .borrowedDate = 123123,
-        .returnedDate = 4213412,
-        .status = LOST,
-    };
-    mt_stringToCode(mt_codeToString(a.code));
-    mt_stringToBorrowedDate(mt_borrowedDateToString(a.borrowedDate));
-    mt_stringToReturnedDate(mt_returnedDateToString(a.returnedDate));
-    mt_stringToStatus(mt_statusToString(a.status));
-
     struct string_2d _a = {
-        .array = (char**) malloc(POINTER_SIZE*4),
+        .array = (char**) malloc(sizeof(char**)*4),
         .size = 4
     };
     _a.array[MT_code] = (char*)"shjgwrt";
     _a.array[MT_borrowedDate] = (char*)"123123";
     _a.array[MT_returnedDate] = (char*)"4213412";
-    _a.array[MT_status] = 0;
+    _a.array[MT_status] = (char*)"4213412";
 
     struct MuonTraSchema dms = MuonTraInit(_a);
+    free(_a.array);
     _a = MuonTraToArray(dms);
+
+    for(int index = 0 ; index < _a.size; index ++) {
+        printf("%d-%s\n", index, _a.array[index]);
+    }
 }
 
 int main() {
-    // test_danhmucsach();
-    // test_dausach();
-    // test_docgia();
-    // test_muontra();
+    test_danhmucsach();
+    test_dausach();
+    test_docgia();
+    test_muontra();
 }

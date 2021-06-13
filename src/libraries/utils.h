@@ -57,7 +57,7 @@ char* numer_to_string(int number) {
         size = abs(number) + 1;
         size = (int)log10(size)+1;
     }
-    char* buffer = (char*)malloc(size);
+    char* buffer = (char*)malloc(sizeof(char*) * size);
     snprintf(buffer, sizeof(buffer), "%d", number);
     return buffer;
 }

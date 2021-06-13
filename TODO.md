@@ -1,3 +1,4 @@
+
 + [x] add define to each file in schemas folder
 + [ ] define tree 
 + [x] models
@@ -18,12 +19,12 @@
 	+ [ ] ~~**Each model**: Define convert to its type _Typically: save point using index_~~
 
 - **Base model**
-    - [ ] read string (look like for each)
-    - [ ] write string (look like for each)
-    - [ ] base casting
+    - [x] ~~_{tmp}_~~ read string (look like for each)
+    - [x] ~~_{tmp}_~~ write string (look like for each)
+    - [x] base casting
 
 - **Model for each one**
-    - [ ] 2 casting functions
+    - [x] 2 casting functions
 
 ---
 - **Notes**:
@@ -38,5 +39,5 @@
 
 **Prototype**
  ```c++
-Model<LinkedList, DanhMucSachSchema> model = new Model<LinkedList, DanhMucSachSchema>(...);
+Model<LinkedList, DanhMucSachSchema> model = new Model<LinkedList, DanhMucSachSchema>();
  ```

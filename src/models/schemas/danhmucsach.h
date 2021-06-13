@@ -36,7 +36,10 @@ struct string_2d DanhMucSachToArray(struct DanhMucSachSchema value) {
     str_array[DM_code] = dm_codeToString(value.code);
     str_array[DM_status] = dm_statusToString(value.status);
     str_array[DM_position] = dm_positionToString(value.position);
-    return (struct string_2d){ .array = str_array, .size = 3 };
+    return (struct string_2d){
+        .array = str_array,
+        .size = 3
+    };
 }
 
 char* dm_codeToString(char* code) { return code; };

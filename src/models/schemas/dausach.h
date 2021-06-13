@@ -3,6 +3,7 @@
 
 #include "./danhmucsach.h"
 #include "../../libraries/utils.h"
+#include "../../vars.h"
 
 
 struct DauSachSchema { char* ISBN;
@@ -45,55 +46,36 @@ struct DauSachSchema DauSachInit(struct string_2d values) {
 }
 
 struct string_2d DauSachToArray(struct DauSachSchema value) {
-    char **str_array = (char**)malloc(6*POINTER_SIZE);
+    char **str_array = (char**)malloc(6*sizeof(char**));
+
     str_array[DS_ISBN] = ds_ISBNToString(value.ISBN);
     str_array[DS_name] = ds_nameToString(value.name);
     str_array[DS_numberOfPages] = ds_numberOfPagesToString(value.numberOfPages);
     str_array[DS_author] = ds_authorToString(value.author);
     str_array[DS_publishingYear] = ds_publishingYearToString(value.publishingYear);
     str_array[DS_type] = ds_typeToString(value.type);
-    return (struct string_2d){ .array = str_array, .size = 6 };
+
+    return (struct string_2d){
+        .array = str_array,
+        .size = 6
+    };
 }
 
 
-char* ds_ISBNToString(char* ISBN) {
-    return ISBN;
-};
-char* ds_nameToString(char* name) {
-    return name;
-};
-char* ds_numberOfPagesToString(int numberOfPages) {
-    return numer_to_string(numberOfPages);
-};
-char* ds_authorToString(char* author) {
-    return author;
-};
-char* ds_publishingYearToString(int publishingYear) {
-    return numer_to_string(publishingYear);
-};
-char* ds_typeToString(char* type) {
-    return type;
-};
+char* ds_ISBNToString(char* ISBN) { return ISBN; };
+char* ds_nameToString(char* name) { return name; };
+char* ds_authorToString(char* author) { return author; };
+char* ds_typeToString(char* type) { return type; };
+char* ds_numberOfPagesToString(int numberOfPages) { return numer_to_string(numberOfPages); };
+char* ds_publishingYearToString(int publishingYear) { return numer_to_string(publishingYear); };
 
 
-char* ds_stringToISBN(char* ISBN) {
-    return ISBN;
-};
-char* ds_stringToName(char* name) {
-    return name;
-};
-int ds_stringToNumberOfPages(char* numberOfPages) {
-    return stoi(numberOfPages);
-};
-char* ds_stringToAuthor(char* author) {
-    return author;
-};
-int ds_stringToPublishingYear(char* publishingYear) {
-    return stoi(publishingYear);
-};
-char* ds_stringToType(char* type) {
-    return type;
-};
+char* ds_stringToISBN(char* ISBN) { return ISBN; };
+char* ds_stringToName(char* name) { return name; };
+char* ds_stringToAuthor(char* author) { return author; };
+char* ds_stringToType(char* type) { return type; };
+int ds_stringToNumberOfPages(char* numberOfPages) { return stoi(numberOfPages); };
+int ds_stringToPublishingYear(char* publishingYear) { return stoi(publishingYear); };
 
 // char* ds_DanhMucSachToString(char* DanhMucSach) { };
 
