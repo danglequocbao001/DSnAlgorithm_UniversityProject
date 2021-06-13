@@ -4,7 +4,8 @@
 
 int main() {
     int a[3] = {0, 1, 2};
-    LinkedList<int> x = LinkedList<int>(a, a+3);
+    LinkedList<int> x = LinkedList<int>(1);
+    x.head->value = 1;
     x.addHead(-1);
     x.addTail(4);
     x.addAt(3, 3);

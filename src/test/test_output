@@ -11,20 +11,14 @@ g++ string -o abc && ./abc && rm abc
 g++ string -o abc && ./abc && rm abc
 find with value 2
 
-find with id 2; value: 1
+find with id 2; value: 4
 fw: index:0 2
-fw: index:1 0
-fw: index:2 1
+fw: index:1 1
+fw: index:2 4
 fw: index:3 3
 fw: index:4 3
-fw: index:5 2
-fw: index:6 4
--> this is the length of list: 7
--> this is the length of list: 4
-fw: index:0 0
-fw: index:1 1
-fw: index:2 3
-fw: index:3 2
+-> this is the length of list: 6
+-> this is the length of list: 3
 -> this is the first length of list: 0
 ====================== mark here
 ====================== mark here

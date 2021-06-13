@@ -46,3 +46,7 @@ for file in ${stucked[@]}; do
     printf "${YELLOW}\t➤  $file${NC}\n"
 done
 echo
+
+if [ ${#stucked[@]} -ne "0" ]; then
+	exit 1
+fi

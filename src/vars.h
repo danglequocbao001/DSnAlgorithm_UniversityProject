@@ -32,6 +32,7 @@
 
 #define STDIN stdin
 #define STDOUT stdout
+#define POINTER_SIZE 4
 
 struct string_2d {
     char** array;

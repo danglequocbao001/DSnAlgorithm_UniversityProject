@@ -1,25 +1,22 @@
 #include "__init__.h"
 
-/*
- * TODO:
- *      Model<LinkedList, DanhMucSachSchema>* DanhMucSach = new Model<>();
- *       - actions:
- *           + load from db
- *           + write to db
- */
-
 template <template <typename T> class C, typename T>
 class Model {
-    // private:
-    public:
+
+    public: // private:
         int count_substring(char*, char*);
         struct string_2d split_string(char*, char*);
 
     public:
-        C<T> *data;
-        T str2attr(char* string);
         Model();
         ~Model();
+
+        char* database_connection;
+        C<T> *data;
+        T str2attr(char* string);
+
+        void refresh();
+        void commit();
 };
 
 

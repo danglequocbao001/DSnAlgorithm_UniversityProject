@@ -24,6 +24,7 @@ class LinkedList {
 
 
     public:
+        LinkedList(C);
         LinkedList(C*, C*);
         ~LinkedList();
         size_t getSize();
@@ -63,6 +64,13 @@ node<C>* LinkedList<C>::insertNode(node<C> *previousNode, C value) {
 
 
 /* === PUBLIC METHOD ATTRIBUTES === */
+template <class C>
+LinkedList<C>::LinkedList(C value) {
+    LinkedList<C>::size = 1;
+    LinkedList<C>::head = LinkedList<C>::InitNode(value);
+    LinkedList<C>::tail = LinkedList<C>::head;
+};
+
 template <class C>
 LinkedList<C>::LinkedList(C *start_array, C *end_array) {
     LinkedList<C>::size = 0;
