@@ -7,5 +7,7 @@
 
 #include "../vars.h"
 
+#define SEPARATOR "|"
+
 #endif /*_MODEL_INIT_H*/
 
