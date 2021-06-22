@@ -1,17 +1,17 @@
+#include "__init__.h"
+
 #ifndef _DOCGIA_H
 #define _DOCGIA_H
 
-#include "./docgia.h"
-#include "string.h"
-
 enum SEX {MALE, FEMALE};
 enum TheDocGiaStatus {DEACTIVE, ACTIVE};
-struct TheDocGiaSchema { int code;
-                         char* firstName;
-                         char* lastName;
-                         int sex;
-                         int status;
-                         struct DanhMucSachSchema *DanhMucSachSchema; };
+struct TheDocGiaSchema {
+    int code;
+    char* firstName;
+    char* lastName;
+    int sex;
+    int status;
+    struct MuonTraSchema *MuonTraSchema; };
 
 
 enum TheDocGiaAttirbutes { DG_code, DG_firstName, DG_lastName, DG_sex, DG_status, };

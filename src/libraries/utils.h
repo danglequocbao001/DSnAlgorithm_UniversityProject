@@ -84,7 +84,6 @@ void readline_file() {
     while((line[index++] = (char)getc(file)) != EOF) {
         if (line[index - 1] == '\n') {
             line[index - 1] = 0;
-            printf("%s ----\n", line);
             memset(line, 0, index - 1);
             index = 0;
         }

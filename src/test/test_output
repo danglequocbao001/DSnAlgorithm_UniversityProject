@@ -1,3 +1,21 @@
+0-125345234523423
+1-9089569
+2-9089569
+0-24123
+1-24123
+2-24123
+3-24123
+4-24123
+5-24123
+0-123
+1-123
+2-123
+3-0
+4-24123
+0-shjgwrt
+1-4213412
+2-123123
+3-4213412
 g++ string -o abc && ./abc && rm abc
 g++ string -o abc && ./abc && rm abc
 g++ string -o abc && ./abc && rm abc
@@ -9,28 +27,5 @@ g++ string -o abc && ./abc && rm abc
 g++ string -o abc && ./abc && rm abc
 g++ string -o abc && ./abc && rm abc
 g++ string -o abc && ./abc && rm abc
-find with value 2
-
-find with id 2; value: 4
-fw: index:0 2
-fw: index:1 1
-fw: index:2 4
-fw: index:3 3
-fw: index:4 3
--> this is the length of list: 6
--> this is the length of list: 3
--> this is the first length of list: 0
-====================== mark here
-====================== mark here
--> search some things with value is 2: 2
--> get value using index id=1 value=2
-index: 0; element: 1
-index: 1; element: 2
-index: 2; element: 3
-index: 3; element: 1
-index: 4; element: 2
-index: 5; element: 3
-index: 6; element: 3
-index: 7; element: 5
-index: 8; element: 6
-index: 9; element: 7
+g++ string -o abc && ./abc && rm abc
+g++ string -o abc && ./abc && rm abc

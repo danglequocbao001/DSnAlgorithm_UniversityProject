@@ -21,6 +21,7 @@ void test_danhmucsach() {
     for(int index = 0 ; index < _a.size; index ++) {
         printf("%d-%s\n", index, _a.array[index]);
     }
+    free(_a.array);
 }
 
 void test_dausach() {
@@ -42,6 +43,7 @@ void test_dausach() {
     for(int index = 0 ; index < _a.size; index ++) {
         printf("%d-%s\n", index, _a.array[index]);
     }
+    free(_a.array);
 }
 
 
@@ -63,6 +65,7 @@ void test_docgia() {
     for(int index = 0 ; index < _a.size; index ++) {
         printf("%d-%s\n", index, _a.array[index]);
     }
+    free(_a.array);
 }
 
 void test_muontra() {
@@ -82,6 +85,7 @@ void test_muontra() {
     for(int index = 0 ; index < _a.size; index ++) {
         printf("%d-%s\n", index, _a.array[index]);
     }
+    free(_a.array);
 }
 
 int main() {

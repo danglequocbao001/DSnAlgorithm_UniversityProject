@@ -1,15 +1,27 @@
+#include "./__init__.h"
+
 #ifndef _DANHMUCSACH_H
 #define _DANHMUCSACH_H
 
-#include "../../vars.h"
-#include "../../libraries/utils.h"
+#define DanhMucSachAttirbutesNumber 3
 
-enum DanhMucSachStatus { BORROWABLE, BORROWED, LIQUIDATED };
-struct DanhMucSachSchema { char* code;
-                           int status;
-                           int position; };
+enum DanhMucSachStatus {
+    BORROWABLE,
+    BORROWED,
+    LIQUIDATED
+};
 
-enum DanhMucSachAttirbutes { DM_code, DM_status, DM_position, };
+struct DanhMucSachSchema {
+    char *code;
+    int status;
+    int position;
+};
+
+enum DanhMucSachAttirbutes { 
+    DM_code,
+    DM_status,
+    DM_position,
+};
 
 struct DanhMucSachSchema DanhMucSachInit(struct string_2d);
 struct string_2d DanhMucSachToArray(struct DanhMucSachSchema);
@@ -31,16 +43,20 @@ struct DanhMucSachSchema DanhMucSachInit(struct string_2d values) {
     };
 }
 
+
 struct string_2d DanhMucSachToArray(struct DanhMucSachSchema value) {
-    char **str_array = (char**)malloc(3*POINTER_SIZE);
+    char **str_array = (char**)malloc(DanhMucSachAttirbutesNumber*POINTER_SIZE);
+
     str_array[DM_code] = dm_codeToString(value.code);
     str_array[DM_status] = dm_statusToString(value.status);
     str_array[DM_position] = dm_positionToString(value.position);
+
     return (struct string_2d){
         .array = str_array,
         .size = 3
     };
 }
+
 
 char* dm_codeToString(char* code) { return code; };
 char* dm_statusToString(int status) { return numer_to_string(status); };

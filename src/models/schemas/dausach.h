@@ -1,18 +1,19 @@
+#include "../__init__.h"
+
 #ifndef _DAUSACH_H
 #define _DAUSACH_H
 
-#include "./danhmucsach.h"
-#include "../../libraries/utils.h"
-#include "../../vars.h"
 
-
-struct DauSachSchema { char* ISBN;
-                       char* name;
-                       int numberOfPages;
-                       char* author;
-                       int publishingYear;
-                       char* type;
-                       struct DanhMucSachSchema *DanhMucSach; };
+struct DauSachSchema {
+    char *ISBN;
+    char *name;
+    int numberOfPages;
+    char *author;
+    int publishingYear;
+    char *type;
+    char *dmsIdentify; // for saving to db and load it into db
+    struct DanhMucSachSchema *DanhMucSach;
+};
 
 enum DauSachAttirbutes { DS_ISBN, DS_name, DS_numberOfPages, DS_author, DS_publishingYear, DS_type, DS_DanhMucSach, };
 

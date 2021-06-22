@@ -143,7 +143,7 @@ C* Array<C>::search(C value) {
 
 template <class C>
 C* Array<C>::get(int index) {
-    if (0 < index && index < Array<C>::size )
+    if (-1 < index && index < Array<C>::size )
         return Array<C>::head + index;
 
     return nullptr;

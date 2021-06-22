@@ -1,28 +1,31 @@
 #include "__init__.h"
 
+#ifndef _MODEL_H
+#define _MODEL_H
+
 template <template <typename T> class C, typename T>
 class Model {
 
     public: // private:
         int count_substring(char*, char*);
         struct string_2d split_string(char*, char*);
-        char* merge_string(struct string_2d);
+        char* merge_string(struct string_2d, char* joinner);
 
-        T arrayToType(struct string_2d);
-        struct string_2d typeToArray(T);
+        T arrayToType(struct string_2d); // INHERITED BY CHILD CLASS
+        struct string_2d typeToArray(T); // INHERITED BY CHILD CLASS
 
     public:
-        Model();
-        ~Model();
+        Model(); // INHERITED BY CHILD CLASS
+        ~Model(); // INHERITED BY CHILD CLASS
 
-        char* separator = "|";
+        char* separator = (char*)SEPARATOR;
         char* database_connection;
 
         C<T> *data;
-        void append(T);
+        void append(T); // INHERITED BY CHILD CLASS
 
         void refresh();
-        void commit();
+        void write(); // INHERITED BY CHILD CLASS
 };
 
 
@@ -57,6 +60,8 @@ struct string_2d Model<C, T>::split_string(char* string, char* chr) {
 
     /*__SPLIT STRING WITH CHR__*/
     char * token = strtok(_string, chr);
+    str_array[0] = (char*) malloc(strlen(token));
+    strcpy(str_array[0], token);
 
     for(int index = 0; index < counted_chrs; index++) {
         str_array[index] = (char*) malloc(strlen(token));
@@ -72,16 +77,29 @@ struct string_2d Model<C, T>::split_string(char* string, char* chr) {
 
 
 template <template <typename T> class C, typename T>
-void Model<C, T>::refresh() {
-    FILE *file = fopen(Model<C, T>::database_connection, "r");
-    char line[1000]; int index = 0;
-    while((line[index++] = (char)getc(file)) != EOF) {
-        if (line[index - 1] == '\n') {
-            line[index - 1] = 0;
-            Model<C, T>::append(Model<C, T>::stringToType(line));
-            memset(line, 0, index - 1);
-            index = 0;
-        }
+char* Model<C, T>::merge_string(struct string_2d array, char* joinner) {
+    char _result[MAX_LINE_LEN] = "";
+    int index = 0;
+    for(; index < array.size - 1; index++) {
+        strcat(_result, array.array[index]);
+        strcat(_result, joinner);
     }
-    fclose(file);
+    strcat(_result, array.array[index]);
+    char* result = (char*) malloc(sizeof(char)*strlen(_result));
+    strcpy(result, _result);
+    return result;
 }
+
+
+/*____PUBLIC BLOCK____*/
+template <template <typename T> class C, typename T>
+Model<C, T>::Model() {}
+
+template <template <typename T> class C, typename T>
+Model<C, T>::~Model() {}
+
+
+template <template <typename T> class C, typename T>
+struct string_2d Model<C, T>::typeToArray(T value) { return {}; }
+
+#endif /*_MODEL_H*/

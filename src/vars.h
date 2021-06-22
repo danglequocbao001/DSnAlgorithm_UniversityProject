@@ -3,6 +3,8 @@
 
 #include <cstdint>
 #include <dirent.h>
+#include <fstream>
+#include <iostream>
 #include <math.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -33,7 +35,13 @@
 
 #define STDIN stdin
 #define STDOUT stdout
+#define F_STDIN std::fstream
+#define F_STDOUT stdout
+#define READ_MODE std::fstream::in
+#define WRITE_MODE "w"
+
 #define POINTER_SIZE 4
+#define MAX_LINE_LEN 3000
 
 struct string_2d {
     char** array;

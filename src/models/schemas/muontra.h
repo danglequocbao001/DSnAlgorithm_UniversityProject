@@ -1,12 +1,16 @@
+#include "./__init__.h"
+
 #ifndef _MUONTRA_H
 #define _MUONTRA_H
 
 
 enum MuonTraStatus { BORROWING, RETURNED, LOST };
-struct MuonTraSchema { char* code;
-                       int borrowedDate;
-                       int returnedDate;
-                       int status; };
+struct MuonTraSchema {
+    char* code;
+    int borrowedDate;
+    int returnedDate;
+    int status;
+};
 
 
 enum MuonTraAttirbutes { MT_code, MT_status, MT_borrowedDate, MT_returnedDate, };

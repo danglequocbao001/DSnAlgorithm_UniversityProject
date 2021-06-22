@@ -17,6 +17,7 @@ class LinkedList {
     private:
         size_t size;
         node<C>* insertNode(node<C>*, C);
+        node<C>* initFirstNode(C);
 
     public:
         node<C> *head;
@@ -24,6 +25,7 @@ class LinkedList {
 
 
     public:
+        LinkedList();
         LinkedList(C);
         LinkedList(C*, C*);
         ~LinkedList();
@@ -34,6 +36,10 @@ class LinkedList {
                 runner != nullptr;\
                 runner = runner->next\
         )
+        #define CHECK_INIT_NODE(V) if (\
+                LinkedList<C>::initFirstNode(V) != nullptr\
+        )\
+                return LinkedList<C>::head;
 
         void traverser( node<C>*,
                         void (*travelForward) (int, node<C>*),
@@ -65,10 +71,24 @@ node<C>* LinkedList<C>::insertNode(node<C> *previousNode, C value) {
 
 /* === PUBLIC METHOD ATTRIBUTES === */
 template <class C>
-LinkedList<C>::LinkedList(C value) {
-    LinkedList<C>::size = 1;
+node<C>* LinkedList<C>::initFirstNode(C value) {
+    if (LinkedList<C>::size != 0) return nullptr;
     LinkedList<C>::head = LinkedList<C>::InitNode(value);
     LinkedList<C>::tail = LinkedList<C>::head;
+    return LinkedList<C>::head;
+};
+
+template <class C>
+LinkedList<C>::LinkedList() {
+    LinkedList<C>::size = 0;
+    LinkedList<C>::head = nullptr;
+    LinkedList<C>::tail = LinkedList<C>::head;
+};
+
+template <class C>
+LinkedList<C>::LinkedList(C value) {
+    LinkedList<C>::size = 0;
+    LinkedList<C>::initFirstNode(value);
 };
 
 template <class C>
@@ -167,6 +187,7 @@ void LinkedList<C>::traverser(
 
 template <class C>
 node<C>* LinkedList<C>::addHead(C value) {
+    CHECK_INIT_NODE(value);
     node<C> *_node = LinkedList<C>::InitNode(value);
     _node->next = LinkedList<C>::head;
     LinkedList<C>::head = _node;
@@ -176,6 +197,7 @@ node<C>* LinkedList<C>::addHead(C value) {
 
 template <class C>
 node<C>* LinkedList<C>::addTail(C value) {
+    CHECK_INIT_NODE(value);
     LinkedList<C>::tail->next = LinkedList<C>::InitNode(value);
     LinkedList<C>::tail = LinkedList<C>::tail->next;
     return LinkedList<C>::tail;
