@@ -1,15 +1,20 @@
 #ifndef VARS
 #define VARS
 
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <unistd.h>
+#include <cstdint>
 #include <dirent.h>
+#include <fstream>
+#include <iostream>
+#include <math.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <string>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <unistd.h>
 
-#ifdef _WIN32 || _WIN64
+#ifdef _WIN32
     // set seperater
     #define SEPERATER "\\"
     // get current work direction
@@ -30,6 +35,18 @@
 
 #define STDIN stdin
 #define STDOUT stdout
+#define F_STDIN std::fstream
+#define F_STDOUT stdout
+#define READ_MODE std::fstream::in
+#define WRITE_MODE "w"
+
+#define POINTER_SIZE 4
+#define MAX_LINE_LEN 3000
+
+struct string_2d {
+    char** array;
+    int size;
+};
 
 #endif /*VARS*/
 
