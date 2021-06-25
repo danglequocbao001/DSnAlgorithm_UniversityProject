@@ -1,6 +1,9 @@
 #include<windows.h>
 #include <iostream>
 #include <cstdlib>
+#include "Dohoa.h"
+#include "mylib.h"
+#include "Xu_li_nhap_so.h"
 using namespace std;
 
 int main() {
