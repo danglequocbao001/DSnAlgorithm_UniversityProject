@@ -1,3 +1,6 @@
+#ifndef TEST_UTILS_H
+#define TEST_UTILS_H
+
 #include "test_frame.h"
 
 void test_seperater() {
@@ -28,10 +31,12 @@ void test_stoi() {
     assert(stoi((char*)"12312142") == 12312142);
 }
 
-int main() {
+void test_utils() {
     test_pwd();
     test_join_path();
     test_numer_to_string();
     test_stoi();
 }
 
+
+#endif /*TEST_UTILS_H*/

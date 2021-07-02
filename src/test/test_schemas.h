@@ -1,3 +1,6 @@
+#ifndef TEST_SCHEMAS_H
+#define TEST_SCHEMAS_H
+
 #include "test_frame.h"
 #include "../models/schemas/danhmucsach.h"
 #include "../models/structures/linkedlist.h"
@@ -84,9 +87,11 @@ void test_muontra() {
     }
 }
 
-int main() {
+void test_schemas() {
     test_danhmucsach();
     test_dausach();
     test_docgia();
     test_muontra();
 }
+
+#endif /*TEST_SCHEMAS_H*/

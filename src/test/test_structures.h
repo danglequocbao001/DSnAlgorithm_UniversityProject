@@ -1,8 +1,11 @@
+#ifndef TEST_STRUCTURES_H
+#define TEST_STRUCTURES_H
+
 #include "../models/structures/normalarray.h"
 #include "../models/structures/linkedlist.h"
 #include <stdio.h>
 
-int main() {
+void test_structures() {
     int a[3] = {0, 1, 2};
     LinkedList<int> x = LinkedList<int>(1);
     x.head->value = 1;
@@ -60,3 +63,5 @@ int main() {
     // printf("[log] this is the end\n");
 }
 
+
+#endif /*TEST_STRUCTURES_H*/
