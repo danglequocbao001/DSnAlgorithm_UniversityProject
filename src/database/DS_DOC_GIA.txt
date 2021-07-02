@@ -1,0 +1,419 @@
+52
+589
+Tran
+Kim Dung
+Nu
+1
+20
+0
+1542
+Tran
+The Trung
+Nam
+1
+39
+0
+1668
+Pham Bang
+Bang
+Nu
+1
+4
+1
+SLHS1
+7
+6
+2020
+0
+0
+0
+Sherlock Holmes
+0
+2130
+Nguyen
+My Lanh
+Nu
+1
+58
+3
+TTKB0
+23
+6
+2020
+0
+0
+0
+Bleach
+0
+ONLF1
+23
+6
+2020
+0
+0
+0
+Vo Than
+0
+AAAA1
+25
+6
+2020
+0
+0
+0
+Than Bai
+0
+2391
+Luc
+Van Dat
+Nam
+1
+13
+0
+3753
+Nguyen Le Kim
+Ngan
+Nu
+1
+24
+0
+3794
+Truong Hung
+An
+Nam
+1
+12
+1
+NTAT1
+20
+5
+2020
+0
+0
+0
+Tay Du Ky
+0
+4533
+Nguyen Thi Thuy
+Linh
+Nu
+1
+11
+0
+4629
+Nguyen Hoang
+Danh
+Nam
+1
+25
+0
+4836
+Luong Ngoc
+Dai
+Nam
+1
+2
+0
+5293
+Nguyen Minh
+Doan
+Nam
+1
+42
+0
+6075
+Do
+Nam Trung
+Nam
+1
+39
+0
+7240
+Luu Gia
+Han
+Nu
+1
+34
+0
+7966
+Nguyen The
+Duy
+Nam
+1
+32
+0
+8130
+Huynh
+Thi Le
+Nu
+1
+5
+0
+8620
+Chau
+The Han
+Nam
+1
+6
+0
+9507
+Nguyen Ngo Bao
+Chau
+Nu
+1
+7
+0
+10211
+Ha Thi Kim
+Thanh
+Nu
+1
+35
+0
+12284
+Nguyen Huynh Yen
+Nhi
+Nu
+1
+24
+0
+12467
+Bui Nguyen Minh
+Quan
+Nam
+1
+13
+0
+13052
+Tran Ngoc Phuong
+Quyen
+Nu
+1
+23
+0
+13097
+Le
+Van Quoc Viet
+Nam
+1
+2
+0
+13716
+Chau Thai Hoang
+Trieu
+Nam
+1
+3
+0
+15603
+Nguyen Duc
+Tu
+Nam
+1
+52
+0
+15631
+Le
+Van
+Nam
+1
+23
+0
+15906
+Bui
+Tien Dung
+Nam
+1
+12
+0
+16451
+Tran Thi Truc
+Mai
+Nu
+1
+9
+0
+18082
+Ly Quynh
+Nhu
+Nu
+1
+7
+0
+18125
+Nguyen
+Son Tung
+Nam
+1
+6
+0
+18293
+Phan
+Van Canh
+Nam
+1
+9
+0
+19686
+Tran Thi
+Thu
+Nu
+1
+7
+0
+19994
+Huynh Hoang
+Nghiep
+Nam
+1
+23
+0
+20490
+Nguyen Ngoc Phuong
+Vy
+Nu
+1
+21
+0
+20571
+Phan
+Thi Linh Giang
+Nu
+1
+2
+0
+20853
+Thai
+Phong
+Nam
+1
+0
+0
+21664
+Tu Thai
+Phong
+Nu
+1
+13
+0
+21829
+Dinh
+Van Hoang
+Nam
+1
+23
+0
+21877
+Vo
+Thanh Trung
+Nam
+1
+26
+0
+22219
+Pham Hoang
+Phuc
+Nam
+1
+30
+0
+22738
+Huynh
+Tan Phat
+Nam
+1
+21
+0
+23998
+Le
+Nguyen Hai Quy
+Nu
+1
+23
+0
+24633
+Duong Quoc
+Bao
+Nu
+1
+27
+0
+24765
+Le
+Nguyen Hai Quynh
+Nu
+1
+35
+0
+25227
+Hoang Thi Thanh
+Thuy
+Nu
+1
+43
+0
+25450
+Le
+Thi My Linh
+Nu
+1
+37
+0
+26266
+Vu
+Song Vu
+Nam
+1
+32
+0
+27492
+Le
+Viet
+Nam
+1
+19
+1
+TPTP2
+28
+5
+2020
+0
+0
+0
+Ve Em Bang Mau Noi Nho
+0
+27502
+Ngo Manh
+Cuong
+Nam
+1
+29
+0
+28882
+Ly
+Tieu Long
+Nam
+1
+12
+0
+30094
+Do
+Dieu Hien
+Nu
+1
+17
+0
+30366
+Nguyen
+Hoang Nhi
+Nu
+1
+22
+0
+31515
+Tran
+Thi Thao
+Nu
+1
+20
+0

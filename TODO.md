@@ -24,7 +24,7 @@
     - [x] base casting
 
 - **Model for each one**
-    - [ ] merge_string
+    - [x] merge_string
     
     refresh:
     - [x] doc file
