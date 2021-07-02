@@ -46,7 +46,7 @@ void Khoi_tao_cay(TREE & t) {
 }
 
 int main() {
-    resizeConsole(1000, 700);
+    resizeConsole(1100, 700);
     srand((int) time(0));
     TREE t;
     Khoi_tao_cay(t);
