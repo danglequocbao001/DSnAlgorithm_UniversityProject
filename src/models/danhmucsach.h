@@ -52,7 +52,7 @@ void DanhMucSach::refresh() {
     while(file >> std::noskipws >> line[index++])
         if (line[index - 1] == '\n') {
             line[index - 1] = 0;
-            struct string_2d _x =DanhMucSach::split_string(
+            struct string_2d _x = DanhMucSach::split_string(
                     strdup(line),
                     DanhMucSach::separator
                 );

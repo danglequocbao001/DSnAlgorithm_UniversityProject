@@ -27,5 +27,3 @@ g++ string -o abc && ./abc && rm abc
 g++ string -o abc && ./abc && rm abc
 g++ string -o abc && ./abc && rm abc
 g++ string -o abc && ./abc && rm abc
-g++ string -o abc && ./abc && rm abc
-g++ string -o abc && ./abc && rm abc

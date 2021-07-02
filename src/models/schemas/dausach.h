@@ -15,7 +15,15 @@ struct DauSachSchema {
     struct DanhMucSachSchema *DanhMucSach;
 };
 
-enum DauSachAttirbutes { DS_ISBN, DS_name, DS_numberOfPages, DS_author, DS_publishingYear, DS_type, DS_DanhMucSach, };
+enum DauSachAttirbutes {
+    DS_ISBN,
+    DS_name,
+    DS_numberOfPages,
+    DS_author,
+    DS_publishingYear,
+    DS_type,
+    DS_DanhMucSach,
+};
 
 struct DauSachSchema DauSachInit(struct string_2d);
 struct string_2d DauSachToArray(struct DauSachSchema);
