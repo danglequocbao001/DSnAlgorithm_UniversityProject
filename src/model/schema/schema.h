@@ -7,5 +7,4 @@
 
 #define SCHEMA_H
 
-
 #endif /*SCHEMA_H*/

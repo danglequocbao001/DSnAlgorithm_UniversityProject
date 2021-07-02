@@ -4,7 +4,7 @@
 #include "../model/muon_tra.h"
 #include "./file_out.h"
 
-NODE_DOC_GIA* Tim_kiem_doc_gia(TREE t, int mathe)
+NODE_DOC_GIA *Tim_kiem_doc_gia(TREE t, int mathe)
 {
 	while (t != NULL && t->data.Ma_the != mathe)
 	{
@@ -12,7 +12,8 @@ NODE_DOC_GIA* Tim_kiem_doc_gia(TREE t, int mathe)
 		{
 			t = t->pLeft;
 		}
-		else t = t->pRight;
+		else
+			t = t->pRight;
 	}
 	return (t);
 }
@@ -43,7 +44,7 @@ void Load_file_doc_gia(TREE &t, DS_DOC_GIA &ds_dg)
 			getline(Filein, dg.Phai);
 			Filein >> dg.Trang_thai_the;
 			Filein >> dg.ds_muon_tra_cua_doc_gia.so_luong;
-			Them_doc_gia(t, dg, ds_dg); // Them doc gia vao cay
+			Them_doc_gia(t, dg, ds_dg);			// Them doc gia vao cay
 			p = Tim_kiem_doc_gia(t, dg.Ma_the); // Lay thong tin doc gia do ra va doc thong tin tiep theo
 			p->data.Trang_thai_the = dg.Trang_thai_the;
 			// Doc danh sach muon tra cua doc gia
@@ -110,7 +111,7 @@ void Load_file_dau_sach(DS_DAU_SACH &ds_dau_sach)
 				getline(Filein, tam);
 				getline(Filein, dms.Vi_tri);
 				NODE_DANH_MUC_SACH *k = Khoi_tao_node(dms);
-				Them_vao_cuoi_danh_sach_dms(ds_dau_sach.list[i]->ds_danh_muc_sach_cua_dau_sach, k);	// Them danh muc sach vao trong dau sach
+				Them_vao_cuoi_danh_sach_dms(ds_dau_sach.list[i]->ds_danh_muc_sach_cua_dau_sach, k); // Them danh muc sach vao trong dau sach
 				ds_dau_sach.list[i]->ds_danh_muc_sach_cua_dau_sach.so_luong++;
 			}
 			if (sosachthuocdausach > 0)

@@ -68,9 +68,7 @@ extern char menu_chinh[so_item][50] = {
     "           DAU SACH         ",
     "        DANH MUC SACH       ",
     "        MUON TRA SACH       ",
-    "            THOAT           "
-};
-
+    "            THOAT           "};
 
 extern char menu_dg[so_item_dg][50] = {
     "           THEM DOC GIA           ",
@@ -79,8 +77,7 @@ extern char menu_dg[so_item_dg][50] = {
     "   SACH DANG MUON CUA 1 DOC GIA   ",
     "     DANH SACH DOC GIA QUA HAN    ",
     "     XUAT DOC GIA THEO HO TEN     ",
-    "     XUAT DOC GIA THEO MA THE     "
-};
+    "     XUAT DOC GIA THEO MA THE     "};
 
 extern char menu_ds[so_item_ds][50] = {
     "           THEM DAU SACH          ",
@@ -89,14 +86,12 @@ extern char menu_ds[so_item_ds][50] = {
     "             TIM SACH             ",
     "      XUAT THONG TIN DAU SACH     ",
     "    XUAT DAU SACH THEO THE LOAI   ",
-    " 10 DAU SACH DUOC MUON NHIEU NHAT "
-};
+    " 10 DAU SACH DUOC MUON NHIEU NHAT "};
 
 extern char menu_dms[so_item_dms][50] = {
     "     THEM SACH VAO 1 DAU SACH     ",
     "     XOA SACH THUOC 1 DAU SACH    ",
-    "  CHINH SUA SACH THUOC 1 DAU SACH "
-};
+    "  CHINH SUA SACH THUOC 1 DAU SACH "};
 
 extern char menu_mt[so_item_mt][50] = {
     "             MUON SACH            ",
@@ -106,7 +101,6 @@ extern char menu_mt[so_item_mt][50] = {
 
 char menu_thoat[so_item_thoat][50] = {
     "   CO    ",
-    "  KHONG  "
-};
+    "  KHONG  "};
 
 #endif /*MENU_CONST_H*/
