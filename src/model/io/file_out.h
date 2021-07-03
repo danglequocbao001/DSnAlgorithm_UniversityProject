@@ -1,8 +1,11 @@
-#ifndef Ghi_file
-#define Ghi_file
+#ifndef FILE_OUT_H
+#define FILE_OUT_H
+
+#include "./__init__.h"
 #include "../schema/schema.h"
 #include "../../library/standard/date_time.h"
 #include <fstream>
+
 void Luu_1_doc_gia(DS_DAU_SACH ds_dau_sach, TREE t, ofstream &Fileout)
 {
 	Fileout << t->data.Ma_the << endl;
@@ -43,7 +46,7 @@ void Luu_ds_doc_gia(DS_DAU_SACH ds_dau_sach, TREE t, ofstream &Fileout)
 void Ghi_file_ds_doc_gia(DS_DAU_SACH ds_dau_sach, TREE t, DS_DOC_GIA ds_doc_gia)
 {
 	ofstream Fileout;
-	Fileout.open("DS_DOC_GIA.txt", ios_base::out);
+	Fileout.open(DOCGIA_DB, ios_base::out);
 	if (Fileout.fail() == true)
 	{
 		cout << "Luu file that bai.\n";
@@ -83,7 +86,7 @@ void Luu_ds_dau_sach(DS_DAU_SACH ds_dau_sach, ofstream &Fileout)
 void Ghi_file_ds_dau_sach(DS_DAU_SACH ds_dau_sach)
 {
 	ofstream Fileout;
-	Fileout.open("DS_DAU_SACH.txt", ios_base::out);
+	Fileout.open(DAUSACH_DB, ios_base::out);
 	if (Fileout.fail() == true)
 	{
 		cout << "Luu file that bai.\n";
@@ -95,4 +98,4 @@ void Ghi_file_ds_dau_sach(DS_DAU_SACH ds_dau_sach)
 	}
 	Fileout.close();
 }
-#endif
+#endif /*FILE_OUT_H*/
