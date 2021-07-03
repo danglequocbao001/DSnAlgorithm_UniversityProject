@@ -46,10 +46,11 @@ void Khoi_tao_cay(TREE &t)
     t = NULL; // Cay rong
 }
 
-int main()
-{
-    resizeConsole(1100, 700);
-    srand((int)time(0));
+int main() {
+    resizeConsole(1110, 615);
+    DisableResizeWindow();
+    DisableCtrButton(0, 0, 1);
+    srand((int) time(0));
     TREE t;
     Khoi_tao_cay(t);
     DS_DOC_GIA ds_dg;
@@ -95,7 +96,7 @@ int main()
                 {
                     ve_lai_man_hinh();
 
-                    DeMuc("   CHINH SUA THONG TIN DOC GIA");
+                    DeMuc("TRA CUU MA THE ROI CHINH SUA THONG TIN DOC GIA");
                     DOC_GIA a[ds_dg.so_luong];
                     int k = 0;
                     Xuat_thong_tin_doc_gia_theo_ho_ten(t, a, ds_dg, k);

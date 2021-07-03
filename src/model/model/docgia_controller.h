@@ -177,6 +177,7 @@ void Nhap_doc_gia(TREE t, DOC_GIA &dg)
 						xoa_man_hinh(39, 12, 80, 1);
 						gotoxy(39, 12);
 					}
+					if(key == 27) break;
 				} while (Kiem_tra_nhap_ho_ten(dg.Ho) == false);
 				do
 				{
@@ -188,6 +189,7 @@ void Nhap_doc_gia(TREE t, DOC_GIA &dg)
 						xoa_man_hinh(40, 14, 80, 1);
 						gotoxy(40, 14);
 					}
+					if(key == 27) break;
 				} while (Kiem_tra_nhap_ho_ten(dg.Ten) == false);
 				do
 				{

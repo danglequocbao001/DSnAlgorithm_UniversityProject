@@ -9,4 +9,7 @@
 #include "../standard/mylib.h"
 #include "menu_const.h"
 
+#define SHOW_SCROLLBAR 1
+#define HIDE_SCROLLBAR 0
+
 #endif /*GRAPHIC_INIT_H*/
