@@ -95,7 +95,7 @@ int main()
                 {
                     ve_lai_man_hinh();
 
-                    DeMuc("   CHINH SUA THONG TIN DOC GIA");
+                    DeMuc("TRA CUU MA THE ROI CHINH SUA THONG TIN DOC GIA");
                     DOC_GIA a[ds_dg.so_luong];
                     int k = 0;
                     Xuat_thong_tin_doc_gia_theo_ho_ten(t, a, ds_dg, k);
