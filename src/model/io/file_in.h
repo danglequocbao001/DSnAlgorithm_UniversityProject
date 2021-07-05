@@ -1,10 +1,11 @@
+#include "./__init__.h"
+#include "./file_out.h"
+#include "../model/muon_tra.h"
+
 #ifndef FILE_IN_H
 #define FILE_IN_H
 
-#include "../model/muon_tra.h"
-#include "./file_out.h"
-
-NODE_DOC_GIA *Tim_kiem_doc_gia(TREE t, int mathe)
+NODE_DOC_GIA* Tim_kiem_doc_gia(TREE t, int mathe)
 {
 	while (t != NULL && t->data.Ma_the != mathe)
 	{
@@ -20,7 +21,7 @@ NODE_DOC_GIA *Tim_kiem_doc_gia(TREE t, int mathe)
 void Load_file_doc_gia(TREE &t, DS_DOC_GIA &ds_dg)
 {
 	ifstream Filein;
-	Filein.open("database/DS_DOC_GIA.txt", ios_base::in);
+	Filein.open(DOCGIA_DB, ios_base::in);
 	NODE_DOC_GIA *p = NULL;
 	DOC_GIA dg;
 	int soluongdocgia, sosachdangmuon;
@@ -76,7 +77,7 @@ void Load_file_doc_gia(TREE &t, DS_DOC_GIA &ds_dg)
 void Load_file_dau_sach(DS_DAU_SACH &ds_dau_sach)
 {
 	ifstream Filein;
-	Filein.open("database/DS_DAU_SACH.txt", ios_base::in);
+	Filein.open(DAUSACH_DB, ios_base::in);
 	int soluongdausach, sosachthuocdausach;
 	if (Filein.fail() == true)
 	{

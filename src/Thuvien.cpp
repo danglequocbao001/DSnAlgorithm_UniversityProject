@@ -46,10 +46,11 @@ void Khoi_tao_cay(TREE &t)
     t = NULL; // Cay rong
 }
 
-int main()
-{
-    resizeConsole(1100, 700);
-    srand((int)time(0));
+int main() {
+    resizeConsole(1110, 615);
+    DisableResizeWindow();
+    DisableCtrButton(0, 0, 1);
+    srand((int) time(0));
     TREE t;
     Khoi_tao_cay(t);
     DS_DOC_GIA ds_dg;
