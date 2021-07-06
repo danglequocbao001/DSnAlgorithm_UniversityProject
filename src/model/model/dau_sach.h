@@ -1,7 +1,8 @@
 #ifndef Dausach
-#define Dausach #include "./model/schema/schema.h"
+#define Dausach
 
 #include "./docgia_controller.h"
+#include "../schema/schema.h"
 #include "../../library/standard/date_time.h"
 #include "../../library/standard/validated_inp_num.h"
 
