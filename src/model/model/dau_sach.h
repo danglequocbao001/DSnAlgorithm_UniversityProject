@@ -1744,16 +1744,6 @@ void Top_10_sach(DS_DAU_SACH ds_dau_sach)
                         c = getch();
                     switch (c)
                     {
-                    case 80:
-                        if (vitri + 1 < ds_dau_sach.so_luong)
-                        {
-                            Normal();
-                            Xuat_thong_tin_1_dau_sach_theo_hang(ds_dau_sach.list[ds_dau_sach.so_luong - 1 - vitri], 10, vitri);
-                            vitri++;
-                            SetColor(27);
-                            Xuat_thong_tin_1_dau_sach_theo_hang(ds_dau_sach.list[ds_dau_sach.so_luong - 1 - vitri], 10, vitri);
-                        }
-                        break;
                     case 72:
                         if (vitri + 1 > 1)
                         {
@@ -1764,6 +1754,17 @@ void Top_10_sach(DS_DAU_SACH ds_dau_sach)
                             Xuat_thong_tin_1_dau_sach_theo_hang(ds_dau_sach.list[ds_dau_sach.so_luong - 1 - vitri], 10, vitri);
                         }
                         break;
+                    case 80:
+                        if (vitri + 1 < ds_dau_sach.so_luong)
+                        {
+                            Normal();
+                            Xuat_thong_tin_1_dau_sach_theo_hang(ds_dau_sach.list[ds_dau_sach.so_luong - 1 - vitri], 10, vitri);
+                            vitri++;
+                            SetColor(27);
+                            Xuat_thong_tin_1_dau_sach_theo_hang(ds_dau_sach.list[ds_dau_sach.so_luong - 1 - vitri], 10, vitri);
+                        }
+                        break;
+
                     case 13:
                         Normal();
                         xoa_man_hinh(5, 7, 128, 30);
@@ -1773,7 +1774,6 @@ void Top_10_sach(DS_DAU_SACH ds_dau_sach)
                         cout << "DANH MUC SACH";
                         khung_xuat_dms(27, 13, 20);
                         Xuat_dms_cua_1_dau_sach(ds_dau_sach.list[ds_dau_sach.so_luong - 1 - vitri]->ds_danh_muc_sach_cua_dau_sach, 16);
-                        thong_bao("                                       ");
                         break;
                     case 27:
                         Normal();
@@ -1810,16 +1810,6 @@ void Top_10_sach(DS_DAU_SACH ds_dau_sach)
                         c = getch();
                     switch (c)
                     {
-                    case 80:
-                        if (vitri + 1 < 10)
-                        {
-                            Normal();
-                            Xuat_thong_tin_1_dau_sach_theo_hang(ds_dau_sach.list[ds_dau_sach.so_luong - 1 - vitri], 10, vitri);
-                            vitri++;
-                            SetColor(27);
-                            Xuat_thong_tin_1_dau_sach_theo_hang(ds_dau_sach.list[ds_dau_sach.so_luong - 1 - vitri], 10, vitri);
-                        }
-                        break;
                     case 72:
                         if (vitri + 1 > 1)
                         {
@@ -1830,6 +1820,17 @@ void Top_10_sach(DS_DAU_SACH ds_dau_sach)
                             Xuat_thong_tin_1_dau_sach_theo_hang(ds_dau_sach.list[ds_dau_sach.so_luong - 1 - vitri], 10, vitri);
                         }
                         break;
+                    case 80:
+                        if (vitri + 1 < 10)
+                        {
+                            Normal();
+                            Xuat_thong_tin_1_dau_sach_theo_hang(ds_dau_sach.list[ds_dau_sach.so_luong - 1 - vitri], 10, vitri);
+                            vitri++;
+                            SetColor(27);
+                            Xuat_thong_tin_1_dau_sach_theo_hang(ds_dau_sach.list[ds_dau_sach.so_luong - 1 - vitri], 10, vitri);
+                        }
+                        break;
+
                     case 13:
                         Normal();
                         xoa_man_hinh(5, 7, 128, 30);
