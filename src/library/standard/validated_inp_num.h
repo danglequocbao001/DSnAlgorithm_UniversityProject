@@ -105,17 +105,6 @@ void Nhap_so(int &n, int x, int y) { // x, y la toa do con tro quay ve de nhap l
             thong_bao("So khong hop le.");
             xoa_man_hinh(x, y, 70, 1);
             gotoxy(x, y);
-            // 	 Clear va ingore:
-            // "When an input error is made, the stream "breaks," cin returns false, and the program stops. It's very important
-            // to guard against such errors as we did in the program. But what if we want to recover from the error,
-            // rather than have the program stop? There are two steps to recovering from an error:
-            // 1. Clear the error with cin.clear().
-            // 2. Remove the incorrect characters from the stream. One way to do this is with cin.ignore()"
-            // cin.clear(); // Hieu nom na la reset lai trang thai cua stream tu bad -> good
-            // Ham ignore co 2 tham so: 1 la cho biet can bo qua bao nhieu ki tu, 2 la xac dinh ki tu cuoi cung can bo qua (Giong nhu diem dau va diem cuoi)
-            //cin.ignore(numeric_limits<streamsize>::max(), '\n'); // numeric_limits<streamsize>::max(): Gia tri lon nhat cua mot stream (max)
-            // Noi cach khac: y nghia cua no trong ham ignore nay la
-            // 	khong gioi han so luong ki tu bo qua
 
             // Reset lai cac gia tri
             is_num_bool = false;
@@ -147,19 +136,7 @@ void Nhap_so_chinh_sua(int &n, int x, int y)
             xoa_man_hinh(x, y, 70, 1);
             gotoxy(x, y);
         }
-        // getline(cin, user_string_num);
 	user_string_num = getOnlyNumber();
-        //        do
-        //        {
-        //        	getline(cin, user_string_num);
-        //        	if (user_string_num == "") // Kiem tra truong hop bo trong du lieu
-        //        	{
-        //				thong_bao("Khong duoc bo trong du lieu.");
-        //				ShowCur(1);
-        //				xoa_man_hinh(x, y, 70, 1);
-        //				gotoxy(x, y);
-        //			}
-        //		}while (user_string_num == "");
         for (int i = 0; i < user_string_num.size(); i++)
         {
             if (isspace(user_string_num[i]) == true)
@@ -210,18 +187,6 @@ void Nhap_so_chinh_sua(int &n, int x, int y)
             thong_bao("So khong hop le.");
             xoa_man_hinh(x, y, 70, 1);
             gotoxy(x, y);
-            // 	 Clear va ingore:
-            // "When an input error is made, the stream "breaks," cin returns false, and the program stops. It's very important
-            // to guard against such errors as we did in the program. But what if we want to recover from the error,
-            // rather than have the program stop? There are two steps to recovering from an error:
-            // 1. Clear the error with cin.clear().
-            // 2. Remove the incorrect characters from the stream. One way to do this is with cin.ignore()"
-            // cin.clear(); // Hieu nom na la reset lai trang thai cua stream tu bad -> good
-            // Ham ignore co 2 tham so: 1 la cho biet can bo qua bao nhieu ki tu, 2 la xac dinh ki tu cuoi cung can bo qua (Giong nhu diem dau va diem cuoi)
-            //cin.ignore(numeric_limits<streamsize>::max(), '\n'); // numeric_limits<streamsize>::max(): Gia tri lon nhat cua mot stream (max)
-            // Noi cach khac: y nghia cua no trong ham ignore nay la
-            // 	khong gioi han so luong ki tu bo qua
-
             // Reset lai cac gia tri
             is_num_bool = false;
             is_num = 0;
@@ -313,18 +278,6 @@ void Nhap_ngay(int &n, int x, int y)
             thong_bao("Ngay khong hop le. Xin nhap lai");
             xoa_man_hinh(x, y, 70, 1);
             gotoxy(x, y);
-            // 	 Clear va ingore:
-            // "When an input error is made, the stream "breaks," cin returns false, and the program stops. It's very important
-            // to guard against such errors as we did in the program. But what if we want to recover from the error,
-            // rather than have the program stop? There are two steps to recovering from an error:
-            // 1. Clear the error with cin.clear().
-            // 2. Remove the incorrect characters from the stream. One way to do this is with cin.ignore()"
-            // cin.clear(); // Hieu nom na la reset lai trang thai cua stream tu bad -> good
-            // Ham ignore co 2 tham so: 1 la cho biet can bo qua bao nhieu ki tu, 2 la xac dinh ki tu cuoi cung can bo qua (Giong nhu diem dau va diem cuoi)
-            //cin.ignore(numeric_limits<streamsize>::max(), '\n'); // numeric_limits<streamsize>::max(): Gia tri lon nhat cua mot stream (max)
-            // Noi cach khac: y nghia cua no trong ham ignore nay la
-            // 	khong gioi han so luong ki tu bo qua
-
             // Reset lai cac gia tri
             is_num_bool = false;
             is_num = 0;
@@ -416,18 +369,6 @@ void Nhap_thang(int &n, int x, int y)
             thong_bao("Thang khong hop le. Xin nhap lai");
             xoa_man_hinh(x, y, 70, 1);
             gotoxy(x, y);
-            // 	 Clear va ingore:
-            // "When an input error is made, the stream "breaks," cin returns false, and the program stops. It's very important
-            // to guard against such errors as we did in the program. But what if we want to recover from the error,
-            // rather than have the program stop? There are two steps to recovering from an error:
-            // 1. Clear the error with cin.clear().
-            // 2. Remove the incorrect characters from the stream. One way to do this is with cin.ignore()"
-            // cin.clear(); // Hieu nom na la reset lai trang thai cua stream tu bad -> good
-            // Ham ignore co 2 tham so: 1 la cho biet can bo qua bao nhieu ki tu, 2 la xac dinh ki tu cuoi cung can bo qua (Giong nhu diem dau va diem cuoi)
-            //cin.ignore(numeric_limits<streamsize>::max(), '\n'); // numeric_limits<streamsize>::max(): Gia tri lon nhat cua mot stream (max)
-            // Noi cach khac: y nghia cua no trong ham ignore nay la
-            // 	khong gioi han so luong ki tu bo qua
-
             // Reset lai cac gia tri
             is_num_bool = false;
             is_num = 0;
@@ -519,18 +460,6 @@ void Nhap_nam(int &n, int x, int y)
             thong_bao("Nam khong hop le. Xin nhap lai");
             xoa_man_hinh(x, y, 70, 1);
             gotoxy(x, y);
-            // 	 Clear va ingore:
-            // "When an input error is made, the stream "breaks," cin returns false, and the program stops. It's very important
-            // to guard against such errors as we did in the program. But what if we want to recover from the error,
-            // rather than have the program stop? There are two steps to recovering from an error:
-            // 1. Clear the error with cin.clear().
-            // 2. Remove the incorrect characters from the stream. One way to do this is with cin.ignore()"
-            // cin.clear(); // Hieu nom na la reset lai trang thai cua stream tu bad -> good
-            // Ham ignore co 2 tham so: 1 la cho biet can bo qua bao nhieu ki tu, 2 la xac dinh ki tu cuoi cung can bo qua (Giong nhu diem dau va diem cuoi)
-            //cin.ignore(numeric_limits<streamsize>::max(), '\n'); // numeric_limits<streamsize>::max(): Gia tri lon nhat cua mot stream (max)
-            // Noi cach khac: y nghia cua no trong ham ignore nay la
-            // 	khong gioi han so luong ki tu bo qua
-
             // Reset lai cac gia tri
             is_num_bool = false;
             is_num = 0;

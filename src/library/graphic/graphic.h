@@ -226,7 +226,7 @@ void Normal()
 void HighLight()
 {
     SetColor(15);
-    SetBGColor(3);
+    SetBGColor(26);
 }
 void DeMuc(std::string s)
 {
