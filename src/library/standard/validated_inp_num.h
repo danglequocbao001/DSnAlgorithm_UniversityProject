@@ -470,4 +470,4 @@ void Nhap_nam(int &n, int x, int y)
     } while (is_num_bool == false);
     n = user_converted_num;
 }
-#endif
+#endif /*VALIDATED_INP_NUM_H*/
