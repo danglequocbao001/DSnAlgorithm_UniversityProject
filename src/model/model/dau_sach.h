@@ -1727,137 +1727,70 @@ void Top_10_sach(DS_DAU_SACH ds_dau_sach)
     int dem = 0;
     huong_dan_top_10();
     khung_xuat_thong_tin_ds(5, 7, 13);
-    if (ds_dau_sach.so_luong < 10)
+
+    for (int i = ds_dau_sach.so_luong - 1; i >= ds_dau_sach.so_luong - 10; i--)
     {
-        for (int i = ds_dau_sach.so_luong - 1; i >= 0; i--)
+        if (dem == 0)
+            SetColor(27);
+        Xuat_thong_tin_1_dau_sach_theo_hang(ds_dau_sach.list[i], 10, dem);
+        Normal();
+        if (dem == 9)
         {
-            if (dem == 0)
-                SetColor(27);
-            Xuat_thong_tin_1_dau_sach_theo_hang(ds_dau_sach.list[i], 10, dem);
-            Normal();
-            if (dem == ds_dau_sach.so_luong - 1)
+            do
             {
-                do
-                {
+                c = getch();
+                if (c == 0)
                     c = getch();
-                    if (c == 0)
-                        c = getch();
-                    switch (c)
-                    {
-                    case 80:
-                        if (vitri + 1 < ds_dau_sach.so_luong)
-                        {
-                            Normal();
-                            Xuat_thong_tin_1_dau_sach_theo_hang(ds_dau_sach.list[ds_dau_sach.so_luong - 1 - vitri], 10, vitri);
-                            vitri++;
-                            SetColor(27);
-                            Xuat_thong_tin_1_dau_sach_theo_hang(ds_dau_sach.list[ds_dau_sach.so_luong - 1 - vitri], 10, vitri);
-                        }
-                        break;
-                    case 72:
-                        if (vitri + 1 > 1)
-                        {
-                            Normal();
-                            Xuat_thong_tin_1_dau_sach_theo_hang(ds_dau_sach.list[ds_dau_sach.so_luong - 1 - vitri], 10, vitri);
-                            vitri--;
-                            SetColor(27);
-                            Xuat_thong_tin_1_dau_sach_theo_hang(ds_dau_sach.list[ds_dau_sach.so_luong - 1 - vitri], 10, vitri);
-                        }
-                        break;
-                    case 13:
-                        Normal();
-                        xoa_man_hinh(5, 7, 128, 30);
-                        gotoxy(30, 10);
-                        cout << "Ten sach: " << ds_dau_sach.list[ds_dau_sach.so_luong - 1 - vitri]->Ten_sach;
-                        gotoxy(60, 12);
-                        cout << "DANH MUC SACH";
-                        khung_xuat_dms(27, 13, 20);
-                        Xuat_dms_cua_1_dau_sach(ds_dau_sach.list[ds_dau_sach.so_luong - 1 - vitri]->ds_danh_muc_sach_cua_dau_sach, 16);
-                        thong_bao("                                       ");
-                        break;
-                    case 27:
-                        Normal();
-                        return;
-                    }
-                } while (c != 13);
-                if (c == 13)
+                switch (c)
                 {
+                case 72:
+                    if (vitri + 1 > 1)
+                    {
+                        Normal();
+                        Xuat_thong_tin_1_dau_sach_theo_hang(ds_dau_sach.list[ds_dau_sach.so_luong - 1 - vitri], 10, vitri);
+                        vitri--;
+                        SetColor(27);
+                        Xuat_thong_tin_1_dau_sach_theo_hang(ds_dau_sach.list[ds_dau_sach.so_luong - 1 - vitri], 10, vitri);
+                    }
+                    break;
+                case 80:
+                    if (vitri + 1 < 10)
+                    {
+                        Normal();
+                        Xuat_thong_tin_1_dau_sach_theo_hang(ds_dau_sach.list[ds_dau_sach.so_luong - 1 - vitri], 10, vitri);
+                        vitri++;
+                        SetColor(27);
+                        Xuat_thong_tin_1_dau_sach_theo_hang(ds_dau_sach.list[ds_dau_sach.so_luong - 1 - vitri], 10, vitri);
+                    }
+                    break;
+
+                case 13:
                     Normal();
-                    i = ds_dau_sach.so_luong;
-                    vitri = 0;
-                    dem = -1;
-                    xoa_man_hinh(5, 7, 128, 29);
+                    xoa_man_hinh(5, 7, 128, 30);
+                    gotoxy(30, 10);
+                    cout << "Ten sach: " << ds_dau_sach.list[ds_dau_sach.so_luong - 1 - vitri]->Ten_sach;
+                    gotoxy(60, 12);
+                    cout << "DANH MUC SACH";
+                    khung_xuat_dms(27, 13, 20);
+                    Xuat_dms_cua_1_dau_sach(ds_dau_sach.list[ds_dau_sach.so_luong - 1 - vitri]->ds_danh_muc_sach_cua_dau_sach, 16);
+                    thong_bao("                                       ");
+                    break;
+                case 27:
+                    Normal();
+                    return;
                 }
-                khung_xuat_thong_tin_ds(5, 7, 13);
-            }
-            dem++;
-        }
-    }
-    else
-    {
-        for (int i = ds_dau_sach.so_luong - 1; i >= ds_dau_sach.so_luong - 10; i--)
-        {
-            if (dem == 0)
-                SetColor(27);
-            Xuat_thong_tin_1_dau_sach_theo_hang(ds_dau_sach.list[i], 10, dem);
-            Normal();
-            if (dem == 9)
+            } while (c != 13);
+            if (c == 13)
             {
-                do
-                {
-                    c = getch();
-                    if (c == 0)
-                        c = getch();
-                    switch (c)
-                    {
-                    case 80:
-                        if (vitri + 1 < 10)
-                        {
-                            Normal();
-                            Xuat_thong_tin_1_dau_sach_theo_hang(ds_dau_sach.list[ds_dau_sach.so_luong - 1 - vitri], 10, vitri);
-                            vitri++;
-                            SetColor(27);
-                            Xuat_thong_tin_1_dau_sach_theo_hang(ds_dau_sach.list[ds_dau_sach.so_luong - 1 - vitri], 10, vitri);
-                        }
-                        break;
-                    case 72:
-                        if (vitri + 1 > 1)
-                        {
-                            Normal();
-                            Xuat_thong_tin_1_dau_sach_theo_hang(ds_dau_sach.list[ds_dau_sach.so_luong - 1 - vitri], 10, vitri);
-                            vitri--;
-                            SetColor(27);
-                            Xuat_thong_tin_1_dau_sach_theo_hang(ds_dau_sach.list[ds_dau_sach.so_luong - 1 - vitri], 10, vitri);
-                        }
-                        break;
-                    case 13:
-                        Normal();
-                        xoa_man_hinh(5, 7, 128, 30);
-                        gotoxy(30, 10);
-                        cout << "Ten sach: " << ds_dau_sach.list[ds_dau_sach.so_luong - 1 - vitri]->Ten_sach;
-                        gotoxy(60, 12);
-                        cout << "DANH MUC SACH";
-                        khung_xuat_dms(27, 13, 20);
-                        Xuat_dms_cua_1_dau_sach(ds_dau_sach.list[ds_dau_sach.so_luong - 1 - vitri]->ds_danh_muc_sach_cua_dau_sach, 16);
-                        thong_bao("                                       ");
-                        break;
-                    case 27:
-                        Normal();
-                        return;
-                    }
-                } while (c != 13);
-                if (c == 13)
-                {
-                    Normal();
-                    i = ds_dau_sach.so_luong;
-                    vitri = 0;
-                    dem = -1;
-                    xoa_man_hinh(5, 7, 128, 29);
-                }
-                khung_xuat_thong_tin_ds(5, 7, 13);
+                Normal();
+                i = ds_dau_sach.so_luong;
+                vitri = 0;
+                dem = -1;
+                xoa_man_hinh(5, 7, 128, 29);
             }
-            dem++;
+            khung_xuat_thong_tin_ds(5, 7, 13);
         }
+        dem++;
     }
 }
 #endif

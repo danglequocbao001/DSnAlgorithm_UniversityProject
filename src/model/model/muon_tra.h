@@ -624,54 +624,6 @@ void Xu_li_tra_sach(TREE &t, DS_DAU_SACH &ds_dau_sach, DS_DANH_MUC_SACH &ds_dms,
 							flag++;
 						}
 					}
-					/*for (int i = 0; i < ds_dau_sach.so_luong; i++) 
-					{
-						if (ds_dau_sach.list[i]->Ten_sach == tensach)
-						{
-							string tam; // Bien dung de luu lai ma sach cua sach duoc tra
-							 // Duyet ds muon tra cua doc gia de tim ra sach co ten do va tien hanh chinh sua thong tin
-							for (NODE_MUON_TRA *k = t->data.ds_muon_tra_cua_doc_gia.pHead; k != NULL; k = k->pNext)
-							{
-								string tensachtam;
-								tensachtam = Tra_ve_ten_sach(ds_dau_sach, k->data.Ma_sach);
-								if (tensachtam == tensach)
-								{
-									if (k->data.Trang_thai == 0 || k->data.Trang_thai == 2) // 0 la dang muon, 2 la lam mat sach. Lam mat sach thi khi den sach <=> Tra sach 
-									{
-										k->data.Trang_thai = 1; // Sua trang thai muon tra lai la 1 (Da tra)
-										ShowCur(1);
-										gotoxy(30, 22);
-										cout << "Ngay tra: ";
-										do
-										{
-											Nhap_ngay_thang(k->data.Ngay_tra, 41, 22);
-											if (Tinh_ngay(k->data.Ngay_tra) - Tinh_ngay(k->data.Ngay_muon) < 0)
-											{
-												thong_bao("Ngay tra khong the nho hon ngay muon. Xin kiem tra lai.");	
-												xoa_man_hinh(41-5, 22+1, 20, 1);
-												xoa_man_hinh(41-4, 22+2, 20, 1);
-												xoa_man_hinh(41-6, 22+3, 20, 1);
-											}	
-										}while (Tinh_ngay(k->data.Ngay_tra) - Tinh_ngay(k->data.Ngay_muon) < 0);
-										// k->data.Ngay_tra = ngaytra; // Lay ngay hien tai lam ngay tra. Khong ro la nen cho nhap ngay hay lay luon ngay hien tai?
-										tam = k->data.Ma_sach; 
-										t->data.So_luong_sach_dang_muon--;
-										// Nen xoa hay khong? Xoa: du lieu duoc giai phong => Du da hon ve bo nho. Khong xoa: co the lay lai du lieu va lam them phan "Lich su muon sach"
-										Xoa_1_node_muon_tra_theo_ma_sach(t->data.ds_muon_tra_cua_doc_gia, tam);
-										break;
-									}
-								}
-							}
-							// Sua phan muon tra xong tien hanh sua thong tin danh muc sach do lai
-							for (NODE_DANH_MUC_SACH *g = ds_dau_sach.list[i]->ds_danh_muc_sach_cua_dau_sach.pHead; g != NULL; g = g->pNext)
-							{
-								if (g->data.Ma_sach == tam)
-								{
-									g->data.Trang_thai = 0; // Cho muon duoc									
-								}
-							}
-						}
-					}*/
 					thong_bao("Xac nhan da tra.");
 					chon = 0;
 					xoa_man_hinh(18, 12, 95, 15);
@@ -872,30 +824,6 @@ void Xu_li_lam_mat_sach(TREE &t, DS_DAU_SACH &ds_dau_sach, DS_DANH_MUC_SACH &ds_
 							flag++;
 						}
 					}
-					/*for (int i = 0; i < ds_dau_sach.so_luong; i++)
-				{
-					if (ds_dau_sach.list[i]->Ten_sach == tensach)
-					{
-						// Duyet ds muon tra cua doc gia de tim ra sach co ten do va tien hanh chinh sua thong tin
-						for (NODE_MUON_TRA *k = t->data.ds_muon_tra_cua_doc_gia.pHead; k != NULL; k = k->pNext)
-						{
-							string tensachtam;
-							tensachtam = Tra_ve_ten_sach(ds_dau_sach, k->data.Ma_sach);
-							if (tensachtam == tensach)
-							{
-								if (k->data.Trang_thai == 0)
-								{
-									k->data.Trang_thai = 2; // Sua trang thai muon tra cua doc gia doi voi sach do tu 0 (Dang muon) sang 2 (Lam mat) <=> Chua tra sach
-									thong_bao("Xac nhan lam mat.");
-								}
-								else
-								{
-									thong_bao("Sach da bi lam mat.");
-								}
-							}
-						}
-					}
-				}*/
 					chon = 0;
 					xoa_man_hinh(18, 12, 95, 15);
 					khung_sach_dang_muon();

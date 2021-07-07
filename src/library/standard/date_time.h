@@ -78,7 +78,7 @@ void Nhap_ngay_thang(NGAY_THANG &date, int x, int y)
 			else if (key == 0)
 			{
 				key = getch();
-				if (key == 68)
+				if (key == 59)
 				{
 					NGAY_THANG ngaytam;
 					// ngaytam.Ngay = date.Ngay;
