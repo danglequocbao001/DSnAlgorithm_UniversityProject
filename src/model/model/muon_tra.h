@@ -151,6 +151,7 @@ void Muon_sach(TREE &t, DS_DAU_SACH &ds_dau_sach, DS_DANH_MUC_SACH &ds_dms, int 
 			{
 				gotoxy(30, 20);
 				cout << "Doc gia chi duoc muon toi da 3 cuon sach.";
+				thong_bao("                                   ");
 				return;
 			}
 			// Kiem tra trang thai the cua doc gia
@@ -158,6 +159,7 @@ void Muon_sach(TREE &t, DS_DAU_SACH &ds_dau_sach, DS_DANH_MUC_SACH &ds_dms, int 
 			{
 				gotoxy(30, 20);
 				cout << "The cua doc gia hien dang bi khoa nen khong the muon sach.";
+				thong_bao("                                   ");
 				return;
 			}
 			// Kiem tra xem doc gia co lam mat sach khong
@@ -165,6 +167,7 @@ void Muon_sach(TREE &t, DS_DAU_SACH &ds_dau_sach, DS_DANH_MUC_SACH &ds_dms, int 
 			{
 				gotoxy(30, 20);
 				cout << "Doc gia khong duoc muon sach vi da lam mat sach.";
+				thong_bao("                                   ");
 				return;
 			}
 			// Kiem tra xem doc gia co giu sach qua han khong
@@ -172,8 +175,10 @@ void Muon_sach(TREE &t, DS_DAU_SACH &ds_dau_sach, DS_DANH_MUC_SACH &ds_dms, int 
 			{
 				gotoxy(30, 20);
 				cout << "Doc gia khong duoc muon sach vi da giu sach qua han 7 ngay.";
+				thong_bao("                                   ");
 				return;
 			}
+			thong_bao("                                   ");
 			xoa_man_hinh(20, 10, 95, 25);
 			if (Kiem_tra_rong_ds_dau_sach(ds_dau_sach) == true)
 			{
@@ -451,6 +456,7 @@ void Xu_li_tra_sach(TREE &t, DS_DAU_SACH &ds_dau_sach, DS_DANH_MUC_SACH &ds_dms,
 			{
 				gotoxy(30, 20);
 				cout << "Doc gia hien van chua muon sach nao.";
+				thong_bao("                                   ");
 				return;
 			}
 			int dem = 0;
@@ -572,6 +578,7 @@ void Xu_li_tra_sach(TREE &t, DS_DAU_SACH &ds_dau_sach, DS_DANH_MUC_SACH &ds_dms,
 					{
 						gotoxy(30, 20);
 						cout << "Doc gia hien van chua muon sach nao.";
+						thong_bao("                                   ");
 						return;
 					}
 					flag = 0;
@@ -675,6 +682,7 @@ void Xu_li_lam_mat_sach(TREE &t, DS_DAU_SACH &ds_dau_sach, DS_DANH_MUC_SACH &ds_
 			{
 				gotoxy(30, 20);
 				cout << "Doc gia hien van chua muon sach nao.";
+				thong_bao("                                  ");
 				return;
 			}
 			int dem = 0;
