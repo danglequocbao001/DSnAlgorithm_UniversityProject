@@ -1,8 +1,11 @@
-#ifndef Ghi_file
-#define Ghi_file
+#ifndef FILE_OUT_H
+#define FILE_OUT_H
+
+#include "./__init__.h"
 #include "../schema/schema.h"
 #include "../../library/standard/date_time.h"
-#include<fstream>
+#include <fstream>
+
 void Luu_1_doc_gia(DS_DAU_SACH ds_dau_sach, TREE t, ofstream &Fileout)
 {
 	Fileout << t->data.Ma_the << endl;
@@ -43,7 +46,7 @@ void Luu_ds_doc_gia(DS_DAU_SACH ds_dau_sach, TREE t, ofstream &Fileout)
 void Ghi_file_ds_doc_gia(DS_DAU_SACH ds_dau_sach, TREE t, DS_DOC_GIA ds_doc_gia)
 {
 	ofstream Fileout;
-	Fileout.open("DS_DOC_GIA.txt", ios_base::out);
+	Fileout.open(DOCGIA_DB, ios_base::out);
 	if (Fileout.fail() == true)
 	{
 		cout << "Luu file that bai.\n";
@@ -71,7 +74,7 @@ void Luu_ds_dau_sach(DS_DAU_SACH ds_dau_sach, ofstream &Fileout)
 		Fileout << ds_dau_sach.list[i]->So_lan_muon << endl;
 		// So luong sach trong dau sach
 		Fileout << ds_dau_sach.list[i]->ds_danh_muc_sach_cua_dau_sach.so_luong << endl;
-		// Thong tin cac sach thuoc dau sach 
+		// Thong tin cac sach thuoc dau sach
 		for (NODE_DANH_MUC_SACH *k = ds_dau_sach.list[i]->ds_danh_muc_sach_cua_dau_sach.pHead; k != NULL; k = k->pNext)
 		{
 			Fileout << k->data.Ma_sach << endl;
@@ -83,7 +86,7 @@ void Luu_ds_dau_sach(DS_DAU_SACH ds_dau_sach, ofstream &Fileout)
 void Ghi_file_ds_dau_sach(DS_DAU_SACH ds_dau_sach)
 {
 	ofstream Fileout;
-	Fileout.open("DS_DAU_SACH.txt", ios_base::out);
+	Fileout.open(DAUSACH_DB, ios_base::out);
 	if (Fileout.fail() == true)
 	{
 		cout << "Luu file that bai.\n";
@@ -95,5 +98,4 @@ void Ghi_file_ds_dau_sach(DS_DAU_SACH ds_dau_sach)
 	}
 	Fileout.close();
 }
-#endif
-
+#endif /*FILE_OUT_H*/

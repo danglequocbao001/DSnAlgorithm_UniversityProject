@@ -39,7 +39,7 @@
 #define SEARCH_BOOK             "Mui ten len xuong: Di chuyen thanh sang | Enter: Chon | Esc: Thoat"
 #define READ_CATE               "Mui ten trai phai: Chuyen trang | Esc: Thoat"
 #define ADJUSTING               "Enter: Chuyen den chinh sua phan tiep theo"
-#define ADJUST_DATETIME         "Enter: Xac nhan | F10: Chinh sua ngay thang"
+#define ADJUST_DATETIME         "Enter: Xac nhan | F1: Chinh sua ngay thang"
 #define NOTIFICATION            "THONG BAO: "
 
 /*_____COMPONENTS_____*/
@@ -63,42 +63,37 @@
 #define VITRI           "Vi tri"
 #define TRANGTHAI       "Trang thai"
 
-extern char menu_chinh[so_item][50] = {
+char menu_chinh[so_item][50] = {
     "           DOC GIA          ",
     "           DAU SACH         ",
     "        DANH MUC SACH       ",
     "        MUON TRA SACH       ",
-    "            THOAT           "
-};
+    "            THOAT           "};
 
-
-extern char menu_dg[so_item_dg][50] = {
+char menu_dg[so_item_dg][50] = {
     "           THEM DOC GIA           ",
     "         CHINH SUA DOC GIA        ",
     "            XOA DOC GIA           ",
     "   SACH DANG MUON CUA 1 DOC GIA   ",
     "     DANH SACH DOC GIA QUA HAN    ",
     "     XUAT DOC GIA THEO HO TEN     ",
-    "     XUAT DOC GIA THEO MA THE     "
-};
+    "     XUAT DOC GIA THEO MA THE     "};
 
-extern char menu_ds[so_item_ds][50] = {
+char menu_ds[so_item_ds][50] = {
     "           THEM DAU SACH          ",
     "           XOA DAU SACH           ",
     "        CHINH SUA DAU SACH        ",
     "             TIM SACH             ",
     "      XUAT THONG TIN DAU SACH     ",
     "    XUAT DAU SACH THEO THE LOAI   ",
-    " 10 DAU SACH DUOC MUON NHIEU NHAT "
-};
+    "   10 SACH DUOC MUON NHIEU NHAT "};
 
-extern char menu_dms[so_item_dms][50] = {
+char menu_dms[so_item_dms][50] = {
     "     THEM SACH VAO 1 DAU SACH     ",
     "     XOA SACH THUOC 1 DAU SACH    ",
-    "  CHINH SUA SACH THUOC 1 DAU SACH "
-};
+    "  CHINH SUA SACH THUOC 1 DAU SACH "};
 
-extern char menu_mt[so_item_mt][50] = {
+char menu_mt[so_item_mt][50] = {
     "             MUON SACH            ",
     "             TRA SACH             ",
     "           LAM MAT SACH           ",
@@ -106,7 +101,6 @@ extern char menu_mt[so_item_mt][50] = {
 
 char menu_thoat[so_item_thoat][50] = {
     "   CO    ",
-    "  KHONG  "
-};
+    "  KHONG  "};
 
 #endif /*MENU_CONST_H*/
