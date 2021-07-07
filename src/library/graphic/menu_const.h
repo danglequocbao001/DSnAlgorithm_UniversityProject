@@ -39,7 +39,7 @@
 #define SEARCH_BOOK             "Mui ten len xuong: Di chuyen thanh sang | Enter: Chon | Esc: Thoat"
 #define READ_CATE               "Mui ten trai phai: Chuyen trang | Esc: Thoat"
 #define ADJUSTING               "Enter: Chuyen den chinh sua phan tiep theo"
-#define ADJUST_DATETIME         "Enter: Xac nhan | F10: Chinh sua ngay thang"
+#define ADJUST_DATETIME         "Enter: Xac nhan | F1: Chinh sua ngay thang"
 #define NOTIFICATION            "THONG BAO: "
 
 /*_____COMPONENTS_____*/
@@ -86,7 +86,7 @@ char menu_ds[so_item_ds][50] = {
     "             TIM SACH             ",
     "      XUAT THONG TIN DAU SACH     ",
     "    XUAT DAU SACH THEO THE LOAI   ",
-    " 10 DAU SACH DUOC MUON NHIEU NHAT "};
+    "   10 SACH DUOC MUON NHIEU NHAT "};
 
 char menu_dms[so_item_dms][50] = {
     "     THEM SACH VAO 1 DAU SACH     ",
