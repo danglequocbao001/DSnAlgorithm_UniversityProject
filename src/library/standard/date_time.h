@@ -24,18 +24,6 @@ bool Nam_nhuan(int nam)
 }
 int Ngay_hop_le(NGAY_THANG date) // 0: ngay sai, 1: thang sai, 2: nam sai, 3: hop le
 {
-	/*if (date.Nam > NAM_MAX || date.Nam < NAM_MIN)
-	{
-		return 2;
-	}
-	if (date.Thang < 1 || date.Thang > 12)
-	{
-		return 1;
-	}
-	if (date.Ngay < 1 || date.Ngay > 31)
-	{
-		return 0;
-	}*/
 	if (date.Thang == 2)
 	{
 		if (Nam_nhuan(date.Nam) == true)
@@ -81,9 +69,6 @@ void Nhap_ngay_thang(NGAY_THANG &date, int x, int y)
 				if (key == 59)
 				{
 					NGAY_THANG ngaytam;
-					// ngaytam.Ngay = date.Ngay;
-					// ngaytam.Thang = date.Thang;
-					// ngaytam.Nam = date.Nam;
 					do
 					{
 						gotoxy(x - 11, y + 1);

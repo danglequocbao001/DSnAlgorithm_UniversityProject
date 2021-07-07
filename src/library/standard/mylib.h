@@ -4,9 +4,6 @@
 #define MYLIB_H
 
 #define Enter 13
-//const int WHITE=15;
-#define PASSWORD "abcdef"
-//const int WHITE=15;
 
 char *Pwd()
 {
@@ -19,20 +16,6 @@ char *Pwd()
     }
     S[i] = '\0';
     return S;
-}
-
-int CheckPwd()
-{
-    int dem = 0;
-    for (dem = 1; dem <= 3; dem++)
-    {
-        printf("Password :");
-        if (strcmp(Pwd(), PASSWORD) == 0)
-            return 1;
-        else
-            printf("\nPassword sai. Hay nhap lai\n");
-    }
-    return 0;
 }
 
 void gotoxy(short x, short y)
