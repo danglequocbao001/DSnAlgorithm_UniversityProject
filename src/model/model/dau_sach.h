@@ -531,7 +531,7 @@ void Hieu_chinh_dau_sach(DS_DAU_SACH &ds_dau_sach)
                                     xoa_man_hinh(53, 22, 60, 1);
                                     gotoxy(53, 22);
                                     Nhap_so_chinh_sua(ds_dau_sach.list[chon]->So_trang, 53, 22);
-                                    if (ds_dau_sach.list[chon]->So_trang == NULL)
+                                    if (ds_dau_sach.list[chon]->So_trang == '\0')
                                     {
                                         ds_dau_sach.list[chon]->So_trang = tam;
                                     }
@@ -570,7 +570,7 @@ void Hieu_chinh_dau_sach(DS_DAU_SACH &ds_dau_sach)
                                             gotoxy(53, 26);
                                         }
                                     } while (ds_dau_sach.list[chon]->Nam_xuat_ban > namhientai);
-                                    if (ds_dau_sach.list[chon]->Nam_xuat_ban == NULL)
+                                    if (ds_dau_sach.list[chon]->Nam_xuat_ban == '\0')
                                     {
                                         ds_dau_sach.list[chon]->Nam_xuat_ban = tam;
                                     }

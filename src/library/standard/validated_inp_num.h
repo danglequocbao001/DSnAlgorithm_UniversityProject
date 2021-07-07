@@ -3,25 +3,25 @@
 #ifndef VALIDATED_INP_NUM_H
 #define VALIDATED_INP_NUM_H
 
-char* getOnlyNumber() {
+std::string getOnlyNumber() {
 	char* tmp_result = (char*) malloc(sizeof(char)*MAXCHARS);
 	int index = 0;
 	int ch;	
-	
+
 	while ((ch = getch()) != EOF && ch != ENTER) {
 		if (isdigit((char)ch)) {
 			tmp_result[index++] = ch;
 			printf ("%c", ch);
-		} else if(ch == 8) {
+		} else if(ch == BACKSPACE && index > 0) {
 			tmp_result[--index] = 0;
 			printf("%c %c", BACKSPACE, BACKSPACE);
 		}
 	}
-	
-	char* result = (char*)malloc(sizeof(char)*index);
-	strcpy(result, tmp_result);
+
+    memset(tmp_result + index, 0, index * 2);
+    std::string result(tmp_result);
 	free(tmp_result);
-	
+
 	return result;
 }
 

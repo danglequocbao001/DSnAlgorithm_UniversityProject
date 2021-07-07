@@ -21,16 +21,16 @@ LogOutputEnabled=0
 OverrideOutput=0
 OverrideOutputName=ThuVien.exe
 HostApplication=
-UseCustomMakefile=0
-CustomMakefile=
+UseCustomMakefile=1
+CustomMakefile=Makefile
 CommandLine=
 Folders=src,src/database,src/library,src/library/graphic,src/library/standard,src/model,src/model/io,src/model/model,src/model/schema
 IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
 CompilerSettings=00000000c0000000000000000
-UnitCount=23
 
+UnitCount=24
 [VersionInfo]
 Major=1
 Minor=0
@@ -279,3 +279,11 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
+[Unit24]
+FileName=Makefile
+Folder=
+Compile=0
+Link=0
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=

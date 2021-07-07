@@ -31,3 +31,6 @@
 *.exe
 *.out
 *.app
+
+# come from vim
+tags
