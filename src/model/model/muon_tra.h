@@ -204,7 +204,7 @@ void Muon_sach(TREE &t, DS_DAU_SACH &ds_dau_sach, DS_DANH_MUC_SACH &ds_dms, int 
 			{
 				vitri = 0;
 				if (dem == 0)
-					SetColor(27);
+					SetColor(26);
 				Xuat_thong_tin_1_dau_sach_theo_hang(ds_dau_sach.list[i], 10, dem);
 				Normal();
 				if (dem == 24 || i == ds_dau_sach.so_luong - 1)
@@ -223,7 +223,7 @@ void Muon_sach(TREE &t, DS_DAU_SACH &ds_dau_sach, DS_DANH_MUC_SACH &ds_dms, int 
 								Xuat_thong_tin_1_dau_sach_theo_hang(ds_dau_sach.list[chon], 10, vitri);
 								chon++;
 								vitri++;
-								SetColor(27);
+								SetColor(26);
 								Xuat_thong_tin_1_dau_sach_theo_hang(ds_dau_sach.list[chon], 10, vitri);
 								gotoxy(10, 5);
 							}
@@ -235,7 +235,7 @@ void Muon_sach(TREE &t, DS_DAU_SACH &ds_dau_sach, DS_DANH_MUC_SACH &ds_dms, int 
 								Xuat_thong_tin_1_dau_sach_theo_hang(ds_dau_sach.list[chon], 10, vitri);
 								chon--;
 								vitri--;
-								SetColor(27);
+								SetColor(26);
 								Xuat_thong_tin_1_dau_sach_theo_hang(ds_dau_sach.list[chon], 10, vitri);
 								gotoxy(10, 5);
 							}
@@ -460,7 +460,7 @@ void Xu_li_tra_sach(TREE &t, DS_DAU_SACH &ds_dau_sach, DS_DANH_MUC_SACH &ds_dms,
 				if (k->data.Trang_thai == 0 || k->data.Trang_thai == 2)
 				{
 					if (dem == 0)
-						SetColor(27);
+						SetColor(26);
 					string tensachtam;
 					tensachtam = Tra_ve_ten_sach(ds_dau_sach, k->data.Ma_sach);
 					dem++;
@@ -502,7 +502,7 @@ void Xu_li_tra_sach(TREE &t, DS_DAU_SACH &ds_dau_sach, DS_DANH_MUC_SACH &ds_dms,
 							{
 								if (flag == chon)
 								{
-									SetColor(27);
+									SetColor(26);
 									string tensachtam;
 									tensachtam = Tra_ve_ten_sach(ds_dau_sach, k->data.Ma_sach);
 									dem++;
@@ -541,7 +541,7 @@ void Xu_li_tra_sach(TREE &t, DS_DAU_SACH &ds_dau_sach, DS_DANH_MUC_SACH &ds_dms,
 							{
 								if (flag == chon)
 								{
-									SetColor(27);
+									SetColor(26);
 									string tensachtam;
 									tensachtam = Tra_ve_ten_sach(ds_dau_sach, k->data.Ma_sach);
 									dem++;
@@ -627,7 +627,7 @@ void Xu_li_tra_sach(TREE &t, DS_DAU_SACH &ds_dau_sach, DS_DANH_MUC_SACH &ds_dms,
 						if (k->data.Trang_thai == 0 || k->data.Trang_thai == 2)
 						{
 							if (dem == 0)
-								SetColor(27);
+								SetColor(26);
 							string tensachtam;
 							tensachtam = Tra_ve_ten_sach(ds_dau_sach, k->data.Ma_sach);
 							dem++;
@@ -685,7 +685,7 @@ void Xu_li_lam_mat_sach(TREE &t, DS_DAU_SACH &ds_dau_sach, DS_DANH_MUC_SACH &ds_
 				if (k->data.Trang_thai == 0 || k->data.Trang_thai == 2)
 				{
 					if (dem == 0)
-						SetColor(27);
+						SetColor(26);
 					string tensachtam;
 					tensachtam = Tra_ve_ten_sach(ds_dau_sach, k->data.Ma_sach);
 					dem++;
@@ -727,7 +727,7 @@ void Xu_li_lam_mat_sach(TREE &t, DS_DAU_SACH &ds_dau_sach, DS_DANH_MUC_SACH &ds_
 							{
 								if (flag == chon)
 								{
-									SetColor(27);
+									SetColor(26);
 									string tensachtam;
 									tensachtam = Tra_ve_ten_sach(ds_dau_sach, k->data.Ma_sach);
 									dem++;
@@ -766,7 +766,7 @@ void Xu_li_lam_mat_sach(TREE &t, DS_DAU_SACH &ds_dau_sach, DS_DANH_MUC_SACH &ds_
 							{
 								if (flag == chon)
 								{
-									SetColor(27);
+									SetColor(26);
 									string tensachtam;
 									tensachtam = Tra_ve_ten_sach(ds_dau_sach, k->data.Ma_sach);
 									dem++;
@@ -825,7 +825,7 @@ void Xu_li_lam_mat_sach(TREE &t, DS_DAU_SACH &ds_dau_sach, DS_DANH_MUC_SACH &ds_
 						if (k->data.Trang_thai == 0 || k->data.Trang_thai == 2)
 						{
 							if (dem == 0)
-								SetColor(27);
+								SetColor(26);
 							string tensachtam;
 							tensachtam = Tra_ve_ten_sach(ds_dau_sach, k->data.Ma_sach);
 							dem++;
