@@ -297,7 +297,13 @@ int main() {
                 {
                     ve_lai_man_hinh();
                     DeMuc("        CHINH SUA DAU SACH");
-                    Hieu_chinh_dau_sach(ds_dau_sach);
+                    if (Kiem_tra_rong_ds_dau_sach(ds_dau_sach) == true)
+                    {
+                        thong_bao("Danh sach dau sach dang rong. Khong the chinh sua.");
+                    }
+                    else {
+                        Hieu_chinh_dau_sach(ds_dau_sach);
+                    }
                     break;
                 }
                 case 4:
@@ -370,7 +376,11 @@ int main() {
                 {
                     ve_lai_man_hinh();
                     DeMuc("      THEM SACH VAO DAU SACH");
-                    Them_sach(ds_dms, ds_dau_sach);
+                    if (Kiem_tra_rong_ds_dau_sach(ds_dau_sach)) {
+                        thong_bao("Chua co dau sach nao.");
+                    } else {
+                        Them_sach(ds_dms, ds_dau_sach);
+                    }
                     break;
                 }
                 case 2:
