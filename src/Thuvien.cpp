@@ -211,7 +211,11 @@ int main() {
                     DeMuc("       DANH SACH DOC GIA QUA HAN");
                     if (Kiem_tra_rong_doc_gia(ds_dg)) {
                         thong_bao("Khong co doc gia nao trong thu vien.");
-                    } else {
+                    } 
+                    else if (Kiem_tra_rong_ds_dau_sach(ds_dau_sach)) {
+                        thong_bao("Khong co sach nao trong thu vien.");
+                    }
+                    else {
                         Xuat_danh_sach_doc_gia_qua_han_theo_thoi_gian_giam_dan(t, ds_dg);
                     }
                     break;
