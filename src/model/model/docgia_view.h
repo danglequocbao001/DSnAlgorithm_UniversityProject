@@ -46,10 +46,7 @@ void Xuat_thong_tin_1_doc_gia_theo_hang(DOC_GIA dg, int dong_bat_dau, int dem)
 }
 void Chuyen_doc_gia_sang_mang(TREE t, DOC_GIA a[], int &n)
 {
-	if (t == NULL)
-	{
-		return;
-	}
+	if (t == NULL) return;
 	else
 	{
 		Chuyen_doc_gia_sang_mang(t->pLeft, a, n);
