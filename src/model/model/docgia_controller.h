@@ -5,6 +5,10 @@
 #include "../../library/standard/validated_inp_num.h"
 
 using namespace std;
+
+bool Kiem_tra_rong_doc_gia(DS_DOC_GIA ds_dg) {
+    return ds_dg.so_luong <= 0;
+}
 bool Kiem_tra_trung_ma_the(TREE t, int x)
 {
 	if (t == NULL)
@@ -217,6 +221,8 @@ void Nhap_doc_gia(TREE t, DOC_GIA &dg)
 // Them
 void Them_doc_gia(TREE &t, DOC_GIA dg, DS_DOC_GIA &ds_dg)
 {
+    if (dg.Ho.empty() || dg.Ten.empty() || dg.Phai.empty()) return;
+
 	if (t == NULL) // Neu cay dang rong
 	{
 		NODE_DOC_GIA *p = new NODE_DOC_GIA; // Khoi tao 1 node de them vao cay
