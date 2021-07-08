@@ -20,7 +20,7 @@ void Nhap_doc_gia(TREE t, DOC_GIA &dg);
 void Them_doc_gia(TREE &t, DOC_GIA dg, DS_DOC_GIA &ds_dg);
 void Chinh_sua_thong_tin_doc_gia(TREE &t);
 void Xoa_node_bat_ki(TREE &t, int mathe, DS_DOC_GIA &ds_dg); // Node o day chinh la doc gia
-void Xuat_thong_tin_doc_gia_theo_ma_the(TREE t);
+void Xuat_thong_tin_doc_gia_theo_ma_the(TREE t, DOC_GIA a[], DS_DOC_GIA ds_dg, int n);
 void Xuat_thong_tin_doc_gia_theo_ho_ten(TREE t, DOC_GIA a[], DS_DOC_GIA ds_dg, int n);
 void Liet_ke_danh_sach_sach_dang_muon_cua_1_doc_gia(TREE t, int mathe);
 void Xuat_danh_sach_doc_gia_qua_han_theo_thoi_gian_giam_dan(TREE t, DOC_GIA a[], DS_DOC_GIA ds_dg, int n);
@@ -242,7 +242,7 @@ int main() {
                     if (Kiem_tra_rong_doc_gia(ds_dg)) {
                         thong_bao("Khong co doc gia nao trong thu vien.");
                     } else {
-                        Xuat_thong_tin_doc_gia_theo_ho_ten(t, a, ds_dg, n);
+                        Xuat_thong_tin_doc_gia_theo_ma_the(t, a, ds_dg, n);
                     }
                     break;
                 }
