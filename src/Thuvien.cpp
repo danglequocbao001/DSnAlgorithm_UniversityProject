@@ -211,7 +211,11 @@ int main() {
                     DeMuc("       DANH SACH DOC GIA QUA HAN");
                     if (Kiem_tra_rong_doc_gia(ds_dg)) {
                         thong_bao("Khong co doc gia nao trong thu vien.");
-                    } else {
+                    } 
+                    else if (Kiem_tra_rong_ds_dau_sach(ds_dau_sach)) {
+                        thong_bao("Khong co sach nao trong thu vien.");
+                    }
+                    else {
                         Xuat_danh_sach_doc_gia_qua_han_theo_thoi_gian_giam_dan(t, ds_dg);
                     }
                     break;
@@ -293,7 +297,13 @@ int main() {
                 {
                     ve_lai_man_hinh();
                     DeMuc("        CHINH SUA DAU SACH");
-                    Hieu_chinh_dau_sach(ds_dau_sach);
+                    if (Kiem_tra_rong_ds_dau_sach(ds_dau_sach) == true)
+                    {
+                        thong_bao("Danh sach dau sach dang rong. Khong the chinh sua.");
+                    }
+                    else {
+                        Hieu_chinh_dau_sach(ds_dau_sach);
+                    }
                     break;
                 }
                 case 4:
@@ -366,7 +376,11 @@ int main() {
                 {
                     ve_lai_man_hinh();
                     DeMuc("      THEM SACH VAO DAU SACH");
-                    Them_sach(ds_dms, ds_dau_sach);
+                    if (Kiem_tra_rong_ds_dau_sach(ds_dau_sach)) {
+                        thong_bao("Chua co dau sach nao.");
+                    } else {
+                        Them_sach(ds_dms, ds_dau_sach);
+                    }
                     break;
                 }
                 case 2:
