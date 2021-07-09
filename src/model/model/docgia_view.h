@@ -26,12 +26,12 @@ void Xuat_thong_tin_1_doc_gia_theo_hang(DOC_GIA dg, int dong_bat_dau, int dem)
 	if (dg.Trang_thai_the == 0)
 	{
 		gotoxy(65, dong_bat_dau + dem);
-		cout << dg.Trang_thai_the << " (Bi khoa)";
+		cout <<" Da bi khoa ";
 	}
 	else
 	{
 		gotoxy(65, dong_bat_dau + dem);
-		cout << dg.Trang_thai_the << " (Dang hoat dong)";
+		cout <<" Dang hoat dong ";
 	}
 	gotoxy(90, dong_bat_dau + dem);
 	cout << dg.So_luong_sach_dang_muon;
@@ -46,10 +46,7 @@ void Xuat_thong_tin_1_doc_gia_theo_hang(DOC_GIA dg, int dong_bat_dau, int dem)
 }
 void Chuyen_doc_gia_sang_mang(TREE t, DOC_GIA a[], int &n)
 {
-	if (t == NULL)
-	{
-		return;
-	}
+	if (t == NULL) return;
 	else
 	{
 		Chuyen_doc_gia_sang_mang(t->pLeft, a, n);

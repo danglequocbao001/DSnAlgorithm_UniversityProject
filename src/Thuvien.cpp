@@ -20,7 +20,7 @@ void Nhap_doc_gia(TREE t, DOC_GIA &dg);
 void Them_doc_gia(TREE &t, DOC_GIA dg, DS_DOC_GIA &ds_dg);
 void Chinh_sua_thong_tin_doc_gia(TREE &t);
 void Xoa_node_bat_ki(TREE &t, int mathe, DS_DOC_GIA &ds_dg); // Node o day chinh la doc gia
-void Xuat_thong_tin_doc_gia_theo_ma_the(TREE t);
+void Xuat_thong_tin_doc_gia_theo_ma_the(TREE t, DOC_GIA a[], DS_DOC_GIA ds_dg, int n);
 void Xuat_thong_tin_doc_gia_theo_ho_ten(TREE t, DOC_GIA a[], DS_DOC_GIA ds_dg, int n);
 void Liet_ke_danh_sach_sach_dang_muon_cua_1_doc_gia(TREE t, int mathe);
 void Xuat_danh_sach_doc_gia_qua_han_theo_thoi_gian_giam_dan(TREE t, DOC_GIA a[], DS_DOC_GIA ds_dg, int n);
@@ -209,7 +209,15 @@ int main() {
                 {
                     ve_lai_man_hinh();
                     DeMuc("       DANH SACH DOC GIA QUA HAN");
-                    Xuat_danh_sach_doc_gia_qua_han_theo_thoi_gian_giam_dan(t, ds_dg);
+                    if (Kiem_tra_rong_doc_gia(ds_dg)) {
+                        thong_bao("Khong co doc gia nao trong thu vien.");
+                    } 
+                    else if (Kiem_tra_rong_ds_dau_sach(ds_dau_sach)) {
+                        thong_bao("Khong co sach nao trong thu vien.");
+                    }
+                    else {
+                        Xuat_danh_sach_doc_gia_qua_han_theo_thoi_gian_giam_dan(t, ds_dg);
+                    }
                     break;
                 }
                 case 6:
@@ -218,7 +226,11 @@ int main() {
                     DOC_GIA a[ds_dg.so_luong];
                     int n = 0;
                     DeMuc("        THONG TIN DOC GIA");
-                    Xuat_thong_tin_doc_gia_theo_ho_ten(t, a, ds_dg, n);
+                    if (Kiem_tra_rong_doc_gia(ds_dg)) {
+                        thong_bao("Khong co doc gia nao trong thu vien.");
+                    } else {
+                        Xuat_thong_tin_doc_gia_theo_ho_ten(t, a, ds_dg, n);
+                    }
                     break;
                 }
                 case 7:
@@ -227,7 +239,11 @@ int main() {
                     DeMuc("        THONG TIN DOC GIA");
                     DOC_GIA a[ds_dg.so_luong];
                     int n = 0;
-                    Xuat_thong_tin_doc_gia_theo_ma_the(t, a, ds_dg, n);
+                    if (Kiem_tra_rong_doc_gia(ds_dg)) {
+                        thong_bao("Khong co doc gia nao trong thu vien.");
+                    } else {
+                        Xuat_thong_tin_doc_gia_theo_ma_the(t, a, ds_dg, n);
+                    }
                     break;
                 }
                 case 0:
@@ -281,7 +297,13 @@ int main() {
                 {
                     ve_lai_man_hinh();
                     DeMuc("        CHINH SUA DAU SACH");
-                    Hieu_chinh_dau_sach(ds_dau_sach);
+                    if (Kiem_tra_rong_ds_dau_sach(ds_dau_sach) == true)
+                    {
+                        thong_bao("Danh sach dau sach dang rong. Khong the chinh sua.");
+                    }
+                    else {
+                        Hieu_chinh_dau_sach(ds_dau_sach);
+                    }
                     break;
                 }
                 case 4:
@@ -317,7 +339,11 @@ int main() {
                 {
                     ve_lai_man_hinh();
                     DeMuc("   10 SACH DUOC MUON NHIEU NHAT");
-                    Top_10_sach(ds_dau_sach);
+                    if (Kiem_tra_rong_ds_dau_sach(ds_dau_sach)) {
+                        thong_bao("Khong co sach nao trong thu vien.");
+                    } else {
+                        Top_10_sach(ds_dau_sach);
+                    }
                     break;
                 }
                 case 0:
@@ -350,7 +376,11 @@ int main() {
                 {
                     ve_lai_man_hinh();
                     DeMuc("      THEM SACH VAO DAU SACH");
-                    Them_sach(ds_dms, ds_dau_sach);
+                    if (Kiem_tra_rong_ds_dau_sach(ds_dau_sach)) {
+                        thong_bao("Chua co dau sach nao.");
+                    } else {
+                        Them_sach(ds_dms, ds_dau_sach);
+                    }
                     break;
                 }
                 case 2:
