@@ -1780,7 +1780,7 @@ void Top_10_sach(DS_DAU_SACH ds_dau_sach)
                         cout << "DANH MUC SACH";
                         khung_xuat_dms(27, 13, 20);
                         Xuat_dms_cua_1_dau_sach(ds_dau_sach.list[ds_dau_sach.so_luong - 1 - vitri]->ds_danh_muc_sach_cua_dau_sach, 16);
-                        thong_bao("                                       ");
+                        thong_bao(" ");
                         break;
                     case 27:
                         Normal();
@@ -1846,7 +1846,7 @@ void Top_10_sach(DS_DAU_SACH ds_dau_sach)
                         cout << "DANH MUC SACH";
                         khung_xuat_dms(27, 13, 20);
                         Xuat_dms_cua_1_dau_sach(ds_dau_sach.list[ds_dau_sach.so_luong - 1 - vitri]->ds_danh_muc_sach_cua_dau_sach, 16);
-                        thong_bao("                                       ");
+                        thong_bao(" ");
                         break;
                     case 27:
                         Normal();
