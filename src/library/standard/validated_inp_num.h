@@ -3,25 +3,47 @@
 #ifndef VALIDATED_INP_NUM_H
 #define VALIDATED_INP_NUM_H
 
-std::string getOnlyNumber()
-{
-    char *tmp_result = (char *)malloc(sizeof(char) * MAXCHARS);
-    int index = 0;
-    int ch;
+/*____for name, sex, ...____*/
+bool is_alpha(char target) {
+    return (
+        ('a' <= target && target <= 'z') ||
+        ('A' <= target && target <= 'Z') ||
+        (target == ' ')
+    );
+}
 
-    while ((ch = getch()) != EOF && ch != ENTER)
-    {
-        if (isdigit((char)ch))
-        {
-            tmp_result[index++] = ch;
-            printf("%c", ch);
-        }
-        else if (ch == BACKSPACE && index > 0)
-        {
-            tmp_result[--index] = 0;
-            printf("%c %c", BACKSPACE, BACKSPACE);
-        }
-    }
+bool no_duplicate_space(char target, char* array) {
+    int len = strlen(array);
+    if (len == 1 || len == 0) return true;
+    return !(array[len - 1] == target && target == ' ');
+}
+
+/*____for number____*/
+bool is_number(char target) {
+    return isdigit(target);
+}
+
+bool rule_one_chain_default(char target, char* chain) {
+    return true;
+}
+
+std::string getLimitInput(
+        bool (*rule_one_char)(char), // {function} check the input char is valid
+        bool (*rule_one_chain)(char, char*) // {function} check the char array is valid
+    ) {
+	char* tmp_result = (char*) malloc(sizeof(char)*MAXCHARS);
+	int index = 0;
+	int ch;	
+
+	while ((ch = getch()) != EOF && ch != ENTER) {
+		if (rule_one_char(ch) && rule_one_chain(ch, tmp_result)) {
+			tmp_result[index++] = ch;
+			printf ("%c", ch);
+		} else if(ch == BACKSPACE && index > 0) {
+			tmp_result[--index] = 0;
+			printf("%c %c", BACKSPACE, BACKSPACE);
+		}
+	}
 
     memset(tmp_result + index, 0, index * 2);
     std::string result(tmp_result);
@@ -53,7 +75,7 @@ void Nhap_so(int &n, int x, int y)
         do
         {
             // getline(cin, user_string_num);
-            user_string_num = getOnlyNumber();
+            user_string_num = getLimitInput(is_number, rule_one_chain_default);
             if (user_string_num == "") // Kiem tra truong hop bo trong du lieu
             {
                 thong_bao("Khong duoc bo trong du lieu.");
@@ -143,7 +165,7 @@ void Nhap_so_chinh_sua(int &n, int x, int y)
             xoa_man_hinh(x, y, 70, 1);
             gotoxy(x, y);
         }
-        user_string_num = getOnlyNumber();
+        user_string_num = getLimitInput(is_number, rule_one_chain_default);
         for (int i = 0; i < user_string_num.size(); i++)
         {
             if (isspace(user_string_num[i]) == true)
@@ -227,7 +249,7 @@ void Nhap_ngay(int &n, int x, int y)
         do
         {
             // getline(cin, user_string_num);
-            user_string_num = getOnlyNumber();
+            user_string_num = getLimitInput(is_number, rule_one_chain_default);
             if (user_string_num == "") // Kiem tra truong hop bo trong du lieu
             {
                 thong_bao("Khong duoc bo trong du lieu.");
@@ -319,7 +341,7 @@ void Nhap_thang(int &n, int x, int y)
         do
         {
             // getline(cin, user_string_num);
-            user_string_num = getOnlyNumber();
+            user_string_num = getLimitInput(is_number, rule_one_chain_default);
             if (user_string_num == "") // Kiem tra truong hop bo trong du lieu
             {
                 thong_bao("Khong duoc bo trong du lieu.");
@@ -411,7 +433,7 @@ void Nhap_nam(int &n, int x, int y)
         do
         {
             // getline(cin, user_string_num);
-            user_string_num = getOnlyNumber();
+            user_string_num = getLimitInput(is_number, rule_one_chain_default);
             if (user_string_num == "") // Kiem tra truong hop bo trong du lieu
             {
                 thong_bao("Khong duoc bo trong du lieu.");
