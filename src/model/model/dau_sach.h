@@ -1711,7 +1711,7 @@ void Tim_thong_tin_sach_dua_vao_ten_sach(DS_DAU_SACH ds_dau_sach, DS_DANH_MUC_SA
         }
     }
 }
-void Sap_xep_dau_sach_tang_dan_theo_so_lan_muon(DS_DAU_SACH &ds_dau_sach)
+void Sap_xep_dau_sach_tang_dan_theo_so_lan_muon(DS_DAU_SACH ds_dau_sach)
 {
     for (int i = 0; i < ds_dau_sach.so_luong - 1; i++)
     {
