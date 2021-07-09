@@ -6,8 +6,9 @@
 
 using namespace std;
 
-bool Kiem_tra_rong_doc_gia(DS_DOC_GIA ds_dg) {
-    return ds_dg.so_luong <= 0;
+bool Kiem_tra_rong_doc_gia(DS_DOC_GIA ds_dg)
+{
+	return ds_dg.so_luong <= 0;
 }
 bool Kiem_tra_trung_ma_the(TREE t, int x)
 {
@@ -85,7 +86,7 @@ void Chuan_hoa_chu(string &a)
 		}
 	}
 }
-bool Kiem_tra_nhap_ho_ten(string hoten) // Chi cho nhap chu cai, khoang trang, va mot so ki tu dac biet nhu "., -, &" (VD: Robert M. Pirsig, Randy Pausch & Jeffrey Zaslow, Antoine de Saint-Exup�ry,...)
+bool Kiem_tra_nhap_ho_ten(string hoten) // Chi cho nhap chu cai, khoang trang, va mot so ki tu dac biet
 {
 	for (int i = 0; i < hoten.length(); i++)
 	{
@@ -181,7 +182,8 @@ void Nhap_doc_gia(TREE t, DOC_GIA &dg)
 						xoa_man_hinh(39, 12, 80, 1);
 						gotoxy(39, 12);
 					}
-					if(key == 27) break;
+					if (key == 27)
+						break;
 				} while (Kiem_tra_nhap_ho_ten(dg.Ho) == false);
 				do
 				{
@@ -193,7 +195,8 @@ void Nhap_doc_gia(TREE t, DOC_GIA &dg)
 						xoa_man_hinh(40, 14, 80, 1);
 						gotoxy(40, 14);
 					}
-					if(key == 27) break;
+					if (key == 27)
+						break;
 				} while (Kiem_tra_nhap_ho_ten(dg.Ten) == false);
 				do
 				{
@@ -221,7 +224,8 @@ void Nhap_doc_gia(TREE t, DOC_GIA &dg)
 // Them
 void Them_doc_gia(TREE &t, DOC_GIA dg, DS_DOC_GIA &ds_dg)
 {
-    if (dg.Ho.empty() || dg.Ten.empty() || dg.Phai.empty()) return;
+	if (dg.Ho.empty() || dg.Ten.empty() || dg.Phai.empty())
+		return;
 
 	if (t == NULL) // Neu cay dang rong
 	{

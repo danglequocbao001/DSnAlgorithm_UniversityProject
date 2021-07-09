@@ -682,7 +682,7 @@ void Xu_li_lam_mat_sach(TREE &t, DS_DAU_SACH &ds_dau_sach, DS_DANH_MUC_SACH &ds_
 			{
 				gotoxy(30, 20);
 				cout << "Doc gia hien van chua muon sach nao.";
-				thong_bao("                                  ");
+				thong_bao(" ");
 				return;
 			}
 			int dem = 0;
