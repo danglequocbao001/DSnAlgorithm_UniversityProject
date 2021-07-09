@@ -101,7 +101,8 @@ bool Kiem_tra_nhap_ho_ten(string hoten) // Chi cho nhap chu cai, khoang trang, v
 void Nhap_va_kiem_tra_bo_trong_du_lieu(string &s, int x, int y) // x,y la noi con tro quay lai de nhap
 {
 Nhapdulieu:
-	getline(cin, s);
+    // getline(cin, s);
+    s = getLimitInput(is_alpha, no_duplicate_space);
 	int dem = 0;
 	if (s == "")
 	{
@@ -110,7 +111,8 @@ Nhapdulieu:
 			thong_bao("Khong duoc bo trong du lieu.");
 			xoa_man_hinh(x, y, 70, 1);
 			gotoxy(x, y);
-			getline(cin, s);
+			// getline(cin, s);
+            s = getLimitInput(is_alpha, no_duplicate_space);
 		} while (s == "");
 	}
 	for (int i = 0; i < s.length(); i++)
@@ -131,7 +133,8 @@ Nhapdulieu:
 void Nhap_va_kiem_tra_bo_trong_du_lieu_chinh_sua(string &s, int x, int y) // x,y la noi con tro quay lai de nhap
 {
 Nhapdulieu:
-	getline(cin, s);
+	// getline(cin, s);
+    s = getLimitInput(is_alpha, no_duplicate_space);
 	int dem = 0;
 	if (s == "")
 		return;
@@ -201,7 +204,8 @@ void Nhap_doc_gia(TREE t, DOC_GIA &dg)
 				do
 				{
 					gotoxy(46, 16);
-					getline(cin, dg.Phai);
+					// getline(cin, dg.Phai);
+                    dg.Phai = getLimitInput(is_alpha, no_duplicate_space);
 					Chuan_hoa_chu(dg.Phai);
 					if (dg.Phai != "Nam" && dg.Phai != "Nu")
 					{
@@ -334,7 +338,8 @@ void Chinh_sua_thong_tin_doc_gia(TREE &t, int mathe)
 						{
 							xoa_man_hinh(50, 23, 80, 1);
 							gotoxy(50, 23);
-							getline(cin, t->data.Phai);
+							// getline(cin, t->data.Phai);
+                            t->data.Phai = getLimitInput(is_alpha, no_duplicate_space);
 							if (t->data.Phai == "")
 							{
 								t->data.Phai = temp;
