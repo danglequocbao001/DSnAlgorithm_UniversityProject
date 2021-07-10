@@ -132,6 +132,40 @@ Nhapdulieu:
         goto Nhapdulieu;
     }
 }
+
+void Nhap_va_kiem_tra_bo_trong_du_lieu_ko_so(string &s, int x, int y) // x,y la noi con tro quay lai de nhap
+{
+Nhapdulieu:
+	// getline(cin, s);
+    s = getLimitInput(is_alpha, no_duplicate_space);
+    int dem = 0;
+    if (s == "")
+    {
+        do
+        {
+            thong_bao(NOT_EMPTY);
+            xoa_man_hinh(x, y, 70, 1);
+            gotoxy(x, y);
+            // getline(cin, s);
+            s = getLimitInput(is_alpha, no_duplicate_space);
+        } while (s == "");
+    }
+    for (int i = 0; i < s.length(); i++)
+    {
+        if (s[i] == ' ')
+        {
+            dem++;
+        }
+    }
+    if (dem == s.length())
+    {
+        thong_bao(WRONG_NAME);
+        xoa_man_hinh(x, y, 70, 1);
+        gotoxy(x, y);
+        goto Nhapdulieu;
+    }
+}
+
 void Nhap_va_kiem_tra_bo_trong_du_lieu_chinh_sua(string &s, int x, int y) // x,y la noi con tro quay lai de nhap
 {
 Nhapdulieu:
@@ -180,7 +214,7 @@ void Nhap_doc_gia(TREE t, DOC_GIA &dg)
 					gotoxy(30, 10);
 					cout << "Ma the: " << dg.Ma_the;
 					gotoxy(39, 12);
-					Nhap_va_kiem_tra_bo_trong_du_lieu(dg.Ho, 39, 12);
+					Nhap_va_kiem_tra_bo_trong_du_lieu_ko_so(dg.Ho, 39, 12);
 					if (Kiem_tra_nhap_ho_ten(dg.Ho) == false)
 					{
 						thong_bao(WRONG_NAME);
@@ -193,7 +227,7 @@ void Nhap_doc_gia(TREE t, DOC_GIA &dg)
 				do
 				{
 					gotoxy(40, 14);
-					Nhap_va_kiem_tra_bo_trong_du_lieu(dg.Ten, 40, 14);
+					Nhap_va_kiem_tra_bo_trong_du_lieu_ko_so(dg.Ten, 40, 14);
 					if (Kiem_tra_nhap_ho_ten(dg.Ten) == false)
 					{
 						thong_bao(WRONG_NAME);
