@@ -160,7 +160,7 @@ void Them_dau_sach(DS_DAU_SACH &ds_dau_sach)
                 do
                 {
                     gotoxy(41, 9);
-                    Nhap_va_kiem_tra_bo_trong_du_lieu(p->ISBN, 41, 9);
+                    Nhap_va_kiem_tra_bo_trong_du_lieu_ko_so(p->ISBN, 41, 9);
                     if (Kiem_tra_ki_tu_ISBN(p->ISBN) == false)
                     {
                         do
@@ -189,13 +189,13 @@ void Them_dau_sach(DS_DAU_SACH &ds_dau_sach)
                     }
                 } while (Kiem_tra_trung_ISBN(ds_dau_sach, p->ISBN) == true);
                 gotoxy(45, 11);
-                Nhap_va_kiem_tra_bo_trong_du_lieu(p->Ten_sach, 45, 11);
+                Nhap_va_kiem_tra_bo_trong_du_lieu_ko_so(p->Ten_sach, 45, 11);
                 gotoxy(49, 13);
                 Nhap_so(p->So_trang, 49, 13);
                 do
                 {
                     gotoxy(48, 15);
-                    Nhap_va_kiem_tra_bo_trong_du_lieu(p->Tac_gia, 48, 15);
+                    Nhap_va_kiem_tra_bo_trong_du_lieu_ko_so(p->Tac_gia, 48, 15);
                     if (Kiem_tra_nhap_ho_ten(p->Tac_gia) == false)
                     {
                         thong_bao("Ten khong hop le, xin nhap lai");
@@ -216,7 +216,7 @@ void Them_dau_sach(DS_DAU_SACH &ds_dau_sach)
                     }
                 } while (p->Nam_xuat_ban > namhientai);
                 gotoxy(45, 19);
-                Nhap_va_kiem_tra_bo_trong_du_lieu(p->The_loai, 45, 19);
+                Nhap_va_kiem_tra_bo_trong_du_lieu_ko_so(p->The_loai, 45, 19);
                 Chuan_hoa_chu(p->Tac_gia);
                 Chuan_hoa_chu(p->Ten_sach);
                 Chuan_hoa_chu(p->The_loai);
