@@ -1,167 +1,107 @@
-20
-Ten Sach
-1234
-Ten Tac Gia
-Ngu Ngon
-100
-2001
-0
-0
-Lap trinh mang
-GXBR
-Nguyen Manh Hung
-Bai Giang
-324
-2020
-2
-2
-GXBR0
-1
-1
-GXBR1
-1
-2
-Tin hoc co so
-HJXD
-Phan Thi Ha
-Bai Giang
-432
-2020
-0
-0
-Chat luong phan mem
-ECYU
-Nguyen Manh Hung
-Bai Giang
-65
-2020
-0
-0
-Nhap mon cong nghe phan mem
-WRGS
-Tran Dinh Que
-Bai Giang
-5334
-2020
-0
-0
-Dam bao chat luong phan mem
-SDFH
-Do Thi Bich Ngoc
-Bai Giang
-93
-2020
-0
-0
-Cau truc du lieu va giai thuat
+11
+Cau Truc Du Lieu
 CTDL
-Nguyen Duy Phuong
-Bai Giang
-12
-2020
-0
-0
-Ky thuat lap trinh huong doi tuong
-SHVN
-Nguyen Manh Son
-Bai Giang
-45
-2020
-0
-0
-Phat trien phan mem huong dich vu
-OQDV
-Pham Van Cuong
-Bai Giang
-54
-2020
-0
-0
-Ngon ngu lap trinh C++
-NCDT
-Nguyen Manh Son
-Bai Giang
-96
-2020
-0
-0
-Lap trinh huong doi tuong
-LTPM
-Nguyen Manh Son
-Bai Giang
-65
-2020
-0
-0
-Thuat toan va ung dung
-TTUD
-Do Bich Ngoc
-Bai Giang
-123
+Nguyen Hoang
+Tai Lieu
+200
 2019
+3
+2
+CTDL0
+1
+Mot
+CTDL1
 0
+Hai
+Lap Trinh Mang
+LTMM
+Lap Trinh
+Tai Lieu
+200
+2018
+2
+3
+LTMM0
+1
+Mot
+LTMM1
+1
+Hai
+LTMM2
 0
-Phat trien ung dung di dong
-FGTK
-Nguyen Hoang Anh
-Bai Giang
-54
-2019
-0
-0
-Ngon ngu lap trinh Java
-NNJV
-Vu Huu Tien
-Bai Giang
-100
-2019
-0
-0
-Quan ly du an phan mem
-CCND
-Pham Quynh Chi
-Bai Giang
-65
+Ba
+Tin Hoc Co So
+THCS
+Nguyen Minh
+Tai Lieu
+200
 2018
 0
 0
-Quan ly an toan thong tin
-YFGT
-Pham Hoang Duy
+Du Lieu Phan Tan
+DLPT
+Ngo Minh
+Tai Lieu
+200
+2020
+1
+1
+DLPT0
+1
+Mot
+Ly Thuyet Thong Tin
+LTTT
+Minh Tran
 Bai Giang
-43
-2018
+250
+2017
 0
 0
-Kho du lieu va ky thuat khai pha
-TDGT
-Nguyen Quynh Chi
-Bai Giang
-54
-2018
+Mang May Tinh
+MMTT
+Ngo Xuan
+Tai Lieu
+150
+2020
 0
 0
-Cac ky thuat giau tin
-BNQN
-Do Xuan Cho
-Bai Giang
-88
-2018
+Xu Ly Tin Hieu
+XTHS
+Tran Minh
+Tai Lieu
+300
+2016
 0
 0
-Quan ly an toan thong tin
-TECG
-Pham Hoang Duy
-Bai Giang
-354
-2018
+Truyen Cuoi
+TTCC
+Nguyen Hai
+Hai
+500
+2020
 0
 0
-Bairtynang Cac ki thuat giau tin
-RTYN
-Do Xuan Cho
-Bai Giang
-755
-2018
+Tieng anh
+TTAA
+Nguyen Anh
+Tai Lieu
+300
+2015
+0
+0
+Ky Thuat So
+KTSS
+Nguyen Thuat
+Tai Lieu
+300
+2015
+0
+0
+Toan Roi Rac
+TRRR
+Nguyen Rac
+Tai Lieu
+300
+2012
 0
 0

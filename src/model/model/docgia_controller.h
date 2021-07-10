@@ -103,7 +103,8 @@ bool Kiem_tra_nhap_ho_ten(string hoten) // Chi cho nhap chu cai, khoang trang, v
 void Nhap_va_kiem_tra_bo_trong_du_lieu(string &s, int x, int y) // x,y la noi con tro quay lai de nhap
 {
 Nhapdulieu:
-    s = getLimitInput(is_alpha, no_duplicate_space);
+	getline(cin, s);
+    // s = getLimitInput(is_alpha, no_duplicate_space);
     int dem = 0;
     if (s == "")
     {
@@ -112,8 +113,8 @@ Nhapdulieu:
             thong_bao(NOT_EMPTY);
             xoa_man_hinh(x, y, 70, 1);
             gotoxy(x, y);
-            // getline(cin, s);
-            s = getLimitInput(is_alpha, no_duplicate_space);
+            getline(cin, s);
+            // s = getLimitInput(is_alpha, no_duplicate_space);
         } while (s == "");
     }
     for (int i = 0; i < s.length(); i++)
