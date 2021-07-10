@@ -38,7 +38,7 @@ std::string getLimitInput(
 	int ch;	
 
 	while ((ch = getch()) != EOF && ch != ENTER) {
-		if (isdigit((char)ch)) {
+		if (rule_one_char(ch) && rule_one_chain(ch, tmp_result)) {
 			tmp_result[index++] = ch;
 			printf ("%c", ch);
 		} else if(ch == BACKSPACE && index > 0) {
@@ -49,12 +49,13 @@ std::string getLimitInput(
 
     memset(tmp_result + index, 0, index * 2);
     std::string result(tmp_result);
-	free(tmp_result);
+    free(tmp_result);
 
-	return result;
+    return result;
 }
 
-void Nhap_so(int &n, int x, int y) { // x, y la toa do con tro quay ve de nhap lai sau khi thong bao
+void Nhap_so(int &n, int x, int y)
+{ // x, y la toa do con tro quay ve de nhap lai sau khi thong bao
     string user_string_num = "";
 
     int is_num = 0;
@@ -73,9 +74,10 @@ void Nhap_so(int &n, int x, int y) { // x, y la toa do con tro quay ve de nhap l
             xoa_man_hinh(x, y, 70, 1);
             gotoxy(x, y);
         }
-        do {
+        do
+        {
             // getline(cin, user_string_num);
-	    user_string_num = getOnlyNumber();
+            user_string_num = getLimitInput(is_number, rule_one_chain_default);
             if (user_string_num == "") // Kiem tra truong hop bo trong du lieu
             {
                 thong_bao("Khong duoc bo trong du lieu.");
@@ -165,7 +167,7 @@ void Nhap_so_chinh_sua(int &n, int x, int y)
             xoa_man_hinh(x, y, 70, 1);
             gotoxy(x, y);
         }
-	user_string_num = getOnlyNumber();
+        user_string_num = getLimitInput(is_number, rule_one_chain_default);
         for (int i = 0; i < user_string_num.size(); i++)
         {
             if (isspace(user_string_num[i]) == true)
@@ -246,9 +248,10 @@ void Nhap_ngay(int &n, int x, int y)
             xoa_man_hinh(x, y, 70, 1);
             gotoxy(x, y);
         }
-        do {
+        do
+        {
             // getline(cin, user_string_num);
-	    user_string_num = getOnlyNumber();
+            user_string_num = getLimitInput(is_number, rule_one_chain_default);
             if (user_string_num == "") // Kiem tra truong hop bo trong du lieu
             {
                 thong_bao("Khong duoc bo trong du lieu.");
@@ -337,9 +340,10 @@ void Nhap_thang(int &n, int x, int y)
             xoa_man_hinh(x, y, 70, 1);
             gotoxy(x, y);
         }
-        do {
+        do
+        {
             // getline(cin, user_string_num);
-	    user_string_num = getOnlyNumber();
+            user_string_num = getLimitInput(is_number, rule_one_chain_default);
             if (user_string_num == "") // Kiem tra truong hop bo trong du lieu
             {
                 thong_bao("Khong duoc bo trong du lieu.");
@@ -428,9 +432,10 @@ void Nhap_nam(int &n, int x, int y)
             xoa_man_hinh(x, y, 70, 1);
             gotoxy(x, y);
         }
-        do {
+        do
+        {
             // getline(cin, user_string_num);
-	    user_string_num = getOnlyNumber();
+            user_string_num = getLimitInput(is_number, rule_one_chain_default);
             if (user_string_num == "") // Kiem tra truong hop bo trong du lieu
             {
                 thong_bao("Khong duoc bo trong du lieu.");

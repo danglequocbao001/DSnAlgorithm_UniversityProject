@@ -17,7 +17,6 @@ struct node_muon_tra
 {
     MUON_TRA data;
     struct node_muon_tra *pNext;
-    struct node_muon_tra *pBack;
 };
 
 typedef struct ds_muon_tra DS_MUON_TRA;

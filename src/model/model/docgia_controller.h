@@ -7,8 +7,9 @@
 #define Mathe
 using namespace std;
 
-bool Kiem_tra_rong_doc_gia(DS_DOC_GIA ds_dg) {
-    return ds_dg.so_luong <= 0;
+bool Kiem_tra_rong_doc_gia(DS_DOC_GIA ds_dg)
+{
+	return ds_dg.so_luong <= 0;
 }
 bool Kiem_tra_trung_ma_the(TREE t, int x)
 {
@@ -86,7 +87,7 @@ void Chuan_hoa_chu(string &a)
 		}
 	}
 }
-bool Kiem_tra_nhap_ho_ten(string hoten) // Chi cho nhap chu cai, khoang trang, va mot so ki tu dac biet nhu "., -, &" (VD: Robert M. Pirsig, Randy Pausch & Jeffrey Zaslow, Antoine de Saint-Exup�ry,...)
+bool Kiem_tra_nhap_ho_ten(string hoten) // Chi cho nhap chu cai, khoang trang, va mot so ki tu dac biet
 {
 	for (int i = 0; i < hoten.length(); i++) {
 		if ( (hoten[i] < 'A' || hoten[i] > 'Z') && 
@@ -133,7 +134,8 @@ Nhapdulieu:
 void Nhap_va_kiem_tra_bo_trong_du_lieu_chinh_sua(string &s, int x, int y) // x,y la noi con tro quay lai de nhap
 {
 Nhapdulieu:
-	getline(cin, s);
+	// getline(cin, s);
+    s = getLimitInput(is_alpha, no_duplicate_space);
 	int dem = 0;
 	if (s == "")
 		return;
@@ -156,7 +158,7 @@ void Nhap_doc_gia(TREE t, DOC_GIA &dg)
 {
 	huong_dan_nhap_doc_gia();
 	gotoxy(30, 10);
-	cout << MA_THE_MIN << endl;
+	cout << "Ma the: " << endl;
 	dg.Ma_the = Tao_ma_the(t);
 	gotoxy(30, 12);
 	cout << "Nhap ho: ";
@@ -203,7 +205,8 @@ void Nhap_doc_gia(TREE t, DOC_GIA &dg)
 				do
 				{
 					gotoxy(46, 16);
-					getline(cin, dg.Phai);
+					// getline(cin, dg.Phai);
+                    dg.Phai = getLimitInput(is_alpha, no_duplicate_space);
 					Chuan_hoa_chu(dg.Phai);
 					if (dg.Phai != "Nam" && dg.Phai != "Nu")
 					{
@@ -226,7 +229,8 @@ void Nhap_doc_gia(TREE t, DOC_GIA &dg)
 // Them
 void Them_doc_gia(TREE &t, DOC_GIA dg, DS_DOC_GIA &ds_dg)
 {
-    if (dg.Ho.empty() || dg.Ten.empty() || dg.Phai.empty()) return;
+	if (dg.Ho.empty() || dg.Ten.empty() || dg.Phai.empty())
+		return;
 
 	if (t == NULL) // Neu cay dang rong
 	{
@@ -335,7 +339,8 @@ void Chinh_sua_thong_tin_doc_gia(TREE &t, int mathe)
 						{
 							xoa_man_hinh(50, 23, 80, 1);
 							gotoxy(50, 23);
-							getline(cin, t->data.Phai);
+							// getline(cin, t->data.Phai);
+                            t->data.Phai = getLimitInput(is_alpha, no_duplicate_space);
 							if (t->data.Phai == "")
 							{
 								t->data.Phai = temp;

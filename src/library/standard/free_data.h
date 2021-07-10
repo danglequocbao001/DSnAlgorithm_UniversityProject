@@ -8,7 +8,6 @@ void Giai_phong_ds_mt(TREE &t, DS_MUON_TRA &ds_mt)
 	{
 		k = ds_mt.pHead;
 		ds_mt.pHead = ds_mt.pHead->pNext;
-		ds_mt.pHead->pBack = NULL;
 		delete k;
 		t->data.So_luong_sach_dang_muon--;
 	}

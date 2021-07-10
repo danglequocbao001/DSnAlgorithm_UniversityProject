@@ -13,32 +13,24 @@ NODE_MUON_TRA *Khoi_tao_node_mt(MUON_TRA mt)
 	}
 	p->data = mt;
 	p->pNext = NULL;
-	p->pBack = NULL;
 	return p;
 }
 void Them_vao_dau_danh_sach_mt(DS_MUON_TRA &ds_mt, NODE_MUON_TRA *p)
 {
-	if (ds_mt.pHead == NULL)
-	{
+	if (ds_mt.pHead == NULL) {
 		ds_mt.pHead = ds_mt.pTail = p;
-	}
-	else
-	{
-		ds_mt.pHead->pBack = p;
-		p->pNext = ds_mt.pHead;
+	} else {
+        NODE_MUON_TRA *tmp_head = ds_mt.pHead;
 		ds_mt.pHead = p;
+        ds_mt.pHead->pNext = tmp_head;
 	}
 }
 void Them_vao_cuoi_danh_sach_mt(DS_MUON_TRA &ds_mt, NODE_MUON_TRA *p)
 {
-	if (ds_mt.pHead == NULL)
-	{
+	if (ds_mt.pHead == NULL) {
 		ds_mt.pHead = ds_mt.pTail = p;
-	}
-	else
-	{
+	} else {
 		ds_mt.pTail->pNext = p;
-		p->pBack = ds_mt.pTail;
 		ds_mt.pTail = p;
 	}
 }
@@ -57,40 +49,36 @@ void Xoa_dau_danh_sach_mt(DS_MUON_TRA &ds_mt)
 }
 void Xoa_cuoi_danh_sach_mt(DS_MUON_TRA &ds_mt)
 {
-	if (ds_mt.pHead == NULL)
-	{
-		return;
-	}
-	else if (ds_mt.pHead == ds_mt.pTail)
-	{
+    if (ds_mt.pHead == NULL) {
+        return;
+    } else if (ds_mt.pHead == ds_mt.pTail) {
 		Xoa_dau_danh_sach_mt(ds_mt);
-	}
-	else
-	{
-		NODE_MUON_TRA *p = ds_mt.pTail;
-		ds_mt.pTail = ds_mt.pTail->pBack;
-		ds_mt.pTail->pNext = NULL;
-		delete p;
-	}
+    } else {
+        for (NODE_MUON_TRA *k = ds_mt.pHead; k != NULL; k = k->pNext) {
+            if (k->pNext == ds_mt.pTail) {
+                delete ds_mt.pTail;
+                k->pNext = NULL;
+                ds_mt.pTail = k;
+                return;
+            }
+        }
+    }
 }
 void Xoa_1_node_muon_tra_theo_ma_sach(DS_MUON_TRA &ds_mt, string masach)
 {
 	if (ds_mt.pHead->data.Ma_sach == masach)
-	{
 		Xoa_dau_danh_sach_mt(ds_mt);
-	}
+
 	if (ds_mt.pTail->data.Ma_sach == masach)
-	{
 		Xoa_cuoi_danh_sach_mt(ds_mt);
-	}
-	for (NODE_MUON_TRA *k = ds_mt.pHead; k != NULL; k = k->pNext)
-	{
-		if (k->data.Ma_sach == masach)
-		{
-			NODE_MUON_TRA *g = k->pBack;
-			g->pNext = k->pNext;
+
+    NODE_MUON_TRA *previous_one;
+	for (NODE_MUON_TRA *k = ds_mt.pHead; k != NULL; k = k->pNext) {
+		if (k->data.Ma_sach == masach) {
+			previous_one->pNext = k->pNext;
 			delete k;
 		}
+        previous_one = k;
 	}
 }
 void Giai_phong_danh_sach_mt(DS_MUON_TRA &ds_mt)
@@ -146,42 +134,42 @@ void Muon_sach(TREE &t, DS_DAU_SACH &ds_dau_sach, DS_DANH_MUC_SACH &ds_dms, int 
 			Xuat_danh_sach_sach_dang_muon_cua_1_doc_gia(ds_dau_sach, t->data.ds_muon_tra_cua_doc_gia, t);
 			if (t->data.So_luong_sach_dang_muon == 0)
 			{
-				gotoxy(30, 20);
-				cout << "Doc gia hien van chua muon sach nao.";
+				// gotoxy(30, 20);
+				// cout << "Doc gia hien van chua muon sach nao.";
+				thong_bao("Doc gia hien van chua muon sach nao.");
 			}
 			// Kiem tra so luong sach dang muon cua doc gia
 			if (t->data.So_luong_sach_dang_muon == 3) // Dang muon hoac lam mat sach ma chua den <=> Chua tra sach
 			{
-				gotoxy(30, 20);
-				cout << "Doc gia chi duoc muon toi da 3 cuon sach.";
-				thong_bao(" ");
+				// gotoxy(30, 20);
+				// cout << "Doc gia chi duoc muon toi da 3 cuon sach.";
+				thong_bao("Doc gia chi duoc muon toi da 3 cuon sach.");
 				return;
 			}
 			// Kiem tra trang thai the cua doc gia
 			if (t->data.Trang_thai_the == 0)
 			{
-				gotoxy(30, 20);
-				cout << "The cua doc gia hien dang bi khoa nen khong the muon sach.";
-				thong_bao(" ");
+				// gotoxy(30, 20);
+				// cout << "The cua doc gia hien dang bi khoa nen khong the muon sach.";
+				thong_bao("The cua doc gia hien dang bi khoa nen khong the muon sach.");
 				return;
 			}
 			// Kiem tra xem doc gia co lam mat sach khong
 			if (Mat_sach(t->data.ds_muon_tra_cua_doc_gia) == true)
 			{
-				gotoxy(30, 20);
-				cout << "Doc gia khong duoc muon sach vi da lam mat sach.";
-				thong_bao(" ");
+				// gotoxy(30, 20);
+				// cout << "Doc gia khong duoc muon sach vi da lam mat sach.";
+				thong_bao("Doc gia khong duoc muon sach vi da lam mat sach.");
 				return;
 			}
 			// Kiem tra xem doc gia co giu sach qua han khong
 			if (So_ngay_muon(t->data.ds_muon_tra_cua_doc_gia) > 7)
 			{
-				gotoxy(30, 20);
-				cout << "Doc gia khong duoc muon sach vi da giu sach qua han 7 ngay.";
-				thong_bao(" ");
+				// gotoxy(30, 20);
+				// cout << "Doc gia khong duoc muon sach vi da giu sach qua han 7 ngay.";
+				thong_bao("Doc gia khong duoc muon sach vi da giu sach qua han 7 ngay.");
 				return;
 			}
-			thong_bao(" ");
 			xoa_man_hinh(20, 10, 95, 25);
 			if (Kiem_tra_rong_ds_dau_sach(ds_dau_sach) == true)
 			{
@@ -685,7 +673,7 @@ void Xu_li_lam_mat_sach(TREE &t, DS_DAU_SACH &ds_dau_sach, DS_DANH_MUC_SACH &ds_
 			{
 				gotoxy(30, 20);
 				cout << "Doc gia hien van chua muon sach nao.";
-				thong_bao("                                  ");
+				thong_bao(" ");
 				return;
 			}
 			int dem = 0;
