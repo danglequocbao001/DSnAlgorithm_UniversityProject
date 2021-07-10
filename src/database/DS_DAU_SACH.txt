@@ -5,7 +5,7 @@ Nguyen Hoang
 Tai Lieu
 200
 2019
-1
+3
 2
 CTDL0
 1
@@ -19,13 +19,13 @@ Lap Trinh
 Tai Lieu
 200
 2018
-0
+2
 3
 LTMM0
-0
+1
 Mot
 LTMM1
-0
+1
 Hai
 LTMM2
 0
@@ -44,10 +44,10 @@ Ngo Minh
 Tai Lieu
 200
 2020
-0
+1
 1
 DLPT0
-0
+1
 Mot
 Ly Thuyet Thong Tin
 LTTT
