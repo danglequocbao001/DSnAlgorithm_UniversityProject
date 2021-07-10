@@ -217,6 +217,7 @@ int main() {
                     }
                     else {
                         Xuat_danh_sach_doc_gia_qua_han_theo_thoi_gian_giam_dan(t, ds_dg);
+                        getch();
                     }
                     break;
                 }
