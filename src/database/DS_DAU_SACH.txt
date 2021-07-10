@@ -1,14 +1,14 @@
-5
+11
 Cau Truc Du Lieu
 CTDL
 Nguyen Hoang
 Tai Lieu
 200
 2019
-0
+1
 2
 CTDL0
-0
+1
 Mot
 CTDL1
 0
@@ -55,5 +55,53 @@ Minh Tran
 Bai Giang
 250
 2017
+0
+0
+Mang May Tinh
+MMTT
+Ngo Xuan
+Tai Lieu
+150
+2020
+0
+0
+Xu Ly Tin Hieu
+XTHS
+Tran Minh
+Tai Lieu
+300
+2016
+0
+0
+Truyen Cuoi
+TTCC
+Nguyen Hai
+Hai
+500
+2020
+0
+0
+Tieng anh
+TTAA
+Nguyen Anh
+Tai Lieu
+300
+2015
+0
+0
+Ky Thuat So
+KTSS
+Nguyen Thuat
+Tai Lieu
+300
+2015
+0
+0
+Toan Roi Rac
+TRRR
+Nguyen Rac
+Tai Lieu
+300
+2012
 0
 0
