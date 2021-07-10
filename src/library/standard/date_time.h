@@ -157,7 +157,7 @@ int Lay_nam_he_thong() // Bat dieu kien khong cho nhap nam xuat ban lon hon nam 
 	Today = localtime(&ltime);
 	return (Today->tm_year + 1900);
 }
-int Tinh_ngay(NGAY_THANG date) // http://mathforum.org/library/drmath/view/66535.html
+int Tinh_ngay(NGAY_THANG date) // https://math.stackexchange.com/a/683382
 {
 	if (date.Thang < 3)
 	{

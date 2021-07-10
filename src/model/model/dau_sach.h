@@ -1,6 +1,7 @@
 #ifndef Dausach
 #define Dausach
 
+#include "./__init__.h"
 #include "./docgia_controller.h"
 #include "../schema/schema.h"
 #include "../../library/standard/date_time.h"

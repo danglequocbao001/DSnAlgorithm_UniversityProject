@@ -1,5 +1,8 @@
+#include "./__init__.h"
+
 #ifndef Muontra
 #define Muontra
+
 NODE_MUON_TRA *Khoi_tao_node_mt(MUON_TRA mt)
 {
 	NODE_MUON_TRA *p = new NODE_MUON_TRA;

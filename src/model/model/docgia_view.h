@@ -1,6 +1,7 @@
 #ifndef Xuatthongtin
 #define Xuatthongtin
 
+#include "./__init__.h"
 #include "../../library/standard/date_time.h"
 #include "../../library/graphic/graphic.h"
 

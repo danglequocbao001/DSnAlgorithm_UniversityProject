@@ -3,7 +3,36 @@
 #ifndef VALIDATED_INP_NUM_H
 #define VALIDATED_INP_NUM_H
 
-std::string getOnlyNumber() {
+/*____for name, sex, ...____*/
+bool is_alpha(char target) {
+    return (
+        ('a' <= target && target <= 'z') ||
+        ('A' <= target && target <= 'Z') ||
+        (target == ' ') ||
+        (target == '.') ||
+        (target == '-')
+    );
+}
+
+bool no_duplicate_space(char target, char* array) {
+    int len = strlen(array);
+    if (len == 1 || len == 0) return true;
+    return !(array[len - 1] == target && target == ' ');
+}
+
+/*____for number____*/
+bool is_number(char target) {
+    return isdigit(target);
+}
+
+bool rule_one_chain_default(char target, char* chain) {
+    return true;
+}
+
+std::string getLimitInput(
+        bool (*rule_one_char)(char), // {function} check the input char is valid
+        bool (*rule_one_chain)(char, char*) // {function} check the char array is valid
+    ) {
 	char* tmp_result = (char*) malloc(sizeof(char)*MAXCHARS);
 	int index = 0;
 	int ch;	
