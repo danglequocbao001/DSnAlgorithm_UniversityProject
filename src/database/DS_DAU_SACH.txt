@@ -8,15 +8,21 @@ Ngu Ngon
 0
 0
 Lap trinh mang
-gxbr
+GXBR
 Nguyen Manh Hung
 Bai Giang
 324
 2020
-0
-0
+2
+2
+GXBR0
+1
+1
+GXBR1
+1
+2
 Tin hoc co so
-hjxd
+HJXD
 Phan Thi Ha
 Bai Giang
 432
@@ -24,7 +30,7 @@ Bai Giang
 0
 0
 Chat luong phan mem
-ecyu
+ECYU
 Nguyen Manh Hung
 Bai Giang
 65
@@ -32,7 +38,7 @@ Bai Giang
 0
 0
 Nhap mon cong nghe phan mem
-wrgs
+WRGS
 Tran Dinh Que
 Bai Giang
 5334
@@ -40,7 +46,7 @@ Bai Giang
 0
 0
 Dam bao chat luong phan mem
-sdfh
+SDFH
 Do Thi Bich Ngoc
 Bai Giang
 93
@@ -48,7 +54,7 @@ Bai Giang
 0
 0
 Cau truc du lieu va giai thuat
-khfu
+CTDL
 Nguyen Duy Phuong
 Bai Giang
 12
@@ -56,7 +62,7 @@ Bai Giang
 0
 0
 Ky thuat lap trinh huong doi tuong
-5hvn
+SHVN
 Nguyen Manh Son
 Bai Giang
 45
@@ -64,7 +70,7 @@ Bai Giang
 0
 0
 Phat trien phan mem huong dich vu
-oqdv
+OQDV
 Pham Van Cuong
 Bai Giang
 54
@@ -72,7 +78,7 @@ Bai Giang
 0
 0
 Ngon ngu lap trinh C++
-ncd7
+NCDT
 Nguyen Manh Son
 Bai Giang
 96
@@ -80,7 +86,7 @@ Bai Giang
 0
 0
 Lap trinh huong doi tuong
-06kc
+LTPM
 Nguyen Manh Son
 Bai Giang
 65
@@ -88,7 +94,7 @@ Bai Giang
 0
 0
 Thuat toan va ung dung
-54kg
+TTUD
 Do Bich Ngoc
 Bai Giang
 123
@@ -96,7 +102,7 @@ Bai Giang
 0
 0
 Phat trien ung dung di dong
-fgtk
+FGTK
 Nguyen Hoang Anh
 Bai Giang
 54
@@ -104,7 +110,7 @@ Bai Giang
 0
 0
 Ngon ngu lap trinh Java
-4535
+NNJV
 Vu Huu Tien
 Bai Giang
 100
@@ -112,7 +118,7 @@ Bai Giang
 0
 0
 Quan ly du an phan mem
-ccnd
+CCND
 Pham Quynh Chi
 Bai Giang
 65
@@ -120,7 +126,7 @@ Bai Giang
 0
 0
 Quan ly an toan thong tin
-yfgt
+YFGT
 Pham Hoang Duy
 Bai Giang
 43
@@ -128,7 +134,7 @@ Bai Giang
 0
 0
 Kho du lieu va ky thuat khai pha
-tdgt
+TDGT
 Nguyen Quynh Chi
 Bai Giang
 54
@@ -136,7 +142,7 @@ Bai Giang
 0
 0
 Cac ky thuat giau tin
-bnqn
+BNQN
 Do Xuan Cho
 Bai Giang
 88
@@ -144,7 +150,7 @@ Bai Giang
 0
 0
 Quan ly an toan thong tin
-tecg
+TECG
 Pham Hoang Duy
 Bai Giang
 354
@@ -152,7 +158,7 @@ Bai Giang
 0
 0
 Bairtynang Cac ki thuat giau tin
-rtyn
+RTYN
 Do Xuan Cho
 Bai Giang
 755

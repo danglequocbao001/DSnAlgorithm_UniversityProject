@@ -310,7 +310,13 @@ int main() {
                 {
                     ve_lai_man_hinh();
                     DeMuc("             TIM SACH");
-                    Tim_thong_tin_sach_dua_vao_ten_sach(ds_dau_sach, ds_dms);
+                    if (Kiem_tra_rong_ds_dau_sach(ds_dau_sach) == true)
+                    {
+                        thong_bao("Danh sach dau sach dang rong. Khong co du lieu de tim.");
+                    }
+                    else {
+                        Tim_thong_tin_sach_dua_vao_ten_sach(ds_dau_sach, ds_dms);
+                    }
                     break;
                 }
                 case 5:
