@@ -20,8 +20,8 @@ Nữ’; trạng thái thẻ = 0 khi thẻ bị khóa, trạng thái thẻ = 1 k
 - [x] C {`Danh`} Nhập thông tin đầu sách và đánh mã sách tự động
 - [x] D {`Danh`} In danh sách các đầu sách trong thư viện theo từng thể loại, trong từng thể loại thì in theo thứ tự tên sách tăng dần.
 - [x] E {`Bảo`} Tìm thông tin sách dựa vào tên sách : in ra các thông tin mã ISBN, tên sách, tác giả, năm xuất bản, thể loại, các mã sách , trạng thái mã sách trong thư viện.
-- [x] F {`Bảo`} Mượn sách : nhập vào mã thẻ độc giả, chương trình sẽ liệt kê các sách mà độc giả đang mượn. Mỗi độc giả chỉ được mượn tối đa 3 cuốn, không cho mượn khi giữ 1 sách quá hạn (7 ngày)
+- [x] F {`Danh`} Mượn sách : nhập vào mã thẻ độc giả, chương trình sẽ liệt kê các sách mà độc giả đang mượn. Mỗi độc giả chỉ được mượn tối đa 3 cuốn, không cho mượn khi giữ 1 sách quá hạn (7 ngày)
 - [x] G {`Danh`} Trả sách
-- [x] H {`Danh`} Liệt kê danh sách các sách mà 1 độc giả đang mượn
+- [x] H {`Bảo`} Liệt kê danh sách các sách mà 1 độc giả đang mượn
 - [x] I {`Bảo`} In danh sách độc giả mượn sách quá hạn theo thứ tự thời gian quá hạn giảm dần
 - [x] J {`Bảo`} In 10 sách có số lượt mượn nhiều nhất.
