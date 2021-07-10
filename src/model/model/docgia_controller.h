@@ -112,8 +112,8 @@ Nhapdulieu:
             thong_bao(NOT_EMPTY);
             xoa_man_hinh(x, y, 70, 1);
             gotoxy(x, y);
-            // getline(cin, s);
-            s = getLimitInput(is_alpha, no_duplicate_space);
+            getline(cin, s);
+            // s = getLimitInput(is_alpha, no_duplicate_space);
         } while (s == "");
     }
     for (int i = 0; i < s.length(); i++)

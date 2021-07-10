@@ -1,1067 +1,183 @@
-151
-2368
-Nguyen Tat
-Ky
+26
+4717
+Nguyen
+Minh
 Nam
 1
 0
 0
-3232
+5823
+Bui Minh
+Quang
+Nam
+1
+0
+0
+6286
 Nguyen Huu
 Phuoc
 Nam
 1
 0
 0
-5473
-Nguyen Minh
-Quang
+6741
+Nguyen
+Dang
 Nam
 1
 0
 0
-6450
-Sai Xuan
-An
-Nam
-1
-2
-1
-GXBR0
-1
-1
-2021
-0
-0
-0
-Lap trinh mang
-0
-6500
-Ha Hoang
-Ngon
-Nam
-1
-0
-0
-6550
-Ma Manh
-Dinh
-Nam
-1
-0
-0
-6600
-Kieu Minh
-Hung
-Nam
-1
-0
-0
-6650
-Mach Anh
-Tuan
-Nam
-1
-0
-0
-6700
-Ton Quang
-Ha
-Nam
-1
-0
-0
-6750
-Luu Trong
-Tan
-Nam
-1
-0
-0
-6800
-Bach Bao
-Quoc
-Nam
-1
-0
-0
-6850
-Duong Quang
-Thuan
-Nam
-1
-0
-0
-6900
-Doan Dinh
-Loc
-Nam
-1
-0
-0
-6950
-Thi Duy
-Khang
-Nam
-1
-0
-0
-7000
-Chung Thai
-Binh
-Nam
-1
-0
-0
-7050
-Mac Thuan
-Thanh
-Nam
-1
-0
-0
-7100
-Do Gia
-Hiep
-Nam
-1
-0
-0
-7150
-Phan Hieu
-Phong
-Nam
-1
-0
-0
-7200
-Vu Long
-Quan
-Nam
-1
-0
-0
-7250
-Bui Khanh
+9122
+Nguyen
 Hoang
 Nam
 1
 0
 0
-7300
-Giang Nam
-Phi
+9491
+Dang Le Quoc
+Bao
 Nam
 1
 0
 0
-7350
-Phung Minh
-Hai
+10216
+Dang
+Bao
 Nam
 1
 0
 0
-7400
-Vuong Thien
-An
-Nam
-1
-0
-0
-7450
-Vo Tan
-Truong
-Nam
-1
-0
-0
-7500
-Nguyen Huu
-Hiep
-Nam
-1
-0
-0
-7550
-Nguyen Bao
-Hoa
-Nam
-1
-0
-0
-7600
-Bui Bao
-Chan
-Nam
-1
-0
-0
-7650
-Cao Quoc
-Tien
-Nam
-1
-0
-0
-7700
-Do Cao
-Minh
-Nam
-1
-0
-0
-7750
-Diep Dinh
-Chuong
-Nam
-1
-0
-0
-7800
-Giang Duc
-Tho
-Nam
-1
-0
-0
-7850
-Do Quoc
-Hoang
-Nam
-1
-0
-0
-7900
-Vuu Vuong
-Viet
-Nam
-1
-0
-0
-7950
-Luu Cong
-Hau
-Nam
-1
-0
-0
-8000
-Mach Quang
-Thong
-Nam
-1
-0
-0
-8050
-Nguyen Cong
-Son
-Nam
-1
-0
-0
-8100
-Hoang Hiep
-Ha
-Nam
-1
-0
-0
-8150
-Ta Duy
-Khiem
-Nam
-1
-0
-0
-8200
-Nguyen Tri
-Hao
-Nam
-1
-0
-0
-8250
-Ta Cong
-Bang
-Nam
-1
-0
-0
-8300
-Vo Nguyen
-Phong
-Nam
-1
-0
-0
-8350
-Phung Kim
-Long
-Nam
-1
-0
-0
-8358
-Ngo Si
-Hoa
-Nam
-1
-0
-0
-8400
-Chu Khanh
-Nam
-Nam
-1
-0
-0
-8450
-Vinh Khoi
-Vi
-Nam
-1
-0
-0
-8500
-Nguyen Kim
-Long
-Nam
-1
-0
-0
-8550
-Ngu Gia
-Thien
-Nam
-1
-0
-0
-8600
-Nguyen Ngoc
-Tru
-Nam
-1
-0
-0
-8650
-Nguyen Bao
-Thai
-Nam
-1
-0
-0
-8700
-Phan Vuong
-Gia
-Nam
-1
-0
-0
-8750
-Ha Vu
-Minh
-Nam
-1
-0
-0
-8800
-Huynh Duy
-Minh
-Nam
-1
-0
-0
-8850
-Giang Khanh
-Minh
-Nam
-1
-0
-0
-8900
-Ho Phuoc
-Thien
-Nam
-1
-0
-0
-8950
-Duong Thong
-Nhat
-Nam
-1
-0
-0
-9000
-Cao Quang
-Huu
-Nam
-1
-0
-0
-9050
-Pham Hong
-Son
-Nam
-1
-0
-0
-9100
-Pham Vinh
-Toan
-Nam
-1
-0
-0
-9150
-An Phuc
-Tam
-Nam
-1
-0
-0
-9200
-Nguyen Minh
-Son
-Nam
-1
-0
-0
-9250
-Do Duc
-Anh
-Nam
-1
-0
-0
-9300
-Nguyen Bao
-Huynh
-Nam
-1
-0
-0
-9350
-Luc Huy
-Khiem
-Nam
-1
-0
-0
-9400
-guyen Bao
-Chau
-Nu
-1
-0
-0
-9450
-Le Thanh
-Van
-Nu
-1
-0
-0
-9500
-Nguyen Linh
-San
-Nu
-1
-0
-0
-9550
-Le Kim
-Thu
-Nu
-1
-0
-0
-9600
-Nguyen Hoan
-Vi
-Nu
-1
-0
-0
-9650
-Bui Mai
-Chi
-Nu
-1
-0
-0
-9700
-Vinh Viet
-Huong
-Nu
-1
-0
-0
-9750
-Vo Hoai
-Thuong
-Nu
-1
-0
-0
-9800
-Le Diem
-Trinh
-Nu
-1
-0
-0
-9850
-Vo Hoang
-Cuc
-Nu
-1
-0
-0
-9900
-Sai Mong Thi 
-Thy)
-Nu
-1
-0
-0
-9950
-Nguyen Vy
-Lan
-Nu
-1
-0
-0
-10000
-Duong Truc
-Loan
-Nu
-1
-0
-0
-10050
-Nguyen Anh
-Trang
-Nu
-1
-0
-0
-10100
-Ngo Kieu
-Khanh
-Nu
-1
-0
-0
-10150
-Pham Thu
-Nga
-Nu
-1
-0
-0
-10200
-Lac Van
-Khanh
-Nu
-1
-0
-0
-10250
-Dang Hong
-Phuc
-Nu
-1
-0
-0
-10300
-Doan Thuy
-Van
-Nu
-1
-0
-0
-10350
-Dang Le
-Quan
-Nu
-1
-0
-0
-10400
-Nguyen Mong
-Diep
-Nu
-1
-0
-0
-10450
-Nguyen Minh
-Phuong
-Nu
-1
-0
-0
-10500
-Vu Quynh
-Lam
-Nu
-1
-0
-0
-10550
-Pho Thu
-Phuong
-Nu
-1
-0
-0
-10600
-Tran Thanh
-Dan
-Nu
-1
-0
-0
-10650
-Dang Thuy
-Ngan
-Nu
-1
-0
-0
-10700
-Quach Mai
-Ha
-Nu
-1
-0
-0
-10750
-Duu Nha
-Hong
-Nu
-1
-0
-0
-10800
-An Kieu
-Hanh
-Nu
-1
-0
-0
-10850
-Dang Xuan
-Lam
-Nu
-1
-0
-0
-10900
-Ho Uyen
-Tram
-Nu
-1
-0
-0
-10950
-Phi Thu
-Oanh
-Nu
-1
-0
-0
-11000
-Huynh Thuy
-Mai
-Nu
-1
-0
-0
-11050
-Vu Thuc
-Uyen
-Nu
-1
-0
-0
-11100
-Thao Phuong
-Hien
-Nu
-1
-0
-0
-11150
-Uat Kieu
-Hoa
-Nu
-1
-0
-0
-11200
-Bui Mai
-Anh
-Nu
-1
-0
-0
-11250
-Ly Tuong
-Vy
-Nu
-1
-0
-0
-11300
-Sai Anh
-Xuan
-Nu
-1
-0
-0
-11350
-Nguyen Bich
-Hau
-Nu
-1
-0
-0
-11400
-Duong Thien
-Trang
-Nu
-1
-0
-0
-11450
-Luu Uyen
-Nha
-Nu
-1
-0
-0
-11500
-Nguyen Bao
-Anh
-Nu
-1
-0
-0
-11550
-Quyen Van
-Linh
-Nu
-1
-0
-0
-11600
-Dang My
-Tram
-Nu
-1
-0
-0
-11650
-Tram Mong
-Nhi
-Nu
-1
-0
-0
-11700
-Thach Phuong
-Hanh
-Nu
-1
-0
-0
-11750
-Mac Thai
-Yen
-Nu
-1
-0
-0
-11800
-Huynh Xuan
-Huong
-Nu
-1
-0
-0
-11850
-Diep Hue
-Phuong
-Nu
-1
-0
-0
-11900
-Quach Thuc
-Nhi
-Nu
-1
-0
-0
-11950
-Thach Thu
-Huyen
-Nu
-1
-0
-0
-12000
-Nguyen Thien
-Tuyen
-Nu
-1
-0
-0
-12050
-Tran Minh
-Hang
-Nu
-1
-0
-0
-12100
-An Hanh
-Phuong
-Nu
-1
-0
-0
-12150
-Uc Khanh
-Mai
-Nu
-1
-0
-0
-12200
-Cao Van
-Trinh
-Nu
-1
-0
-0
-12250
-Ngu Thu
-Minh
-Nu
-1
-0
-0
-12300
-Nguyen Bao
-Thuy
-Nu
-1
-0
-0
-12350
-Duong Hong
-Oanh
-Nu
-1
-0
-0
-12400
-Quach Thuc
-Nhi
-Nu
-1
-0
-0
-12450
-Thach Thu
-Huyen
-Nu
-1
-0
-0
-12500
-Nguyen Thien
-Tuyen
-Nu
-1
-0
-0
-12550
-Tran Minh
-Hang
-Nu
-1
-0
-0
-12600
-An Hanh
-Phuong
-Nu
-1
-0
-0
-12634
-Nguyen Dang
-Vu
-Nam
-1
-0
-0
-12650
-Uc Khanh
-Mai
-Nu
-1
-0
-0
-12700
-Cao Van
-Trinh
-Nu
-1
-0
-0
-12750
-Ngu Thu
-Minh
-Nu
-1
-0
-0
-12800
-Nguyen Bao
-Thuy
-Nu
-1
-0
-0
-12850
-Duong Hong
-Oanh
-Nu
-1
-0
-0
-12900
-Vuong An
-Nhan
-Nu
-1
-0
-0
-12950
-Huynh Ngoc
-Trinh
-Nu
-1
-0
-0
-13000
-Dang Thanh
-Loan
-Nu
-1
-0
-0
-13050
-Phan
-Nhu Y
-Nu
-1
-0
-0
-13100
-Pham Phong
-Lan
-Nu
-1
-0
-0
-13150
-Hoang Thanh
-Dan
-Nu
-1
-0
-0
-13200
-Than Que
-Linh
-Nu
-1
-0
-0
-13250
-Duong Minh
-Ha
-Nu
-1
-0
-0
-13300
-Trang Truc
-Ly
-Nu
-1
-0
-0
-13350
-Bui
-Trang
-Anh
-1
-0
-0
-15864
-Nguyen Ngoc Thanh
-Danh
-Nam
-1
-0
-0
-16880
+12341
 Ngo Van
 Viet
 Nam
 1
 0
 0
-21507
-Ha Nam
-Thai
+12725
+Duy
+Khanh
 Nam
 1
 0
 0
-23948
+12792
+Nguyen Truong
+Giang
+Nam
+1
+0
+0
+13125
+Nguyen Tat
+Ky
+Nam
+1
+0
+0
+13916
+Vu
+Uyen
+Nu
+1
+0
+0
+16506
+Vu
+Nhat
+Nam
+1
+0
+0
+18359
+Ngo Sy
+Hoa
+Nam
+1
+0
+0
+19912
+Nguyen
+Kieu
+Nu
+1
+0
+0
+20882
+Le
+Vu
+Nam
+1
+0
+0
+23836
 Tran Duy
 Khanh
 Nam
 1
 0
 0
-26395
+24510
+Le
+Nhat
+Nam
+1
+0
+0
+25096
 Le Nguyen Ngoc
 Vu
 Nam
 1
 0
 0
-27399
-Cc
-Cc
+26190
+Ha Nam
+Thai
 Nam
+1
 0
 0
-0
-28258
-Nguyen Truong
-Giang
+26800
+Nguyen Ngoc Thanh
+Danh
 Nam
+1
+0
+0
+27036
+Dang
+Thu
+Nu
+1
+0
+0
+27061
+Vu
+Van
+Nu
+1
+0
+0
+27707
+Nguyen Dang
+Vu
+Nam
+1
+0
+0
+30601
+Vo Van
+Ngan
+Nu
+1
+0
+0
+32107
+Thu
+Thuy
+Nu
 1
 0
 0
