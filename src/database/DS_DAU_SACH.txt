@@ -5,13 +5,13 @@ Nguyen Hoang
 Tai Lieu
 200
 2019
-3
+4
 2
 CTDL0
-1
+0
 Mot
 CTDL1
-0
+1
 Hai
 Lap Trinh Mang
 LTMM

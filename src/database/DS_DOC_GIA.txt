@@ -39,17 +39,8 @@ Dang Le Quoc
 Bao
 Nam
 1
-6
-2
-CTDL0
-10
 7
-2021
-0
-0
-0
-Cau Truc Du Lieu
-0
+2
 LTMM1
 10
 7
@@ -58,6 +49,15 @@ LTMM1
 0
 0
 Lap Trinh Mang
+0
+CTDL1
+1
+7
+2021
+0
+0
+0
+Cau Truc Du Lieu
 0
 10216
 Dang
