@@ -1,6 +1,7 @@
 #ifndef Xuatthongtin
 #define Xuatthongtin
 
+#include "./__init__.h"
 #include "../../library/standard/date_time.h"
 #include "../../library/graphic/graphic.h"
 
@@ -354,7 +355,7 @@ void Liet_ke_danh_sach_sach_dang_muon_cua_1_doc_gia(DS_DAU_SACH ds_dau_sach, TRE
 				return;
 			}
 			Xuat_danh_sach_sach_dang_muon_cua_1_doc_gia(ds_dau_sach, t->data.ds_muon_tra_cua_doc_gia, t);
-			thong_bao("                                     ");
+			thong_bao(" ");
 		}
 	}
 }

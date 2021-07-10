@@ -1,6 +1,7 @@
 #ifndef Dausach
 #define Dausach
 
+#include "./__init__.h"
 #include "./docgia_controller.h"
 #include "../schema/schema.h"
 #include "../../library/standard/date_time.h"
@@ -1701,7 +1702,7 @@ void Tim_thong_tin_sach_dua_vao_ten_sach(DS_DAU_SACH ds_dau_sach, DS_DANH_MUC_SA
                     thong_bao("Dau sach khong ton tai.");
                     return;
                 }
-                thong_bao("                                     ");
+                thong_bao(" ");
                 return;
             }
             else if (key == 27)
@@ -1780,7 +1781,7 @@ void Top_10_sach(DS_DAU_SACH ds_dau_sach)
                         cout << "DANH MUC SACH";
                         khung_xuat_dms(27, 13, 20);
                         Xuat_dms_cua_1_dau_sach(ds_dau_sach.list[ds_dau_sach.so_luong - 1 - vitri]->ds_danh_muc_sach_cua_dau_sach, 16);
-                        thong_bao("                                       ");
+                        thong_bao(" ");
                         break;
                     case 27:
                         Normal();
@@ -1846,7 +1847,7 @@ void Top_10_sach(DS_DAU_SACH ds_dau_sach)
                         cout << "DANH MUC SACH";
                         khung_xuat_dms(27, 13, 20);
                         Xuat_dms_cua_1_dau_sach(ds_dau_sach.list[ds_dau_sach.so_luong - 1 - vitri]->ds_danh_muc_sach_cua_dau_sach, 16);
-                        thong_bao("                                       ");
+                        thong_bao(" ");
                         break;
                     case 27:
                         Normal();

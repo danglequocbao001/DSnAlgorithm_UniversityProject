@@ -1,13 +1,15 @@
-#ifndef Mathe
-#define Mathe
+#include "./__init__.h"
 #include "./docgia_view.h"
 #include "../schema/schema.h"
 #include "../../library/standard/validated_inp_num.h"
 
+#ifndef Mathe
+#define Mathe
 using namespace std;
 
-bool Kiem_tra_rong_doc_gia(DS_DOC_GIA ds_dg) {
-    return ds_dg.so_luong <= 0;
+bool Kiem_tra_rong_doc_gia(DS_DOC_GIA ds_dg)
+{
+	return ds_dg.so_luong <= 0;
 }
 bool Kiem_tra_trung_ma_the(TREE t, int x)
 {
@@ -62,36 +64,37 @@ void Chuan_hoa_chu(string &a)
 		}
 	}
 	// Viet hoa ki tu dau cua moi chu
-	if (a[0] >= 97 && a[0] <= 122)
+	if ('a' <= a[0] && a[0] <= 'z')
 	{
-		a[0] = a[0] - 32;
+		a[0] = a[0] - ('a' - 'A');
 	}
 	for (int i = 1; i < a.length(); i++)
 	{
 		if (a[i] == ' ') // Kiem tra tu tiep theo
 		{
 			i++;
-			if (a[i] >= 97 && a[i] <= 122)
+			if ('a' < a[i] && a[i] <= 'z')
 			{
-				a[i] = a[i] - 32;
+				a[i] = a[i] - ('a' - 'A');
 			}
 		}
 		else
 		{
-			if (a[i] >= 65 && a[i] <= 90)
+			if ('A' <= a[i] && a[i] < 'Z')
 			{
-				a[i] = a[i] + 32;
+				a[i] = a[i] + ('a' - 'A');
 			}
 		}
 	}
 }
-bool Kiem_tra_nhap_ho_ten(string hoten) // Chi cho nhap chu cai, khoang trang, va mot so ki tu dac biet nhu "., -, &" (VD: Robert M. Pirsig, Randy Pausch & Jeffrey Zaslow, Antoine de Saint-Exup�ry,...)
+bool Kiem_tra_nhap_ho_ten(string hoten) // Chi cho nhap chu cai, khoang trang, va mot so ki tu dac biet
 {
-	for (int i = 0; i < hoten.length(); i++)
-	{
-		if ((hoten[i] < 65 || hoten[i] > 90) && (hoten[i] < 97 && hoten[i > 122]) && (hoten[i] != 32) && (hoten[i] != 38) &&
-			(hoten[i] != 45) && (hoten[i] != 46))
-		{
+	for (int i = 0; i < hoten.length(); i++) {
+		if ( (hoten[i] < 'A' || hoten[i] > 'Z') && 
+             (hoten[i] < 'a' && hoten[i > 'z']) &&
+             (hoten[i] != ('a' - 'A')) && (hoten[i] != '&') &&
+             (hoten[i] != '-') && (hoten[i] != '.')
+        ) {
 			return false;
 		}
 	}
@@ -100,37 +103,39 @@ bool Kiem_tra_nhap_ho_ten(string hoten) // Chi cho nhap chu cai, khoang trang, v
 void Nhap_va_kiem_tra_bo_trong_du_lieu(string &s, int x, int y) // x,y la noi con tro quay lai de nhap
 {
 Nhapdulieu:
-	getline(cin, s);
-	int dem = 0;
-	if (s == "")
-	{
-		do
-		{
-			thong_bao("Khong duoc bo trong du lieu.");
-			xoa_man_hinh(x, y, 70, 1);
-			gotoxy(x, y);
-			getline(cin, s);
-		} while (s == "");
-	}
-	for (int i = 0; i < s.length(); i++)
-	{
-		if (s[i] == ' ')
-		{
-			dem++;
-		}
-	}
-	if (dem == s.length())
-	{
-		thong_bao("Ten khong hop le. Xin nhap lai.");
-		xoa_man_hinh(x, y, 70, 1);
-		gotoxy(x, y);
-		goto Nhapdulieu;
-	}
+    s = getLimitInput(is_alpha, no_duplicate_space);
+    int dem = 0;
+    if (s == "")
+    {
+        do
+        {
+            thong_bao(NOT_EMPTY);
+            xoa_man_hinh(x, y, 70, 1);
+            gotoxy(x, y);
+            // getline(cin, s);
+            s = getLimitInput(is_alpha, no_duplicate_space);
+        } while (s == "");
+    }
+    for (int i = 0; i < s.length(); i++)
+    {
+        if (s[i] == ' ')
+        {
+            dem++;
+        }
+    }
+    if (dem == s.length())
+    {
+        thong_bao(WRONG_NAME);
+        xoa_man_hinh(x, y, 70, 1);
+        gotoxy(x, y);
+        goto Nhapdulieu;
+    }
 }
 void Nhap_va_kiem_tra_bo_trong_du_lieu_chinh_sua(string &s, int x, int y) // x,y la noi con tro quay lai de nhap
 {
 Nhapdulieu:
-	getline(cin, s);
+	// getline(cin, s);
+    s = getLimitInput(is_alpha, no_duplicate_space);
 	int dem = 0;
 	if (s == "")
 		return;
@@ -143,7 +148,7 @@ Nhapdulieu:
 	}
 	if (dem == s.length())
 	{
-		thong_bao("Ten khong hop le. Xin nhap lai.");
+		thong_bao(WRONG_NAME);
 		xoa_man_hinh(x, y, 70, 1);
 		gotoxy(x, y);
 		goto Nhapdulieu;
@@ -166,7 +171,7 @@ void Nhap_doc_gia(TREE t, DOC_GIA &dg)
 		if (kbhit())
 		{
 			char key = getch();
-			if (key == 13)
+			if (key == ENTER)
 			{
 				ShowCur(1);
 				do
@@ -177,11 +182,12 @@ void Nhap_doc_gia(TREE t, DOC_GIA &dg)
 					Nhap_va_kiem_tra_bo_trong_du_lieu(dg.Ho, 39, 12);
 					if (Kiem_tra_nhap_ho_ten(dg.Ho) == false)
 					{
-						thong_bao("Ten khong hop le, xin nhap lai.");
+						thong_bao(WRONG_NAME);
 						xoa_man_hinh(39, 12, 80, 1);
 						gotoxy(39, 12);
 					}
-					if(key == 27) break;
+					if (key == ESC)
+						break;
 				} while (Kiem_tra_nhap_ho_ten(dg.Ho) == false);
 				do
 				{
@@ -189,20 +195,22 @@ void Nhap_doc_gia(TREE t, DOC_GIA &dg)
 					Nhap_va_kiem_tra_bo_trong_du_lieu(dg.Ten, 40, 14);
 					if (Kiem_tra_nhap_ho_ten(dg.Ten) == false)
 					{
-						thong_bao("Ten khong hop le, xin nhap lai.");
+						thong_bao(WRONG_NAME);
 						xoa_man_hinh(40, 14, 80, 1);
 						gotoxy(40, 14);
 					}
-					if(key == 27) break;
+					if (key == ESC)
+						break;
 				} while (Kiem_tra_nhap_ho_ten(dg.Ten) == false);
 				do
 				{
 					gotoxy(46, 16);
-					getline(cin, dg.Phai);
+					// getline(cin, dg.Phai);
+                    dg.Phai = getLimitInput(is_alpha, no_duplicate_space);
 					Chuan_hoa_chu(dg.Phai);
 					if (dg.Phai != "Nam" && dg.Phai != "Nu")
 					{
-						thong_bao("Gioi tinh khong hop le, xin nhap lai.");
+						thong_bao(WRONG_SEX);
 						xoa_man_hinh(46, 16, 80, 1);
 					}
 				} while (dg.Phai != "Nam" && dg.Phai != "Nu");
@@ -211,7 +219,7 @@ void Nhap_doc_gia(TREE t, DOC_GIA &dg)
 				thong_bao("Them thanh cong.");
 				return;
 			}
-			else if (key == 27)
+			else if (key == ESC)
 			{
 				return;
 			}
@@ -221,7 +229,8 @@ void Nhap_doc_gia(TREE t, DOC_GIA &dg)
 // Them
 void Them_doc_gia(TREE &t, DOC_GIA dg, DS_DOC_GIA &ds_dg)
 {
-    if (dg.Ho.empty() || dg.Ten.empty() || dg.Phai.empty()) return;
+	if (dg.Ho.empty() || dg.Ten.empty() || dg.Phai.empty())
+		return;
 
 	if (t == NULL) // Neu cay dang rong
 	{
@@ -264,26 +273,26 @@ void Chinh_sua_thong_tin_doc_gia(TREE &t, int mathe)
 		{
 			huong_dan_chinh_sua_doc_gia();
 			gotoxy(60, 11);
-			cout << "THONG TIN DOC GIA";
+			cout << THONG_TIN_DOC_GIA;
 			khung_xuat_thong_tin_dg(13, 13, 4);
 			Xuat_thong_tin_1_doc_gia_theo_hang(t->data, 16, 0);
 			gotoxy(59, 20);
-			cout << "CHINH SUA THONG TIN";
+			cout << CHINH_SUA_THONG_TIN;
 			ShowCur(0);
 			gotoxy(30, 21);
-			cout << "Nhap ho moi: " << t->data.Ho;
+			cout << HO_MOI << t->data.Ho;
 			gotoxy(30, 22);
-			cout << "Nhap ten moi: " << t->data.Ten;
+			cout << TEN_MOI << t->data.Ten;
 			gotoxy(30, 23);
-			cout << "Nhap gioi tinh moi: " << t->data.Phai;
+			cout << GIO_TINH_MOI << t->data.Phai;
 			gotoxy(30, 25);
-			cout << "Nhap trang thai the moi(0/1): " << t->data.Trang_thai_the;
+			cout << TRANG_THAI_MOI << t->data.Trang_thai_the;
 			while (true)
 			{
 				if (kbhit())
 				{
 					char key = getch();
-					if (key == 13)
+					if (key == ENTER)
 					{
 						huong_dan_chinh_sua();
 						ShowCur(1);
@@ -295,7 +304,7 @@ void Chinh_sua_thong_tin_doc_gia(TREE &t, int mathe)
 							Nhap_va_kiem_tra_bo_trong_du_lieu_chinh_sua(t->data.Ho, 43, 21);
 							if (Kiem_tra_nhap_ho_ten(t->data.Ho) == false)
 							{
-								thong_bao("Ten khong hop le, xin nhap lai.");
+								thong_bao(WRONG_NAME);
 								xoa_man_hinh(43, 21, 80, 1);
 								gotoxy(43, 21);
 							}
@@ -314,7 +323,7 @@ void Chinh_sua_thong_tin_doc_gia(TREE &t, int mathe)
 							Nhap_va_kiem_tra_bo_trong_du_lieu_chinh_sua(t->data.Ten, 44, 22);
 							if (Kiem_tra_nhap_ho_ten(t->data.Ten) == false)
 							{
-								thong_bao("Ten khong hop le, xin nhap lai.");
+								thong_bao(WRONG_NAME);
 								xoa_man_hinh(44, 22, 80, 1);
 								gotoxy(44, 22);
 							}
@@ -330,7 +339,8 @@ void Chinh_sua_thong_tin_doc_gia(TREE &t, int mathe)
 						{
 							xoa_man_hinh(50, 23, 80, 1);
 							gotoxy(50, 23);
-							getline(cin, t->data.Phai);
+							// getline(cin, t->data.Phai);
+                            t->data.Phai = getLimitInput(is_alpha, no_duplicate_space);
 							if (t->data.Phai == "")
 							{
 								t->data.Phai = temp;
@@ -339,7 +349,7 @@ void Chinh_sua_thong_tin_doc_gia(TREE &t, int mathe)
 							Chuan_hoa_chu(t->data.Phai);
 							if (t->data.Phai != "Nam" && t->data.Phai != "Nu")
 							{
-								thong_bao("Gioi tinh khong hop le, xin nhap lai.");
+								thong_bao(WRONG_SEX);
 								xoa_man_hinh(50, 23, 80, 1);
 							}
 						} while (t->data.Phai != "Nam" && t->data.Phai != "Nu");
@@ -352,16 +362,16 @@ void Chinh_sua_thong_tin_doc_gia(TREE &t, int mathe)
 							Nhap_so(t->data.Trang_thai_the, 60, 25);
 							if (t->data.Trang_thai_the != 0 && t->data.Trang_thai_the != 1)
 							{
-								thong_bao("Trang thai the khong hop le, xin nhap lai.");
+								thong_bao(WRONG_TRANG_THAI);
 								xoa_man_hinh(60, 25, 70, 1);
 							}
 						} while (t->data.Trang_thai_the != 0 && t->data.Trang_thai_the != 1);
 						Chuan_hoa_chu(t->data.Ho);
 						Chuan_hoa_chu(t->data.Ten);
-						thong_bao("Hieu chinh thanh cong.");
+						thong_bao(SUCCESSFUL);
 						return;
 					}
-					else if (key == 27)
+					else if (key == ESC)
 					{
 						break;
 					}
@@ -474,7 +484,7 @@ void Xoa_node_bat_ki(TREE &t, int mathe, DS_DOC_GIA &ds_dg, DS_DAU_SACH ds_dau_s
 				if (kbhit())
 				{
 					char key = getch();
-					if (key == 13)
+					if (key == ENTER)
 					{
 						// Danh cho xoa node co 1 con va node la
 						NODE_DOC_GIA *X = t; // Node the mang, la node ma ti nua se xoa
@@ -501,7 +511,7 @@ void Xoa_node_bat_ki(TREE &t, int mathe, DS_DOC_GIA &ds_dg, DS_DAU_SACH ds_dau_s
 						Normal();
 						return;
 					}
-					else if (key == 27)
+					else if (key == ESC)
 					{
 						return;
 					}
