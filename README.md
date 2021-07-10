@@ -4,7 +4,6 @@
 { <a href="https://github.com/shanenoi">Nguyễn Ngọc Thanh Danh</a>,
   <a href="https://github.com/danglequocbao001">Đặng Lê Quốc Bảo</a> }<br> <b>N19DCCN027</b> <b>N19DCCN014</b>
 </p>
-___
 
 # CTDL & GT - Đồ án Quản Lý Thư Viện - PTITHCM - 2021
 Thư viện: Ta tổ chức các danh sách sau:
